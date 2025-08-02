@@ -1,0 +1,7 @@
+<map id="inheritance8767c6e414" name="inheritance8767c6e414">
+<area shape="rect" id="node1" href="https://docs.python.org/3/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="52,5,124,31"/>
+<area shape="rect" id="node5" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Transformable.html#optika.mixins.Transformable" target="_top" title="Transformable()" alt="" coords="31,79,145,104"/>
+<area shape="rect" id="node2" href="esis.optics.abc.AbstractFrontAperture.html#esis.optics.abc.AbstractFrontAperture" target="_top" title="An interface describing the entrance aperture of the instrument." alt="" coords="5,225,171,251"/>
+<area shape="rect" id="node4" href="#esis.optics.FrontAperture" target="_top" title="A model of the entrance aperture of the instrument." alt="" coords="33,299,143,324"/>
+<area shape="rect" id="node3" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Translatable.html#optika.mixins.Translatable" target="_top" title="Translatable()" alt="" coords="37,152,139,177"/>
+</map>
