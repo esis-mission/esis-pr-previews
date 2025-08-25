@@ -1,0 +1,854 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../_static/favicon_io/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../_static/favicon_io/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/favicon_io/apple-touch-icon.png" sizes="180x180" type="image/png">
+    <title>AbstractGrating &#8212; ESIS  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/esis.optics.abc.AbstractGrating';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AbstractFilter" href="esis.optics.abc.AbstractFilter.html" />
+    <link rel="prev" title="AbstractFieldStop" href="esis.optics.abc.AbstractFieldStop.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_black.png" class="logo__image only-light" alt="ESIS  documentation - Home"/>
+    <img src="../_static/logo_white.png" class="logo__image only-dark pst-js-only" alt="ESIS  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="esis.optics.html">optics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.FrontAperture.html">FrontAperture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.CentralObscuration.html">CentralObscuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.PrimaryMirror.html">PrimaryMirror</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.FieldStop.html">FieldStop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Grating.html">Grating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Filter.html">Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Sensor.html">Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Instrument.html">Instrument</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="esis.optics.abc.html">abc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractFrontAperture.html">AbstractFrontAperture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractCentralObscuration.html">AbstractCentralObscuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractPrimaryMirror.html">AbstractPrimaryMirror</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractFieldStop.html">AbstractFieldStop</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">AbstractGrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractFilter.html">AbstractFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractInstrument.html">AbstractInstrument</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="esis.optics.mixins.html">mixins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.mixins.CylindricallyTransformable.html">CylindricallyTransformable</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esis.flights.html">flights</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="esis.flights.f1.html">f1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="esis.flights.f1.optics.html">optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.requirements.html">requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.design.html">design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.design_single.html">design_single</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.design_full.html">design_full</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.primaries.html">primaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.gratings.html">gratings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.filters.html">filters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="esis.html" class="nav-link">esis</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="esis.optics.html" class="nav-link">optics</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="esis.optics.abc.html" class="nav-link">abc</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">AbstractGrating</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="abstractgrating">
+<h1>AbstractGrating<a class="headerlink" href="#abstractgrating" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">esis.optics.abc.</span></span><span class="sig-name descname"><span class="pre">AbstractGrating</span></span><a class="reference internal" href="../_modules/esis/optics/_gratings/_gratings.html#AbstractGrating"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#esis.optics.abc.AbstractGrating" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Printable.html#optika.mixins.Printable" title="(in optika)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Printable</span></code></a>, <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Rollable.html#optika.mixins.Rollable" title="(in optika)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rollable</span></code></a>, <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Yawable.html#optika.mixins.Yawable" title="(in optika)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Yawable</span></code></a>, <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Pitchable.html#optika.mixins.Pitchable" title="(in optika)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pitchable</span></code></a>, <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Translatable.html#optika.mixins.Translatable" title="(in optika)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translatable</span></code></a>, <a class="reference internal" href="esis.optics.mixins.CylindricallyTransformable.html#esis.optics.mixins.CylindricallyTransformable" title="esis.optics.mixins._mixins.CylindricallyTransformable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CylindricallyTransformable</span></code></a></p>
+<p>An interface describing the diffraction gratings of the instrument.</p>
+<p class="rubric">Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.angle_aperture" title="esis.optics.abc.AbstractGrating.angle_aperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angle_aperture</span></code></a></p></td>
+<td><p>The angle of the grating's aperture.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.angle_input" title="esis.optics.abc.AbstractGrating.angle_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angle_input</span></code></a></p></td>
+<td><p>The nominal angle of the incident light from the field stop.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.angle_output" title="esis.optics.abc.AbstractGrating.angle_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angle_output</span></code></a></p></td>
+<td><p>The nominal angle of reflected light to the detectors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.azimuth" title="esis.optics.abc.AbstractGrating.azimuth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">azimuth</span></code></a></p></td>
+<td><p>The angle of rotation about the axis of symmetry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.clearance" title="esis.optics.abc.AbstractGrating.clearance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearance</span></code></a></p></td>
+<td><p>The minimum distance between adjacent physical gratings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.distance_radial" title="esis.optics.abc.AbstractGrating.distance_radial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distance_radial</span></code></a></p></td>
+<td><p>The distance of this object from the axis of symmetry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.halfwidth_inner" title="esis.optics.abc.AbstractGrating.halfwidth_inner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halfwidth_inner</span></code></a></p></td>
+<td><p>The distance from the apex to the inner edge of the clear aperture.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.halfwidth_outer" title="esis.optics.abc.AbstractGrating.halfwidth_outer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halfwidth_outer</span></code></a></p></td>
+<td><p>The distance from the apex to the outer edge of the clear aperture.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.manufacturing_number" title="esis.optics.abc.AbstractGrating.manufacturing_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">manufacturing_number</span></code></a></p></td>
+<td><p>An additional number describing this diffraction grating.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.material" title="esis.optics.abc.AbstractGrating.material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">material</span></code></a></p></td>
+<td><p>The optical material composing this grating.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.num_folds" title="esis.optics.abc.AbstractGrating.num_folds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_folds</span></code></a></p></td>
+<td><p>The order of the rotational symmetry of the optical system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.pitch" title="esis.optics.abc.AbstractGrating.pitch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pitch</span></code></a></p></td>
+<td><p>pitch angle of this object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.roll" title="esis.optics.abc.AbstractGrating.roll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">roll</span></code></a></p></td>
+<td><p>roll angle of this object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.rulings" title="esis.optics.abc.AbstractGrating.rulings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rulings</span></code></a></p></td>
+<td><p>The ruling pattern of this grating.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.sag" title="esis.optics.abc.AbstractGrating.sag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sag</span></code></a></p></td>
+<td><p>The sag function of this grating.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.serial_number" title="esis.optics.abc.AbstractGrating.serial_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">serial_number</span></code></a></p></td>
+<td><p>The serial number of this diffraction grating.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.surface" title="esis.optics.abc.AbstractGrating.surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surface</span></code></a></p></td>
+<td><p>Represent this object as an <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.html#module-optika" title="(in optika)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optika</span></code></a> surface.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.transformation" title="esis.optics.abc.AbstractGrating.transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformation</span></code></a></p></td>
+<td><p>the coordinate transformation between the global coordinate system and this object's local coordinate system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.translation" title="esis.optics.abc.AbstractGrating.translation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translation</span></code></a></p></td>
+<td><p>translate the coordinate system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.width_border" title="esis.optics.abc.AbstractGrating.width_border"><code class="xref py py-obj docutils literal notranslate"><span class="pre">width_border</span></code></a></p></td>
+<td><p>The nominal width of the border around the clear aperture.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.width_border_inner" title="esis.optics.abc.AbstractGrating.width_border_inner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">width_border_inner</span></code></a></p></td>
+<td><p>The width of the border on the narrow edge of the grating.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.yaw" title="esis.optics.abc.AbstractGrating.yaw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">yaw</span></code></a></p></td>
+<td><p>yaw angle of this object</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#esis.optics.abc.AbstractGrating.to_string" title="esis.optics.abc.AbstractGrating.to_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_string</span></code></a>([prefix])</p></td>
+<td><p>Public-facing version of the <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> method that allows for defining a prefix string, which can be used to calculate how much whitespace to add to the beginning of each line of the result.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Inheritance Diagram</p>
+<div class="graphviz"><img src="../_images/inheritance-840a3da59f20880b619d04b64ff1657c75e5cef2.png" alt="Inheritance diagram of esis.optics.abc.AbstractGrating" usemap="#inheritance49985ce71f" class="inheritance graphviz" /></div>
+<map id="inheritance49985ce71f" name="inheritance49985ce71f">
+<area shape="rect" id="node1" href="https://docs.python.org/3/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="208,5,280,31"/>
+<area shape="rect" id="node9" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Transformable.html#optika.mixins.Transformable" target="_top" title="Transformable()" alt="" coords="187,79,301,104"/>
+<area shape="rect" id="node2" href="#esis.optics.abc.AbstractGrating" target="_top" title="An interface describing the diffraction gratings of the instrument." alt="" coords="239,225,363,251"/>
+<area shape="rect" id="node3" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Printable.html#optika.mixins.Printable" target="_top" title="Printable()" alt="" coords="656,152,736,177"/>
+<area shape="rect" id="node4" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Rollable.html#optika.mixins.Rollable" target="_top" title="Rollable()" alt="" coords="5,152,80,177"/>
+<area shape="rect" id="node5" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Yawable.html#optika.mixins.Yawable" target="_top" title="Yawable()" alt="" coords="104,152,179,177"/>
+<area shape="rect" id="node6" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Pitchable.html#optika.mixins.Pitchable" target="_top" title="Pitchable()" alt="" coords="203,152,285,177"/>
+<area shape="rect" id="node7" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.mixins.Translatable.html#optika.mixins.Translatable" target="_top" title="Translatable()" alt="" coords="309,152,411,177"/>
+<area shape="rect" id="node8" href="esis.optics.mixins.CylindricallyTransformable.html#esis.optics.mixins.CylindricallyTransformable" target="_top" title="A mixin class which can apply a cylindrical transformation to subclasses." alt="" coords="435,152,631,177"/>
+</map><dl class="field-list simple">
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#esis.optics.abc.AbstractGrating.to_string" title="Link to this definition">#</a></dt>
+<dd><p>Public-facing version of the <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> method that allows for
+defining a prefix string, which can be used to calculate how much
+whitespace to add to the beginning of each line of the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>None</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – an optional string, the length of which is used to calculate how
+much whitespace to add to the result.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.angle_aperture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_aperture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.angle_aperture" title="Link to this definition">#</a></dt>
+<dd><p>The angle of the grating’s aperture.</p>
+<p>This is equal to <span class="math notranslate nohighlight">\(2 \pi / n\)</span> radians, where <span class="math notranslate nohighlight">\(n\)</span> is the
+order of the rotational symmetry of the optical system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.angle_input">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.angle_input" title="Link to this definition">#</a></dt>
+<dd><p>The nominal angle of the incident light from the field stop.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.angle_output">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_output</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.angle_output" title="Link to this definition">#</a></dt>
+<dd><p>The nominal angle of reflected light to the detectors.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.azimuth">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.azimuth" title="Link to this definition">#</a></dt>
+<dd><p>The angle of rotation about the axis of symmetry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.clearance">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clearance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.clearance" title="Link to this definition">#</a></dt>
+<dd><p>The minimum distance between adjacent physical gratings.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.distance_radial">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_radial</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.distance_radial" title="Link to this definition">#</a></dt>
+<dd><p>The distance of this object from the axis of symmetry.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.halfwidth_inner">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">halfwidth_inner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.halfwidth_inner" title="Link to this definition">#</a></dt>
+<dd><p>The distance from the apex to the inner edge of the clear aperture.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.halfwidth_outer">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">halfwidth_outer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.halfwidth_outer" title="Link to this definition">#</a></dt>
+<dd><p>The distance from the apex to the outer edge of the clear aperture.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.manufacturing_number">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">manufacturing_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.manufacturing_number" title="Link to this definition">#</a></dt>
+<dd><p>An additional number describing this diffraction grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.material">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">material</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.materials.AbstractMaterial.html#optika.materials.AbstractMaterial" title="(in optika)"><span class="pre">AbstractMaterial</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.material" title="Link to this definition">#</a></dt>
+<dd><p>The optical material composing this grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.num_folds">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_folds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.num_folds" title="Link to this definition">#</a></dt>
+<dd><p>The order of the rotational symmetry of the optical system.</p>
+<p>This determines the aperture wedge angle of this grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.pitch">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.13)"><span class="pre">complex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.pitch" title="Link to this definition">#</a></dt>
+<dd><p>pitch angle of this object</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.roll">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">roll</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.13)"><span class="pre">complex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.roll" title="Link to this definition">#</a></dt>
+<dd><p>roll angle of this object</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.rulings">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rulings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.rulings.AbstractRulings.html#optika.rulings.AbstractRulings" title="(in optika)"><span class="pre">AbstractRulings</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.rulings" title="Link to this definition">#</a></dt>
+<dd><p>The ruling pattern of this grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.sag">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.sags.AbstractSag.html#optika.sags.AbstractSag" title="(in optika)"><span class="pre">AbstractSag</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.sag" title="Link to this definition">#</a></dt>
+<dd><p>The sag function of this grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.serial_number">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serial_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.serial_number" title="Link to this definition">#</a></dt>
+<dd><p>The serial number of this diffraction grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.surface">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">surface</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.surfaces.Surface.html#optika.surfaces.Surface" title="(in optika)"><span class="pre">Surface</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.surface" title="Link to this definition">#</a></dt>
+<dd><p>Represent this object as an <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.html#module-optika" title="(in optika)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optika</span></code></a> surface.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.transformation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transformation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.transformations.AbstractTransformation.html#named_arrays.transformations.AbstractTransformation" title="(in named_arrays)"><span class="pre">AbstractTransformation</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.transformation" title="Link to this definition">#</a></dt>
+<dd><p>the coordinate transformation between the global coordinate system
+and this object’s local coordinate system</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.translation">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">translation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractVectorArray.html#named_arrays.AbstractVectorArray" title="(in named_arrays)"><span class="pre">AbstractVectorArray</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.translation" title="Link to this definition">#</a></dt>
+<dd><p>translate the coordinate system</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.width_border">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width_border</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.width_border" title="Link to this definition">#</a></dt>
+<dd><p>The nominal width of the border around the clear aperture.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.width_border_inner">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width_border_inner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.width_border_inner" title="Link to this definition">#</a></dt>
+<dd><p>The width of the border on the narrow edge of the grating.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="esis.optics.abc.AbstractGrating.yaw">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">yaw</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><span class="pre">Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.13)"><span class="pre">complex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.AbstractScalar.html#named_arrays.AbstractScalar" title="(in named_arrays)"><span class="pre">AbstractScalar</span></a></em><a class="headerlink" href="#esis.optics.abc.AbstractGrating.yaw" title="Link to this definition">#</a></dt>
+<dd><p>yaw angle of this object</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="esis.optics.abc.AbstractFieldStop.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">AbstractFieldStop</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="esis.optics.abc.AbstractFilter.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">AbstractFilter</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating"><code class="docutils literal notranslate"><span class="pre">AbstractGrating</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.to_string"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.to_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.angle_aperture"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.angle_aperture</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.angle_input"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.angle_input</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.angle_output"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.angle_output</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.azimuth"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.azimuth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.clearance"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.clearance</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.distance_radial"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.distance_radial</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.halfwidth_inner"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.halfwidth_inner</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.halfwidth_outer"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.halfwidth_outer</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.manufacturing_number"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.manufacturing_number</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.material"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.material</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.num_folds"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.num_folds</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.pitch"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.pitch</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.roll"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.roll</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.rulings"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.rulings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.sag"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.sag</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.serial_number"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.serial_number</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.surface"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.surface</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.transformation"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.transformation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.translation"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.translation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.width_border"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.width_border</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.width_border_inner"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.width_border_inner</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.optics.abc.AbstractGrating.yaw"><code class="docutils literal notranslate"><span class="pre">AbstractGrating.yaw</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/_autosummary/esis.optics.abc.AbstractGrating.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

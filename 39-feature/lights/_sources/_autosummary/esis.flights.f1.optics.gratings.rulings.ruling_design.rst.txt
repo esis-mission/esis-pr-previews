@@ -1,0 +1,8 @@
+ruling\_design
+==============
+
+.. currentmodule:: esis.flights.f1.optics.gratings.rulings
+
+.. autofunction:: esis.flights.f1.optics.gratings.rulings.ruling_design
+
+    .. autolink-examples:: esis.flights.f1.optics.gratings.rulings.ruling_design
