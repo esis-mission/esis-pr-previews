@@ -1,0 +1,45 @@
+CentralObscuration
+==================
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.CentralObscuration
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~CentralObscuration.halfwidth
+      ~CentralObscuration.num_folds
+      ~CentralObscuration.radius
+      ~CentralObscuration.remove_last_vertex
+      ~CentralObscuration.surface
+      ~CentralObscuration.transformation
+      ~CentralObscuration.translation
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~CentralObscuration.__init__
+      ~CentralObscuration.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.CentralObscuration
+        :parts: 1
+    
