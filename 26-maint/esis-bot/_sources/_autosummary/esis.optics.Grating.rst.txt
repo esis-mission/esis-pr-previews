@@ -1,0 +1,60 @@
+Grating
+=======
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.Grating
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Grating.angle_aperture
+      ~Grating.angle_input
+      ~Grating.angle_output
+      ~Grating.azimuth
+      ~Grating.clearance
+      ~Grating.distance_radial
+      ~Grating.halfwidth_inner
+      ~Grating.halfwidth_outer
+      ~Grating.manufacturing_number
+      ~Grating.material
+      ~Grating.num_folds
+      ~Grating.pitch
+      ~Grating.roll
+      ~Grating.rulings
+      ~Grating.sag
+      ~Grating.serial_number
+      ~Grating.surface
+      ~Grating.transformation
+      ~Grating.translation
+      ~Grating.width_border
+      ~Grating.width_border_inner
+      ~Grating.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Grating.__init__
+      ~Grating.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.Grating
+        :parts: 1
+    

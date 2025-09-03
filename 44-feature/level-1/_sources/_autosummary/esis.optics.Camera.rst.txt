@@ -1,0 +1,58 @@
+Camera
+======
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.Camera
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Camera.axis_tap_x
+      ~Camera.axis_tap_y
+      ~Camera.bits_adc
+      ~Camera.channel
+      ~Camera.channel_trigger
+      ~Camera.gain
+      ~Camera.sensor
+      ~Camera.surface
+      ~Camera.timedelta_exposure
+      ~Camera.timedelta_exposure_max
+      ~Camera.timedelta_exposure_min
+      ~Camera.timedelta_exposure_step
+      ~Camera.timedelta_readout
+      ~Camera.timedelta_sync
+      ~Camera.timedelta_transfer
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Camera.__init__
+      ~Camera.calibrate_temperature_adc_1
+      ~Camera.calibrate_temperature_adc_234
+      ~Camera.calibrate_temperature_fpga
+      ~Camera.calibrate_timedelta_exposure
+      ~Camera.calibrate_voltage_fpga
+      ~Camera.dn_to_electrons
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.Camera
+        :parts: 1
+    

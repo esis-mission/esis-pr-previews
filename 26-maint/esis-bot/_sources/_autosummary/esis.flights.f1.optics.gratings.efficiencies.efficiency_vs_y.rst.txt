@@ -1,0 +1,6 @@
+efficiency\_vs\_y
+=================
+
+.. currentmodule:: esis.flights.f1.optics.gratings.efficiencies
+
+.. autofunction:: esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_y

@@ -1,0 +1,1984 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; ESIS  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-codeautolink.css?v=b2176991" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_black.png" class="logo__image only-light" alt="ESIS  documentation - Home"/>
+    <img src="_static/logo_white.png" class="logo__image only-dark pst-js-only" alt="ESIS  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#Y"><strong>Y</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration">AbstractCentralObscuration (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop">AbstractFieldStop (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter">AbstractFilter (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFrontAperture.html#esis.optics.abc.AbstractFrontAperture">AbstractFrontAperture (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating">AbstractGrating (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument">AbstractInstrument (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror">AbstractPrimaryMirror (class in esis.optics.abc)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.active">active (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.add_axes">add_axes() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.add_axes">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.all">all() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.all">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.angle_aperture">angle_aperture (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.angle_aperture">(esis.optics.Grating property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.angle_grating_input">angle_grating_input (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.angle_grating_input">(esis.optics.Instrument property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.angle_grating_output">angle_grating_output (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.angle_grating_output">(esis.optics.Instrument property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.angle_input">angle_input (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.angle_input">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.angle_output">angle_output (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.angle_output">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.animate">animate() (esis.data.Level_0 method)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.any">any() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.any">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.astype">astype() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.astype">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axes">axes (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axes">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axes_center">axes_center (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axes_center">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axes_flattened">axes_flattened (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axes_flattened">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axes_vertex">axes_vertex (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axes_vertex">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axis_channel">axis_channel (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axis_channel">(esis.data.Level_1 attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.axis_channel">(esis.optics.abc.AbstractInstrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.axis_channel">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.axis_tap_x">axis_tap_x (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.axis_tap_y">axis_tap_y (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axis_time">axis_time (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axis_time">(esis.data.Level_1 attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axis_x">axis_x (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axis_x">(esis.data.Level_1 attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axis_xy">axis_xy (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.axis_y">axis_y (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.axis_y">(esis.data.Level_1 attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.azimuth">azimuth (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.azimuth">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.azimuth">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.azimuth">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.mixins.CylindricallyTransformable.html#esis.optics.mixins.CylindricallyTransformable.azimuth">(esis.optics.mixins.CylindricallyTransformable property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.azimuth">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.bits_adc">bits_adc (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.broadcast_to">broadcast_to() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.broadcast_to">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.broadcasted">broadcasted (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.broadcasted">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.cadence">cadence (esis.optics.Requirements attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.calibrate_temperature_adc_1">calibrate_temperature_adc_1() (esis.optics.Camera class method)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.calibrate_temperature_adc_234">calibrate_temperature_adc_234() (esis.optics.Camera class method)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.calibrate_temperature_fpga">calibrate_temperature_fpga() (esis.optics.Camera class method)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.calibrate_timedelta_exposure">calibrate_timedelta_exposure() (esis.optics.Camera class method)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.calibrate_voltage_fpga">calibrate_voltage_fpga() (esis.optics.Camera class method)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera">Camera (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.camera">camera (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.camera">(esis.optics.abc.AbstractInstrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.camera">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.cell_centers">cell_centers() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.cell_centers">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.central_obscuration">central_obscuration (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.central_obscuration">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration">CentralObscuration (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.channel">channel (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.channel">(esis.optics.Camera attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.channel_trigger">channel_trigger (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.clearance">clearance (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.clearance">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.combine_axes">combine_axes() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.combine_axes">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.copy">copy() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.copy">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.copy_shallow">copy_shallow() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.copy_shallow">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.cte">cte (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.mixins.CylindricallyTransformable.html#esis.optics.mixins.CylindricallyTransformable">CylindricallyTransformable (class in esis.optics.mixins)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.dark">dark (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.dark_current">dark_current() (esis.optics.Sensor method)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.dark_subtracted">dark_subtracted (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.darks">darks (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.darks_down">darks_down (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.darks_up">darks_up (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.design.html#esis.flights.f1.optics.design">design() (in module esis.flights.f1.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.design_full.html#esis.flights.f1.optics.design_full">design_full() (in module esis.flights.f1.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f2.optics.design_proposed.html#esis.flights.f2.optics.design_proposed">design_proposed() (in module esis.flights.f2.optics)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.flights.f1.optics.design_single.html#esis.flights.f1.optics.design_single">design_single() (in module esis.flights.f1.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.despiked">despiked (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.distance_radial">distance_radial (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.distance_radial">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.distance_radial">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.distance_radial">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.mixins.CylindricallyTransformable.html#esis.optics.mixins.CylindricallyTransformable.distance_radial">(esis.optics.mixins.CylindricallyTransformable property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.distance_radial">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.dn_to_electrons">dn_to_electrons() (esis.optics.Camera method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_angle_0deg.html#esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_angle_0deg">efficiency_vs_angle_0deg() (in module esis.flights.f1.optics.gratings.efficiencies)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_angle_3deg.html#esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_angle_3deg">efficiency_vs_angle_3deg() (in module esis.flights.f1.optics.gratings.efficiencies)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_wavelength.html#esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_wavelength">efficiency_vs_wavelength() (in module esis.flights.f1.optics.gratings.efficiencies)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_x.html#esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_x">efficiency_vs_x() (in module esis.flights.f1.optics.gratings.efficiencies)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_y.html#esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_y">efficiency_vs_y() (in module esis.flights.f1.optics.gratings.efficiencies)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.electrons">electrons (esis.data.Level_0 property)</a>
+</li>
+      <li>
+    esis
+
+      <ul>
+        <li><a href="_autosummary/esis.html#module-esis">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.data
+
+      <ul>
+        <li><a href="_autosummary/esis.data.html#module-esis.data">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.html#module-esis.flights">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.html#module-esis.flights.f1">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.data
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.data.html#module-esis.flights.f1.data">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.nsroc
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.nsroc.html#module-esis.flights.f1.nsroc">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.html#module-esis.flights.f1.optics">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.filters
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.filters.html#module-esis.flights.f1.optics.filters">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.filters.materials
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.filters.materials.html#module-esis.flights.f1.optics.filters.materials">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.gratings
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.html#module-esis.flights.f1.optics.gratings">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    esis.flights.f1.optics.gratings.efficiencies
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.html#module-esis.flights.f1.optics.gratings.efficiencies">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.gratings.materials
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.materials.html#module-esis.flights.f1.optics.gratings.materials">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.gratings.rulings
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.rulings.html#module-esis.flights.f1.optics.gratings.rulings">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.primaries
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.html#module-esis.flights.f1.optics.primaries">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f1.optics.primaries.materials
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.materials.html#module-esis.flights.f1.optics.primaries.materials">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f2
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f2.html#module-esis.flights.f2">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f2.optics
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f2.optics.html#module-esis.flights.f2.optics">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.flights.f2.optics.materials
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f2.optics.materials.html#module-esis.flights.f2.optics.materials">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.nsroc
+
+      <ul>
+        <li><a href="_autosummary/esis.nsroc.html#module-esis.nsroc">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.optics
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.html#module-esis.optics">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.optics.abc
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.html#module-esis.optics.abc">module</a>
+</li>
+      </ul></li>
+      <li>
+    esis.optics.mixins
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.mixins.html#module-esis.optics.mixins">module</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.explicit">explicit (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.explicit">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.family">family (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.field">field (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.field">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.field_stop">field_stop (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.field_stop">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop">FieldStop (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter">Filter (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.filter">filter (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.filter">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.fov">fov (esis.optics.Requirements attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.from_fits">from_fits() (esis.data.Level_0 class method)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.from_level_0">from_level_0() (esis.data.Level_1 class method)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.from_scalar_array">from_scalar_array() (esis.data.Level_0 class method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.from_scalar_array">(esis.data.Level_1 class method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.from_taps">from_taps() (esis.data.Level_0 method)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.front_aperture">front_aperture (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.front_aperture">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.FrontAperture.html#esis.optics.FrontAperture">FrontAperture (class in esis.optics)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.gain">gain (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.grade">grade (esis.optics.Sensor attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating">Grating (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.grating">grating (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.grating">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.halfwidth">halfwidth (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.halfwidth">(esis.optics.CentralObscuration attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.halfwidth_inner">halfwidth_inner (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.halfwidth_inner">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.halfwidth_outer">halfwidth_outer (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.halfwidth_outer">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.index">index() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.index">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.index_secant">index_secant() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.index_secant">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.indices">indices (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.indices">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.inputs">inputs (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.inputs">(esis.data.Level_1 attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument">Instrument (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.interp_linear">interp_linear() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.interp_linear">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.kwargs_plot">kwargs_plot (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.kwargs_plot">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.length">length (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.length">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.length_observation">length_observation (esis.optics.Requirements attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0">Level_0 (class in esis.data)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.data.level_0.html#esis.flights.f1.data.level_0">level_0() (in module esis.flights.f1.data)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1">Level_1 (class in esis.data)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.lights">lights (esis.data.Level_0 property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.manufacturer">manufacturer (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.manufacturing_number">manufacturing_number (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.manufacturing_number">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.material">material (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.material">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.material">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.material">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.material">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.material">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.max">max() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.max">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.mean">mean() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.mean">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.median">median() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.median">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.min">min() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.min">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="_autosummary/esis.html#module-esis">esis</a>
+</li>
+        <li><a href="_autosummary/esis.data.html#module-esis.data">esis.data</a>
+</li>
+        <li><a href="_autosummary/esis.flights.html#module-esis.flights">esis.flights</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.html#module-esis.flights.f1">esis.flights.f1</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.data.html#module-esis.flights.f1.data">esis.flights.f1.data</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.nsroc.html#module-esis.flights.f1.nsroc">esis.flights.f1.nsroc</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.html#module-esis.flights.f1.optics">esis.flights.f1.optics</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.filters.html#module-esis.flights.f1.optics.filters">esis.flights.f1.optics.filters</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.filters.materials.html#module-esis.flights.f1.optics.filters.materials">esis.flights.f1.optics.filters.materials</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.html#module-esis.flights.f1.optics.gratings">esis.flights.f1.optics.gratings</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.efficiencies.html#module-esis.flights.f1.optics.gratings.efficiencies">esis.flights.f1.optics.gratings.efficiencies</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.materials.html#module-esis.flights.f1.optics.gratings.materials">esis.flights.f1.optics.gratings.materials</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.gratings.rulings.html#module-esis.flights.f1.optics.gratings.rulings">esis.flights.f1.optics.gratings.rulings</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.html#module-esis.flights.f1.optics.primaries">esis.flights.f1.optics.primaries</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.materials.html#module-esis.flights.f1.optics.primaries.materials">esis.flights.f1.optics.primaries.materials</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f2.html#module-esis.flights.f2">esis.flights.f2</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f2.optics.html#module-esis.flights.f2.optics">esis.flights.f2.optics</a>
+</li>
+        <li><a href="_autosummary/esis.flights.f2.optics.materials.html#module-esis.flights.f2.optics.materials">esis.flights.f2.optics.materials</a>
+</li>
+        <li><a href="_autosummary/esis.nsroc.html#module-esis.nsroc">esis.nsroc</a>
+</li>
+        <li><a href="_autosummary/esis.optics.html#module-esis.optics">esis.optics</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.html#module-esis.optics.abc">esis.optics.abc</a>
+</li>
+        <li><a href="_autosummary/esis.optics.mixins.html#module-esis.optics.mixins">esis.optics.mixins</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.flights.f2.optics.materials.multilayer_AlSc.html#esis.flights.f2.optics.materials.multilayer_AlSc">multilayer_AlSc() (in module esis.flights.f2.optics.materials)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.materials.multilayer_design.html#esis.flights.f1.optics.gratings.materials.multilayer_design">multilayer_design() (in module esis.flights.f1.optics.gratings.materials)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.materials.multilayer_design.html#esis.flights.f1.optics.primaries.materials.multilayer_design">(in module esis.flights.f1.optics.primaries.materials)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.materials.multilayer_fit.html#esis.flights.f1.optics.gratings.materials.multilayer_fit">multilayer_fit() (in module esis.flights.f1.optics.gratings.materials)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.materials.multilayer_fit.html#esis.flights.f1.optics.primaries.materials.multilayer_fit">(in module esis.flights.f1.optics.primaries.materials)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.flights.f2.optics.materials.multilayer_SiSc.html#esis.flights.f2.optics.materials.multilayer_SiSc">multilayer_SiSc() (in module esis.flights.f2.optics.materials)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.materials.multilayer_witness_fit.html#esis.flights.f1.optics.gratings.materials.multilayer_witness_fit">multilayer_witness_fit() (in module esis.flights.f1.optics.gratings.materials)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.materials.multilayer_witness_fit.html#esis.flights.f1.optics.primaries.materials.multilayer_witness_fit">(in module esis.flights.f1.optics.primaries.materials)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.materials.multilayer_witness_measured.html#esis.flights.f1.optics.gratings.materials.multilayer_witness_measured">multilayer_witness_measured() (in module esis.flights.f1.optics.gratings.materials)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.flights.f1.optics.primaries.materials.multilayer_witness_measured.html#esis.flights.f1.optics.primaries.materials.multilayer_witness_measured">(in module esis.flights.f1.optics.primaries.materials)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.name">name (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.name">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.ndim">ndim (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.ndim">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.ndindex">ndindex() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.ndindex">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_blank">num_blank (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.num_folds">num_folds (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.num_folds">(esis.optics.abc.AbstractFieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.num_folds">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.num_folds">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.num_folds">(esis.optics.CentralObscuration attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.num_folds">(esis.optics.FieldStop attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.num_folds">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.num_folds">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_overscan">num_overscan (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_pixel">num_pixel (esis.optics.Sensor property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_pixel_active">num_pixel_active (esis.optics.Sensor property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_pixel_x">num_pixel_x (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_pixel_y">num_pixel_y (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.num_sides">num_sides (esis.optics.abc.AbstractFieldStop property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.num_sides">(esis.optics.FieldStop property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_tap_x">num_tap_x (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.num_tap_y">num_tap_y (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.num_x">num_x (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.num_y">num_y (esis.data.Level_0 property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.outputs">outputs (esis.data.Level_0 attribute)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.outputs">(esis.data.Level_1 attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.flights.f1.data.path_fits.html#esis.flights.f1.data.path_fits">path_fits() (in module esis.flights.f1.data)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.pcolormesh">pcolormesh() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.pcolormesh">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.percentile">percentile() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.percentile">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.pitch">pitch (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.pitch">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.pitch">(esis.optics.abc.AbstractInstrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.pitch">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.pitch">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.pitch">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.pitch">(esis.optics.Instrument attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.pitch">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.pitch">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.position_image">position_image (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.primary_mirror">primary_mirror (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.primary_mirror">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror">PrimaryMirror (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.ptp">ptp() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.ptp">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.pupil">pupil (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.pupil">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.radius">radius (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.radius">(esis.optics.CentralObscuration property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.radius_clear">radius_clear (esis.optics.abc.AbstractFieldStop property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.radius_clear">(esis.optics.abc.AbstractFilter property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.radius_clear">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.radius_clear">(esis.optics.FieldStop attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.radius_clear">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.radius_clear">(esis.optics.PrimaryMirror property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.radius_mechanical">radius_mechanical (esis.optics.abc.AbstractFieldStop property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.radius_mechanical">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.radius_mechanical">(esis.optics.FieldStop attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.radius_mechanical">(esis.optics.PrimaryMirror property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.readout_mode">readout_mode (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.readout_noise">readout_noise (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.regrid">regrid() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.regrid">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.remove_last_vertex">remove_last_vertex (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.remove_last_vertex">(esis.optics.CentralObscuration attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.replace">replace() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.replace">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements">Requirements (class in esis.optics)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.flights.f1.optics.requirements.html#esis.flights.f1.optics.requirements">requirements() (in module esis.flights.f1.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.reshape">reshape() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.reshape">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.resolution_angular">resolution_angular (esis.optics.Requirements property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.resolution_spatial">resolution_spatial (esis.optics.Requirements attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.resolution_spectral">resolution_spectral (esis.optics.Requirements attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.rms">rms() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.rms">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.roll">roll (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.roll">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.roll">(esis.optics.abc.AbstractInstrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.roll">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.roll">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.roll">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.roll">(esis.optics.Instrument attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.roll">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.roll">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.rulings.ruling_design.html#esis.flights.f1.optics.gratings.rulings.ruling_design">ruling_design() (in module esis.flights.f1.optics.gratings.rulings)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.gratings.rulings.ruling_measurement.html#esis.flights.f1.optics.gratings.rulings.ruling_measurement">ruling_measurement() (in module esis.flights.f1.optics.gratings.rulings)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.rulings">rulings (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.rulings">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.sag">sag (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.sag">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.sag">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.sag">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor">Sensor (class in esis.optics)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.sensor">sensor (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.serial_number">serial_number (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.serial_number">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.serial_number">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.shape">shape (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.shape">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.size">size (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.size">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.snr">snr (esis.optics.Requirements attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.std">std() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.std">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.sum">sum() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.sum">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.surface">surface (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.surface">(esis.optics.abc.AbstractFieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.surface">(esis.optics.abc.AbstractFilter property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFrontAperture.html#esis.optics.abc.AbstractFrontAperture.surface">(esis.optics.abc.AbstractFrontAperture property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.surface">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.surface">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.surface">(esis.optics.Camera property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.surface">(esis.optics.CentralObscuration property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.surface">(esis.optics.FieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.surface">(esis.optics.Filter property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FrontAperture.html#esis.optics.FrontAperture.surface">(esis.optics.FrontAperture property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.surface">(esis.optics.Grating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.surface">(esis.optics.PrimaryMirror property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.system">system (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.system">(esis.optics.Instrument property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.taps">taps (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.temperature">temperature (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.optics.filters.materials.thin_film_design.html#esis.flights.f1.optics.filters.materials.thin_film_design">thin_film_design() (in module esis.flights.f1.optics.filters.materials)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.time_mission_start">time_mission_start (esis.data.Level_0 property)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_ballistic_impact">timedelta_ballistic_impact (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_blackbrant_burnout">timedelta_blackbrant_burnout (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_blackbrant_ignition">timedelta_blackbrant_ignition (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_canard_decouple">timedelta_canard_decouple (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_despin">timedelta_despin (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_esis_start">timedelta_esis_start (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_exposure">timedelta_exposure (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_exposure_max">timedelta_exposure_max (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_exposure_min">timedelta_exposure_min (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_exposure_step">timedelta_exposure_step (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_nosecone_eject">timedelta_nosecone_eject (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_parachute_deploy">timedelta_parachute_deploy (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_payload_impact">timedelta_payload_impact (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_payload_separation">timedelta_payload_separation (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_rail_release">timedelta_rail_release (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_readout">timedelta_readout (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_shutter_close">timedelta_shutter_close (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_shutter_open">timedelta_shutter_open (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_disable">timedelta_sparcs_disable (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_enable">timedelta_sparcs_enable (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_finemode">timedelta_sparcs_finemode (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_rlg_disable">timedelta_sparcs_rlg_disable (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_rlg_enable">timedelta_sparcs_rlg_enable (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_spinup">timedelta_sparcs_spinup (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_sparcs_vent">timedelta_sparcs_vent (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_sync">timedelta_sync (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.timedelta_terrier_burnout">timedelta_terrier_burnout (esis.nsroc.Timeline attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Camera.html#esis.optics.Camera.timedelta_transfer">timedelta_transfer (esis.optics.Camera attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline">Timeline (class in esis.nsroc)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.timeline">timeline (esis.data.Level_0 attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.flights.f1.nsroc.timeline.html#esis.flights.f1.nsroc.timeline">timeline() (in module esis.flights.f1.nsroc)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.to">to() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.to">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.to_jshtml">to_jshtml() (esis.data.Level_0 method)</a>
+</li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.to_string">to_string() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.to_string">(esis.data.Level_1 method)</a>
+</li>
+        <li><a href="_autosummary/esis.nsroc.Timeline.html#esis.nsroc.Timeline.to_string">(esis.nsroc.Timeline method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.to_string">(esis.optics.abc.AbstractCentralObscuration method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.to_string">(esis.optics.abc.AbstractFieldStop method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.to_string">(esis.optics.abc.AbstractFilter method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.to_string">(esis.optics.abc.AbstractGrating method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.to_string">(esis.optics.abc.AbstractInstrument method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.to_string">(esis.optics.abc.AbstractPrimaryMirror method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.to_string">(esis.optics.CentralObscuration method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.to_string">(esis.optics.FieldStop method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.to_string">(esis.optics.Filter method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.to_string">(esis.optics.Grating method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.to_string">(esis.optics.Instrument method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.to_string">(esis.optics.PrimaryMirror method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Requirements.html#esis.optics.Requirements.to_string">(esis.optics.Requirements method)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.to_string">(esis.optics.Sensor method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.to_string_array">to_string_array() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.to_string_array">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.transformation">transformation (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.transformation">(esis.optics.abc.AbstractFieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.transformation">(esis.optics.abc.AbstractFilter property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFrontAperture.html#esis.optics.abc.AbstractFrontAperture.transformation">(esis.optics.abc.AbstractFrontAperture property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.transformation">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.transformation">(esis.optics.abc.AbstractInstrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.transformation">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.transformation">(esis.optics.CentralObscuration property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.transformation">(esis.optics.FieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.transformation">(esis.optics.Filter property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FrontAperture.html#esis.optics.FrontAperture.transformation">(esis.optics.FrontAperture property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.transformation">(esis.optics.Grating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.transformation">(esis.optics.Instrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.mixins.CylindricallyTransformable.html#esis.optics.mixins.CylindricallyTransformable.transformation">(esis.optics.mixins.CylindricallyTransformable property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.transformation">(esis.optics.PrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.transformation">(esis.optics.Sensor property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractCentralObscuration.html#esis.optics.abc.AbstractCentralObscuration.translation">translation (esis.optics.abc.AbstractCentralObscuration property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.translation">(esis.optics.abc.AbstractFieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.translation">(esis.optics.abc.AbstractFilter property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractFrontAperture.html#esis.optics.abc.AbstractFrontAperture.translation">(esis.optics.abc.AbstractFrontAperture property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.translation">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.translation">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.CentralObscuration.html#esis.optics.CentralObscuration.translation">(esis.optics.CentralObscuration attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.translation">(esis.optics.FieldStop attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.translation">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FrontAperture.html#esis.optics.FrontAperture.translation">(esis.optics.FrontAperture attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.translation">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.translation">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.translation">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.transpose">transpose() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.transpose">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.type_abstract">type_abstract (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.type_abstract">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.type_explicit">type_explicit (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.type_explicit">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.unbiased">unbiased (esis.data.Level_0 property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.value">value (esis.data.Level_0 property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.value">(esis.data.Level_1 property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.var">var() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.var">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.vmr">vmr() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.vmr">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.volume_cell">volume_cell() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.volume_cell">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.wavelength">wavelength (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.wavelength">(esis.optics.Instrument attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.wavelength_max">wavelength_max (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.wavelength_max">(esis.optics.Instrument property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.wavelength_min">wavelength_min (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.wavelength_min">(esis.optics.Instrument property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.wavelength_physical">wavelength_physical (esis.optics.abc.AbstractInstrument property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.wavelength_physical">(esis.optics.Instrument property)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.data.Level_0.html#esis.data.Level_0.weights">weights() (esis.data.Level_0 method)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.data.Level_1.html#esis.data.Level_1.weights">(esis.data.Level_1 method)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.width_active">width_active (esis.optics.Sensor property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.width_border">width_border (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.width_border">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.width_border">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.width_border">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.width_border">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.width_border">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.width_border_inner">width_border_inner (esis.optics.abc.AbstractGrating property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.width_border_inner">(esis.optics.Grating attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFieldStop.html#esis.optics.abc.AbstractFieldStop.width_clear">width_clear (esis.optics.abc.AbstractFieldStop property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.width_clear">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.FieldStop.html#esis.optics.FieldStop.width_clear">(esis.optics.FieldStop property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.width_clear">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.width_package">width_package (esis.optics.Sensor property)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.width_package_x">width_package_x (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.width_package_y">width_package_y (esis.optics.Sensor attribute)</a>
+</li>
+      <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.width_pixel">width_pixel (esis.optics.Sensor attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Y">Y</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/esis.optics.abc.AbstractFilter.html#esis.optics.abc.AbstractFilter.yaw">yaw (esis.optics.abc.AbstractFilter property)</a>
+
+      <ul>
+        <li><a href="_autosummary/esis.optics.abc.AbstractGrating.html#esis.optics.abc.AbstractGrating.yaw">(esis.optics.abc.AbstractGrating property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractInstrument.html#esis.optics.abc.AbstractInstrument.yaw">(esis.optics.abc.AbstractInstrument property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.abc.AbstractPrimaryMirror.html#esis.optics.abc.AbstractPrimaryMirror.yaw">(esis.optics.abc.AbstractPrimaryMirror property)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Filter.html#esis.optics.Filter.yaw">(esis.optics.Filter attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Grating.html#esis.optics.Grating.yaw">(esis.optics.Grating attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Instrument.html#esis.optics.Instrument.yaw">(esis.optics.Instrument attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.PrimaryMirror.html#esis.optics.PrimaryMirror.yaw">(esis.optics.PrimaryMirror attribute)</a>
+</li>
+        <li><a href="_autosummary/esis.optics.Sensor.html#esis.optics.Sensor.yaw">(esis.optics.Sensor attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

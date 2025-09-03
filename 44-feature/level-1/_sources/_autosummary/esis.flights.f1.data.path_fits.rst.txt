@@ -1,0 +1,8 @@
+path\_fits
+==========
+
+.. currentmodule:: esis.flights.f1.data
+
+.. autofunction:: esis.flights.f1.data.path_fits
+
+    .. autolink-examples:: esis.flights.f1.data.path_fits

@@ -1,0 +1,49 @@
+Filter
+======
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.Filter
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Filter.azimuth
+      ~Filter.distance_radial
+      ~Filter.material
+      ~Filter.pitch
+      ~Filter.radius_clear
+      ~Filter.roll
+      ~Filter.surface
+      ~Filter.transformation
+      ~Filter.translation
+      ~Filter.width_border
+      ~Filter.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Filter.__init__
+      ~Filter.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.Filter
+        :parts: 1
+    

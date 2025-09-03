@@ -1,0 +1,6 @@
+multilayer\_fit
+===============
+
+.. currentmodule:: esis.flights.f1.optics.primaries.materials
+
+.. autofunction:: esis.flights.f1.optics.primaries.materials.multilayer_fit

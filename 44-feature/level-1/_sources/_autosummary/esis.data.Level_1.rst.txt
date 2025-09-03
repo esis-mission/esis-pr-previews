@@ -1,0 +1,93 @@
+Level\_1
+========
+
+.. currentmodule:: esis.data
+
+.. autoclass:: esis.data.Level_1
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Level_1.axes
+      ~Level_1.axes_center
+      ~Level_1.axes_flattened
+      ~Level_1.axes_vertex
+      ~Level_1.axis_channel
+      ~Level_1.axis_time
+      ~Level_1.axis_x
+      ~Level_1.axis_y
+      ~Level_1.broadcasted
+      ~Level_1.explicit
+      ~Level_1.indices
+      ~Level_1.inputs
+      ~Level_1.length
+      ~Level_1.ndim
+      ~Level_1.outputs
+      ~Level_1.shape
+      ~Level_1.size
+      ~Level_1.type_abstract
+      ~Level_1.type_explicit
+      ~Level_1.value
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Level_1.__init__
+      ~Level_1.add_axes
+      ~Level_1.all
+      ~Level_1.any
+      ~Level_1.astype
+      ~Level_1.broadcast_to
+      ~Level_1.cell_centers
+      ~Level_1.combine_axes
+      ~Level_1.copy
+      ~Level_1.copy_shallow
+      ~Level_1.from_level_0
+      ~Level_1.from_scalar_array
+      ~Level_1.index
+      ~Level_1.index_secant
+      ~Level_1.interp_linear
+      ~Level_1.max
+      ~Level_1.mean
+      ~Level_1.median
+      ~Level_1.min
+      ~Level_1.ndindex
+      ~Level_1.pcolormesh
+      ~Level_1.percentile
+      ~Level_1.ptp
+      ~Level_1.regrid
+      ~Level_1.replace
+      ~Level_1.reshape
+      ~Level_1.rms
+      ~Level_1.std
+      ~Level_1.sum
+      ~Level_1.to
+      ~Level_1.to_string
+      ~Level_1.to_string_array
+      ~Level_1.transpose
+      ~Level_1.var
+      ~Level_1.vmr
+      ~Level_1.volume_cell
+      ~Level_1.weights
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.data.Level_1
+        :parts: 1
+    
