@@ -1,0 +1,46 @@
+AbstractFieldStop
+=================
+
+.. currentmodule:: esis.optics.abc
+
+.. autoclass:: esis.optics.abc.AbstractFieldStop
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~AbstractFieldStop.num_folds
+      ~AbstractFieldStop.num_sides
+      ~AbstractFieldStop.radius_clear
+      ~AbstractFieldStop.radius_mechanical
+      ~AbstractFieldStop.surface
+      ~AbstractFieldStop.transformation
+      ~AbstractFieldStop.translation
+      ~AbstractFieldStop.width_clear
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~AbstractFieldStop.__init__
+      ~AbstractFieldStop.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.abc.AbstractFieldStop
+        :parts: 1
+    

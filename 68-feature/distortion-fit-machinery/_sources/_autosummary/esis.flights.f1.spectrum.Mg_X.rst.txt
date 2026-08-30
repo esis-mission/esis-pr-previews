@@ -1,0 +1,35 @@
+Mg\_X
+=====
+
+.. automodule:: esis.flights.f1.spectrum.Mg_X
+
+    
+    
+    .. rubric:: Module Attributes
+
+    .. autosummary::
+      :toctree:
+    
+      wavelength
+      radiance
+      fwhm
+      width_doppler
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

@@ -1,0 +1,8 @@
+fit\_distortion
+===============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.fit_distortion
+
+    .. autolink-examples:: esis.optics.fit_distortion

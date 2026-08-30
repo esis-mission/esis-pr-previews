@@ -1,0 +1,8 @@
+design\_full
+============
+
+.. currentmodule:: esis.flights.f1.optics
+
+.. autofunction:: esis.flights.f1.optics.design_full
+
+    .. autolink-examples:: esis.flights.f1.optics.design_full

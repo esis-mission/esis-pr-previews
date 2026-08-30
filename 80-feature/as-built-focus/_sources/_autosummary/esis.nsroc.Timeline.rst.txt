@@ -1,0 +1,59 @@
+Timeline
+========
+
+.. currentmodule:: esis.nsroc
+
+.. autoclass:: esis.nsroc.Timeline
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Timeline.timedelta_ballistic_impact
+      ~Timeline.timedelta_blackbrant_burnout
+      ~Timeline.timedelta_blackbrant_ignition
+      ~Timeline.timedelta_canard_decouple
+      ~Timeline.timedelta_despin
+      ~Timeline.timedelta_esis_start
+      ~Timeline.timedelta_nosecone_eject
+      ~Timeline.timedelta_parachute_deploy
+      ~Timeline.timedelta_payload_impact
+      ~Timeline.timedelta_payload_separation
+      ~Timeline.timedelta_rail_release
+      ~Timeline.timedelta_shutter_close
+      ~Timeline.timedelta_shutter_open
+      ~Timeline.timedelta_sparcs_disable
+      ~Timeline.timedelta_sparcs_enable
+      ~Timeline.timedelta_sparcs_finemode
+      ~Timeline.timedelta_sparcs_rlg_disable
+      ~Timeline.timedelta_sparcs_rlg_enable
+      ~Timeline.timedelta_sparcs_spinup
+      ~Timeline.timedelta_sparcs_vent
+      ~Timeline.timedelta_terrier_burnout
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Timeline.__init__
+      ~Timeline.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.nsroc.Timeline
+        :parts: 1
+    

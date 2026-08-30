@@ -1,0 +1,8 @@
+efficiency\_vs\_angle\_0deg
+===========================
+
+.. currentmodule:: esis.flights.f1.optics.gratings.efficiencies
+
+.. autofunction:: esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_angle_0deg
+
+    .. autolink-examples:: esis.flights.f1.optics.gratings.efficiencies.efficiency_vs_angle_0deg

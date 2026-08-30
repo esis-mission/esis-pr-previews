@@ -1,0 +1,1201 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../_static/favicon_io/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../_static/favicon_io/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/favicon_io/apple-touch-icon.png" sizes="180x180" type="image/png">
+    <title>as_built &#8212; ESIS  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css?v=b2176991" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/esis.flights.f1.optics.as_built';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="primaries" href="esis.flights.f1.optics.primaries.html" />
+    <link rel="prev" title="design_full" href="esis.flights.f1.optics.design_full.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_black.png" class="logo__image only-light" alt="ESIS  documentation - Home"/>
+    <img src="../_static/logo_white.png" class="logo__image only-dark pst-js-only" alt="ESIS  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="esis.optics.html">optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.FrontAperture.html">FrontAperture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.CentralObscuration.html">CentralObscuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.PrimaryMirror.html">PrimaryMirror</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.FieldStop.html">FieldStop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Grating.html">Grating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Filter.html">Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Sensor.html">Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.optics.Instrument.html">Instrument</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="esis.optics.abc.html">abc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractFrontAperture.html">AbstractFrontAperture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractCentralObscuration.html">AbstractCentralObscuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractPrimaryMirror.html">AbstractPrimaryMirror</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractFieldStop.html">AbstractFieldStop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractGrating.html">AbstractGrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractFilter.html">AbstractFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.abc.AbstractInstrument.html">AbstractInstrument</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="esis.optics.mixins.html">mixins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="esis.optics.mixins.CylindricallyTransformable.html">CylindricallyTransformable</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esis.nsroc.html">nsroc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="esis.nsroc.Timeline.html">Timeline</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esis.data.html">data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="esis.data.Level_0.html">Level_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esis.data.Level_1.html">Level_1</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="esis.data.abc.html">abc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="esis.data.abc.AbstractChannelData.html">AbstractChannelData</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="esis.flights.html">flights</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="esis.flights.f1.html">f1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="esis.flights.f1.optics.html">optics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.requirements.html">requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.design.html">design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.design_single.html">design_single</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.design_full.html">design_full</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">as_built</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.primaries.html">primaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.gratings.html">gratings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.optics.filters.html">filters</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="esis.flights.f1.nsroc.html">nsroc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.nsroc.timeline.html">timeline</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="esis.flights.f1.data.html">data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.data.path_fits.html">path_fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.data.level_0.html">level_0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f1.data.level_1.html">level_1</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="esis.flights.f2.html">f2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="esis.flights.f2.optics.html">optics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f2.optics.design_proposed.html">design_proposed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esis.flights.f2.optics.materials.html">materials</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="esis.html" class="nav-link">esis</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="esis.flights.html" class="nav-link">flights</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="esis.flights.f1.html" class="nav-link">f1</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="esis.flights.f1.optics.html" class="nav-link">optics</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">as_built</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="as-built">
+<h1>as_built<a class="headerlink" href="#as-built" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="esis.flights.f1.optics.as_built">
+<span class="sig-prename descclassname"><span class="pre">esis.flights.f1.optics.</span></span><span class="sig-name descname"><span class="pre">as_built</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'channel'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_distribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/esis/flights/f1/optics/_instruments/_instruments.html#as_built"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#esis.flights.f1.optics.as_built" title="Link to this definition">#</a></dt>
+<dd><p>Load the as-built optical model.</p>
+<p>Based on <a class="reference internal" href="esis.flights.f1.optics.design.html#esis.flights.f1.optics.design" title="esis.flights.f1.optics.design"><code class="xref py py-func docutils literal notranslate"><span class="pre">design()</span></code></a>, but includes efficiency and figure measurements of the
+primary mirror and gratings, as well as gain measurements of the sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>None</em><em> | </em><a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.vectors.ObjectVectorArray.html#optika.vectors.ObjectVectorArray" title="(in optika)"><em>ObjectVectorArray</em></a>) – sampling of wavelength, field, and pupil positions that will be used to
+characterize the optical system.</p></li>
+<li><p><strong>axis_channel</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the logical axis corresponding to changing camera channel.</p></li>
+<li><p><strong>num_distribution</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – number of Monte Carlo samples to draw when computing uncertainties</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="esis.optics.Instrument.html#esis.optics.Instrument" title="esis.optics._instruments._instruments.Instrument"><em>Instrument</em></a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Load the as-built optical model and print its parameters.</p>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">esis</span>
+
+<span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f1</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">as_built</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>Instrument(
+    name=&#39;ESIS 1 final design (all channels)&#39;,
+    axis_channel=&#39;channel&#39;,
+    front_aperture=&lt;esis.optics._front_apertures._front_apertures.FrontAperture object at 0x7fe6e5ef6010&gt;,
+    central_obscuration=CentralObscuration(
+        num_folds=8,
+        halfwidth=35.31326554 mm,
+        remove_last_vertex=True,
+        translation=Cartesian3dVectorArray(
+            x=0. mm,
+            y=0. mm,
+            z=-1404.27 mm,
+        ),
+    ),
+    primary_mirror=PrimaryMirror(
+        sag=ParabolicSag(
+            transformation=None,
+            parameters_slope_error=SlopeErrorParameters(
+                step_size=4. mm,
+                kernel_size=2. mm,
+            ),
+            parameters_roughness=RoughnessParameters(
+                period_min=0.06 mm,
+                period_max=6. mm,
+            ),
+            parameters_microroughness=RoughnessParameters(
+                period_min=1.6 um,
+                period_max=70. um,
+            ),
+            focal_length=-1000. mm,
+        ),
+        num_folds=8,
+        width_clear=143.94043117 mm,
+        width_border=5.35850129 mm,
+        material=MultilayerMirror(
+            layers=[
+                Layer(
+                    chemical=&#39;SiO2&#39;,
+                    thickness=1. nm,
+                    interface=ErfInterfaceProfile(
+                        width=3.44068978 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;tab:blue&#39;, &#39;alpha&#39;: 0.3},
+                    x_label=None,
+                ),
+                Layer(
+                    chemical=&#39;SiC&#39;,
+                    thickness=21.27827884 nm,
+                    interface=ErfInterfaceProfile(
+                        width=3.44068978 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;tab:blue&#39;, &#39;alpha&#39;: 0.5},
+                    x_label=None,
+                ),
+                Layer(
+                    chemical=&#39;Cr&#39;,
+                    thickness=5. nm,
+                    interface=ErfInterfaceProfile(
+                        width=1.77840007 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;tab:orange&#39;, &#39;alpha&#39;: 0.5},
+                    x_label=None,
+                ),
+            ],
+            substrate=Layer(
+                chemical=&#39;SiO2&#39;,
+                thickness=30. mm,
+                interface=ErfInterfaceProfile(
+                    width=5.53 Angstrom,
+                ),
+                kwargs_plot={&#39;color&#39;: &#39;gray&#39;, &#39;alpha&#39;: 0.5},
+                x_label=None,
+            ),
+        ),
+        translation=Cartesian3dVectorArray(
+            x=UniformUncertainScalarArray(
+                nominal=0. mm,
+                width=1. mm,
+                num_distribution=11,
+                seed=71967619082360938115356412507343569871,
+            ),
+            y=UniformUncertainScalarArray(
+                nominal=0. mm,
+                width=1. mm,
+                num_distribution=11,
+                seed=15699433473226962310783336660888875425,
+            ),
+            z=0. mm,
+        ),
+        pitch=0. deg,
+        yaw=0. deg,
+        roll=0. deg,
+    ),
+    field_stop=FieldStop(
+        num_folds=8,
+        radius_clear=1.82 mm,
+        radius_mechanical=2.81 mm,
+        translation=Cartesian3dVectorArray(
+            x=UniformUncertainScalarArray(
+                nominal=0. mm,
+                width=1. mm,
+                num_distribution=11,
+                seed=71967619082360938115356412507343569871,
+            ),
+            y=UniformUncertainScalarArray(
+                nominal=0. mm,
+                width=1. mm,
+                num_distribution=11,
+                seed=15699433473226962310783336660888875425,
+            ),
+            z=-1000. mm,
+        ),
+    ),
+    grating=Grating(
+        serial_number=ScalarArray(
+            ndarray=[&#39;89025&#39;, &#39;89024&#39;, &#39;89026&#39;, &#39;89027&#39;],
+            axes=(&#39;channel&#39;,),
+        ),
+        manufacturing_number=ScalarArray(
+            ndarray=[&#39;UBO-16-024&#39;, &#39;UBO-16-017&#39;, &#39;UBO-16-019&#39;, &#39;UBO-16-014&#39;],
+            axes=(&#39;channel&#39;,),
+        ),
+        angle_input=1.301 deg,
+        angle_output=8.057 deg,
+        sag=SphericalSag(
+            transformation=None,
+            parameters_slope_error=SlopeErrorParameters(
+                step_size=2. mm,
+                kernel_size=1. mm,
+            ),
+            parameters_roughness=RoughnessParameters(
+                period_min=0.024 mm,
+                period_max=2.4 mm,
+            ),
+            parameters_microroughness=RoughnessParameters(
+                period_min=0.02 um,
+                period_max=2. um,
+            ),
+            radius=ScalarArray(
+                ndarray=[596.88      , 597.05333333, 597.04333333, 597.19166667] mm,
+                axes=(&#39;channel&#39;,),
+            ),
+        ),
+        material=MultilayerMirror(
+            layers=[
+                Layer(
+                    chemical=&#39;SiO2&#39;,
+                    thickness=1. nm,
+                    interface=ErfInterfaceProfile(
+                        width=1. nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;gray&#39;},
+                    x_label=1.1,
+                ),
+                Layer(
+                    chemical=Chemical(
+                        formula=&#39;SiC&#39;,
+                        is_amorphous=True,
+                        table=&#39;kortright&#39;,
+                    ),
+                    thickness=9.60594508 nm,
+                    interface=ErfInterfaceProfile(
+                        width=1.90483881 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;lightgray&#39;},
+                    x_label=None,
+                ),
+                Layer(
+                    chemical=&#39;Al&#39;,
+                    thickness=4.80725357 nm,
+                    interface=ErfInterfaceProfile(
+                        width=1.90483881 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;lightblue&#39;},
+                    x_label=1.1,
+                ),
+                Layer(
+                    chemical=Chemical(
+                        formula=&#39;Mg&#39;,
+                        is_amorphous=False,
+                        table=&#39;fernandez_perea&#39;,
+                    ),
+                    thickness=26.62708342 nm,
+                    interface=ErfInterfaceProfile(
+                        width=1.90483881 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;pink&#39;},
+                    x_label=None,
+                ),
+                PeriodicLayerSequence(
+                    layers=[
+                        Layer(
+                            chemical=&#39;Al&#39;,
+                            thickness=1.20181339 nm,
+                            interface=ErfInterfaceProfile(
+                                width=1.90483881 nm,
+                            ),
+                            kwargs_plot={&#39;color&#39;: &#39;lightblue&#39;},
+                            x_label=1.1,
+                        ),
+                        Layer(
+                            chemical=Chemical(
+                                formula=&#39;SiC&#39;,
+                                is_amorphous=True,
+                                table=&#39;kortright&#39;,
+                            ),
+                            thickness=9.60594508 nm,
+                            interface=ErfInterfaceProfile(
+                                width=1.90483881 nm,
+                            ),
+                            kwargs_plot={&#39;color&#39;: &#39;lightgray&#39;},
+                            x_label=None,
+                        ),
+                        Layer(
+                            chemical=Chemical(
+                                formula=&#39;Mg&#39;,
+                                is_amorphous=False,
+                                table=&#39;fernandez_perea&#39;,
+                            ),
+                            thickness=26.62708342 nm,
+                            interface=ErfInterfaceProfile(
+                                width=1.90483881 nm,
+                            ),
+                            kwargs_plot={&#39;color&#39;: &#39;pink&#39;},
+                            x_label=None,
+                        ),
+                    ],
+                    num_periods=3,
+                ),
+                Layer(
+                    chemical=&#39;Al&#39;,
+                    thickness=12.01813392 nm,
+                    interface=ErfInterfaceProfile(
+                        width=1.90483881 nm,
+                    ),
+                    kwargs_plot={&#39;color&#39;: &#39;lightblue&#39;},
+                    x_label=1.1,
+                ),
+            ],
+            substrate=Layer(
+                chemical=&#39;SiO2&#39;,
+                thickness=10. mm,
+                interface=ErfInterfaceProfile(
+                    width=0.5 nm,
+                ),
+                kwargs_plot={&#39;color&#39;: &#39;gray&#39;},
+                x_label=None,
+            ),
+        ),
+        rulings=MeasuredRulings(
+            spacing=Polynomial1dRulingSpacing(
+                coefficients={0: UncertainScalarArray(
+    nominal=0.00038677 mm,
+    distribution=ScalarArray(
+        ndarray=[0.00038687, 0.00038682, 0.00038668, 0.00038676, 0.00038692, 0.00038691, 0.00038677, 0.00038678,
+                 0.00038678, 0.00038681, 0.00038691] mm,
+        axes=(&#39;_distribution&#39;,),
+    ),
+), 1: UniformUncertainScalarArray(
+    nominal=-3.3849e-05 um / mm,
+    width=5.12e-07 um / mm,
+    num_distribution=11,
+    seed=329869872466312402796082487199101091404,
+), 2: UniformUncertainScalarArray(
+    nominal=-1.3625e-07 um / mm2,
+    width=8.558e-09 um / mm2,
+    num_distribution=11,
+    seed=112968521009357236984484910939464160130,
+)},
+                normal=Cartesian3dVectorArray(x=1, y=0, z=0),
+                transformation=None,
+            ),
+            diffraction_order=-1,
+            efficiency_measured=FunctionArray(
+                inputs=TemporalSpectralDirectionalVectorArray(
+                    time=&lt;Time object: scale=&#39;utc&#39; format=&#39;iso&#39; value=2018-01-21 00:00:00.000&gt;,
+                    wavelength=ScalarArray(
+                        ndarray=[449.9605, 455.0952, 460.0931, 465.0887, 470.089 , 475.0917, 480.1014, 485.0828,
+                                 490.0831, 495.0905, 500.0861, 505.0863, 510.089 , 515.1011, 520.0967, 525.0922,
+                                 530.0902, 535.0858, 540.0861, 545.0816, 550.0914, 555.0869, 560.0919, 565.0899,
+                                 570.0878, 575.0905, 580.0884, 585.0911, 590.0866, 595.0964, 600.0919, 605.0899,
+                                 610.0925, 615.0952, 620.0931, 625.0934, 630.0843, 635.0822, 640.0896, 645.0875,
+                                 650.0949, 655.0905, 660.0837, 665.0887, 670.0961, 675.0846, 680.0802, 685.0899,
+                                 690.0902, 695.0881, 700.0908, 705.0863, 710.0984, 715.0916, 720.0754, 725.0852,
+                                 730.0831, 735.0787, 740.0861, 745.0863, 750.0937, 755.0916, 760.0872, 765.0875,
+                                 770.0902, 775.0881, 780.0837, 785.0911, 790.0866, 795.0893, 800.0802, 805.097 ,
+                                 810.0902, 815.0881, 820.0837, 825.0911, 830.089 , 835.0893, 840.0943, 845.0875,
+                                 850.0902, 855.0881, 860.0837, 865.0863, 870.0914, 875.0846, 880.092 , 885.0875,
+                                 890.0878, 895.0928, 900.0861, 905.0887, 910.0914, 915.094 , 920.0967, 925.0852,
+                                 930.0925, 935.0928, 940.0861, 945.0887, 950.0749] Angstrom,
+                        axes=(&#39;wavelength&#39;,),
+                    ),
+                    direction=0. deg,
+                ),
+                outputs=ScalarArray(
+                    ndarray=[0.12321582, 0.59322994, 0.31578597, 0.37807883, 0.17012928, 0.10194699, 0.18328038,
+                             0.13686031, 0.17249875, 0.23871327, 0.29489931, 0.42754583, 0.47872766, 0.45725882,
+                             0.46379642, 0.47099969, 0.49313259, 0.51549805, 0.53398935, 0.5273769 , 0.51934506,
+                             0.51059013, 0.49531883, 0.48487497, 0.47691071, 0.4673829 , 0.45800468, 0.44929878,
+                             0.44494296, 0.44225212, 0.43921125, 0.43504338, 0.4323591 , 0.43168854, 0.43338953,
+                             0.43193699, 0.4241297 , 0.40739984, 0.38069944, 0.34527646, 0.30570771, 0.26643472,
+                             0.23812677, 0.22188315, 0.22124548, 0.23516671, 0.25738814, 0.28634021, 0.32160106,
+                             0.34335857, 0.35209299, 0.35816431, 0.34814608, 0.33287109, 0.31726986, 0.29441473,
+                             0.29216422, 0.29250187, 0.2702469 , 0.26815913, 0.2805732 , 0.28988671, 0.27849082,
+                             0.29253054, 0.27877292, 0.33070687, 0.29231947, 0.32340672, 0.26830668, 0.36282648,
+                             0.34440822, 0.26244641, 0.2573431 , 0.29912549, 0.29644082, 0.19558709, 0.34615717,
+                             0.27346896, 0.32036365, 0.29543568, 0.24915719, 0.23839011, 0.34789841, 0.31262912,
+                             0.30885046, 0.27228885, 0.34258837, 0.34673988, 0.37144668, 0.19229355, 0.39421528,
+                             0.24486465, 0.18794816, 0.16429062, 0.35197533, 0.35929711, 0.58378151, 0.06519925,
+                             0.46418769, 0.26846698, 0.04033995] ,
+                    axes=(&#39;wavelength&#39;,),
+                ),
+            ),
+        ),
+        num_folds=8,
+        halfwidth_inner=8.44 mm,
+        halfwidth_outer=8.49 mm,
+        width_border=2. mm,
+        width_border_inner=4.58 mm,
+        clearance=1.25 mm,
+        distance_radial=20.74999998 mm,
+        azimuth=ScalarArray(
+            ndarray=[ 22.5,  67.5, 112.5, 157.5] deg,
+            axes=(&#39;channel&#39;,),
+        ),
+        translation=Cartesian3dVectorArray(
+            x=UniformUncertainScalarArray(
+                nominal=0. mm,
+                width=1. mm,
+                num_distribution=11,
+                seed=268827035523857317240856824879161492947,
+            ),
+            y=UniformUncertainScalarArray(
+                nominal=0. mm,
+                width=1. mm,
+                num_distribution=11,
+                seed=271848020833971290943398258332359372941,
+            ),
+            z=UniformUncertainScalarArray(
+                nominal=-1374.7 mm,
+                width=1.52752523e-05 m,
+                num_distribution=11,
+                seed=334495149580179008661797779475673063279,
+            ),
+        ),
+        pitch=0. deg,
+        yaw=-4.46956724 deg,
+        roll=UniformUncertainScalarArray(
+            nominal=0. deg,
+            width=0.013 rad,
+            num_distribution=11,
+            seed=264238292223191947886392788461005086671,
+        ),
+    ),
+    filter=Filter(
+        material=ThinFilmFilter(
+            layer=Layer(
+                chemical=&#39;Al&#39;,
+                thickness=100. nm,
+                interface=None,
+                kwargs_plot={&#39;color&#39;: &#39;lightgray&#39;},
+                x_label=None,
+            ),
+            layer_oxide=Layer(
+                chemical=Chemical(
+                    formula=&#39;Al2O3&#39;,
+                    is_amorphous=True,
+                    table=&#39;palik&#39;,
+                ),
+                thickness=4. nm,
+                interface=None,
+                kwargs_plot={&#39;color&#39;: &#39;gray&#39;},
+                x_label=1.1,
+            ),
+            mesh=Mesh(
+                chemical=&#39;Ni&#39;,
+                efficiency=0.82,
+                pitch=70. 1 / inch,
+            ),
+        ),
+        radius_clear=15. mm,
+        width_border=0. mm,
+        distance_radial=95.9 mm,
+        azimuth=ScalarArray(
+            ndarray=[ 22.5,  67.5, 112.5, 157.5] deg,
+            axes=(&#39;channel&#39;,),
+        ),
+        translation=Cartesian3dVectorArray(
+            x=0. mm,
+            y=0. mm,
+            z=-73.03800115 mm,
+        ),
+        pitch=0. deg,
+        yaw=-3.45 deg,
+        roll=45. deg,
+    ),
+    camera=Camera(
+        sensor=Sensor(
+            manufacturer=&#39;Teledyne/e2v&#39;,
+            family=&#39;CCD230-42&#39;,
+            serial_number=ScalarArray(
+                ndarray=[&#39;SN6&#39;, &#39;SN7&#39;, &#39;SN9&#39;, &#39;SN10&#39;],
+                axes=(&#39;channel&#39;,),
+            ),
+            grade=None,
+            width_pixel=15. um,
+            num_pixel_x=2048,
+            num_pixel_y=2064,
+            num_blank=50,
+            num_overscan=2,
+            cte=99.9995 %,
+            readout_noise=6. electron,
+            readout_mode=&#39;transfer&#39;,
+            temperature=-55. deg_C,
+            width_package_x=42. mm,
+            width_package_y=61. mm,
+            distance_radial=108. mm,
+            azimuth=ScalarArray(
+                ndarray=[ 22.5,  67.5, 112.5, 157.5] deg,
+                axes=(&#39;channel&#39;,),
+            ),
+            translation=Cartesian3dVectorArray(
+                x=0. mm,
+                y=0. mm,
+                z=126.96199885 mm,
+            ),
+            pitch=0. deg,
+            yaw=-12.252 deg,
+            roll=0. deg,
+            position_image=0. mm,
+        ),
+        gain=ScalarArray(
+            ndarray=[[[2.55, 2.63],
+                      [2.57, 2.57]],
+
+                     [[2.57, 2.53],
+                      [2.5 , 2.52]],
+
+                     [[2.57, 2.59],
+                      [2.53, 2.52]],
+
+                     [[2.6 , 2.58],
+                      [2.6 , 2.54]]] electron / DN,
+            axes=(&#39;channel&#39;, &#39;tap_y&#39;, &#39;tap_x&#39;),
+        ),
+        bits_adc=16,
+        timedelta_exposure=10. s,
+        timedelta_exposure_min=2. s,
+        timedelta_exposure_max=600. s,
+        timedelta_exposure_step=100. ms,
+        timedelta_transfer=50. ms,
+        timedelta_readout=1.1 s,
+        axis_tap_x=&#39;tap_x&#39;,
+        axis_tap_y=&#39;tap_y&#39;,
+        timedelta_sync=1. ms,
+        channel=ScalarArray(
+            ndarray=[1, 2, 3, 4],
+            axes=(&#39;channel&#39;,),
+        ),
+        channel_trigger=1,
+    ),
+    wavelength=629.77 Angstrom,
+    field=Cartesian2dVectorLinearSpace(
+        start=-1,
+        stop=1,
+        axis=Cartesian2dVectorArray(x=&#39;field_x&#39;, y=&#39;field_y&#39;),
+        num=11,
+        endpoint=True,
+        centers=True,
+    ),
+    pupil=Cartesian2dVectorLinearSpace(
+        start=-1,
+        stop=1,
+        axis=Cartesian2dVectorArray(x=&#39;pupil_x&#39;, y=&#39;pupil_y&#39;),
+        num=11,
+        endpoint=True,
+        centers=True,
+    ),
+    pitch=0. deg,
+    yaw=0. deg,
+    roll=0. deg,
+    kwargs_plot=None,
+)
+</pre></div>
+</div>
+</div>
+</div>
+<p><div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>References to <a class="reference internal" href="#esis.flights.f1.optics.as_built" title="esis.flights.f1.optics.as_built"><code class="xref py py-class docutils literal notranslate"><span class="pre">esis.flights.f1.optics.as_built</span></code></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#as-built">as_built</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="esis.flights.f1.optics.design_full.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">design_full</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="esis.flights.f1.optics.primaries.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">primaries</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esis.flights.f1.optics.as_built"><code class="docutils literal notranslate"><span class="pre">as_built()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/_autosummary/esis.flights.f1.optics.as_built.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
