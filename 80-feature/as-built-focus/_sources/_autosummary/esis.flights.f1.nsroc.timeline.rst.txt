@@ -1,8 +1,0 @@
-timeline
-========
-
-.. currentmodule:: esis.flights.f1.nsroc
-
-.. autofunction:: esis.flights.f1.nsroc.timeline
-
-    .. autolink-examples:: esis.flights.f1.nsroc.timeline
