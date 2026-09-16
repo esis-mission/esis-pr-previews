@@ -1,0 +1,46 @@
+optics
+======
+
+.. automodule:: esis.flights.f2.optics
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      design_proposed
+      design_guess
+      design_single
+      design
+      design_visible
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Modules
+
+    .. autosummary::
+       :toctree:
+       :template: module_custom.rst
+       :recursive:
+    
+       materials
+    
+    
+

@@ -1,0 +1,36 @@
+LinearMerit
+===========
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.LinearMerit
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~LinearMerit.__init__
+      ~LinearMerit.correlation
+      ~LinearMerit.image
+      ~LinearMerit.linearize
+      ~LinearMerit.mask_field_stop
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.LinearMerit
+        :parts: 1
+    

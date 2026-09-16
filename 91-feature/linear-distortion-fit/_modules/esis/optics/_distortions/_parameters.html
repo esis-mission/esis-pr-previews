@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esis.optics._distortions._parameters &#8212; ESIS  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-codeautolink.css?v=b2176991" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/esis/optics/_distortions/_parameters';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../../_static/searchtools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo_black.png" class="logo__image only-light" alt="ESIS  documentation - Home"/>
+    <img src="../../../../_static/logo_white.png" class="logo__image only-dark pst-js-only" alt="ESIS  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../reports/distortion-fit.html">
+    Distortion fit
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../reports/f2/design.html">
+    Design & Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../reports/f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../schedule.html">
+    Schedule
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/distortion-fit.html">
+    Distortion fit
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/f2/design.html">
+    Design & Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../schedule.html">
+    Schedule
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">esis.optics._distortions._parameters</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for esis.optics._distortions._parameters</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""The degrees of freedom of the distortion fit, and their serialization."""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dataclasses</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pathlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.table</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">named_arrays</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">na</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">optika</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esis</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"DistortionParameters"</span><span class="p">,</span>
+    <span class="s2">"KAPPA_FOCUS"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">KAPPA_FOCUS</span> <span class="o">=</span> <span class="mf">17.0</span>
+<span class="sd">"""</span>
+<span class="sd">The sensor travel per unit of grating travel along the beam that keeps the</span>
+<span class="sd">image in focus.</span>
+
+<span class="sd">For a magnification :math:`m` the longitudinal magnification is :math:`m^2`,</span>
+<span class="sd">about 16 for ESIS; measured on the as-built model it is 16.9 on every</span>
+<span class="sd">channel (the O V spot size changes by 58--59 μm rms per mm of grating</span>
+<span class="sd">travel and by 3.4--3.5 μm per mm of sensor travel, in opposite senses).</span>
+<span class="sd">:attr:`DistortionParameters.z_sensor` moves the grating by this fraction of</span>
+<span class="sd">the sensor move, so that it changes the magnification of a channel without</span>
+<span class="sd">defocusing it.</span>
+<span class="sd">"""</span>
+
+
+<div class="viewcode-block" id="DistortionParameters">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters">[docs]</a>
+<span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span><span class="p">(</span><span class="n">eq</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">DistortionParameters</span><span class="p">(</span>
+    <span class="n">optika</span><span class="o">.</span><span class="n">mixins</span><span class="o">.</span><span class="n">Printable</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    The degrees of freedom adjusted when fitting an instrument model to images.</span>
+
+<span class="sd">    An instance of this class serves both as a point in parameter space and as</span>
+<span class="sd">    the prototype that defines the units and structure of the flat vector seen</span>
+<span class="sd">    by :mod:`scipy.optimize` routines: :func:`named_arrays.pack` flattens it</span>
+<span class="sd">    into a dimensionless vector and :func:`named_arrays.unpack` rebuilds it.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Gather the distortion parameters of the ESIS flight-1 design and flatten</span>
+<span class="sd">    them into a vector suitable for :mod:`scipy.optimize`.</span>
+
+<span class="sd">    .. jupyter-execute::</span>
+
+<span class="sd">        import named_arrays as na</span>
+<span class="sd">        import esis</span>
+
+<span class="sd">        instrument = esis.flights.f1.optics.design(num_distribution=0)</span>
+<span class="sd">        parameters = esis.optics.DistortionParameters.from_instrument(instrument)</span>
+<span class="sd">        na.pack(parameters)</span>
+<span class="sd">    """</span>
+
+    <span class="n">yaw_grating</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The yaw angle of the diffraction grating."""</span>
+
+    <span class="n">pitch_grating</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The pitch angle of the diffraction grating."""</span>
+
+    <span class="n">roll_grating</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The roll angle of the diffraction grating."""</span>
+
+    <span class="n">roll_field_stop</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The roll angle of the field stop."""</span>
+
+    <span class="n">spacing_rulings</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The constant coefficient of the grating ruling spacing polynomial."""</span>
+
+    <span class="n">displacement_primary</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    The displacement of the primary mirror along the optic axis relative to</span>
+<span class="sd">    its nominal focal length.</span>
+
+<span class="sd">    A displacement :math:`d` simultaneously sets the focal length to</span>
+<span class="sd">    :math:`f_\\mathrm{nominal} + d` and the translation of the primary mirror</span>
+<span class="sd">    to :math:`-d`, so that the primary moves while the focal plane stays put.</span>
+<span class="sd">    """</span>
+
+    <span class="n">pitch</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The pitch angle of the entire instrument."""</span>
+
+    <span class="n">yaw</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""The yaw angle of the entire instrument."""</span>
+
+    <span class="n">roll</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    The roll angle of the entire instrument.</span>
+
+<span class="sd">    In the flight-1 model this is defined per channel as the offset from that</span>
+<span class="sd">    channel's grating azimuth, so it is a grating placement term rather than</span>
+<span class="sd">    a quantity shared by the channels.</span>
+<span class="sd">    """</span>
+
+    <span class="n">z_sensor</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    The displacement of the sensor along its normal, with the grating</span>
+<span class="sd">    following along the beam by :obj:`KAPPA_FOCUS` times less so that the</span>
+<span class="sd">    image stays in focus: a change of the magnification of one channel</span>
+<span class="sd">    without a change of its focus.</span>
+
+<span class="sd">    Together with the sensor rotations and in-plane translations below this</span>
+<span class="sd">    lets a channel's mapping differ from another's by a scale, an</span>
+<span class="sd">    anisotropy and a rotation, which is what the inter-channel alignment</span>
+<span class="sd">    measures and which none of the parameters above can produce.</span>
+<span class="sd">    """</span>
+
+    <span class="n">roll_sensor</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+<span class="w">    </span><span class="sd">"""The roll of the sensor about its normal (a rotation of the image)."""</span>
+
+    <span class="n">pitch_sensor</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+<span class="w">    </span><span class="sd">"""The pitch of the sensor (a foreshortening of the image along one axis)."""</span>
+
+    <span class="n">yaw_sensor</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+<span class="w">    </span><span class="sd">"""The yaw of the sensor (a foreshortening of the image along the other axis)."""</span>
+
+    <span class="n">x_sensor</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span>
+<span class="w">    </span><span class="sd">"""The in-plane translation of the sensor along its :math:`x` axis."""</span>
+
+    <span class="n">y_sensor</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span>
+<span class="w">    </span><span class="sd">"""The in-plane translation of the sensor along its :math:`y` axis."""</span>
+
+<div class="viewcode-block" id="DistortionParameters.from_instrument">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters.from_instrument">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_instrument</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">instrument</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">AbstractInstrument</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DistortionParameters</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Gather the current distortion parameters of the given instrument.</span>
+
+<span class="sd">        The parameters are converted to a canonical set of units</span>
+<span class="sd">        (:obj:`~astropy.units.arcmin` for the grating angles,</span>
+<span class="sd">        :obj:`~astropy.units.arcsec` for the instrument pointing, etc.)</span>
+<span class="sd">        so that the components of the packed vector are of order unity</span>
+<span class="sd">        and bounds built from different instances are consistent.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instrument</span>
+<span class="sd">            The instrument model to gather the parameters from.</span>
+<span class="sd">        """</span>
+        <span class="n">primary_mirror</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">primary_mirror</span>
+        <span class="n">sensor</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">sensor</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">yaw_grating</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">yaw</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">arcmin</span><span class="p">),</span>
+            <span class="n">pitch_grating</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">pitch</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">arcmin</span><span class="p">),</span>
+            <span class="n">roll_grating</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">roll</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+            <span class="n">roll_field_stop</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">field_stop</span><span class="o">.</span><span class="n">roll</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+            <span class="n">spacing_rulings</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">rulings</span><span class="o">.</span><span class="n">spacing</span><span class="o">.</span><span class="n">coefficients</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">),</span>
+            <span class="n">displacement_primary</span><span class="o">=-</span><span class="n">primary_mirror</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+            <span class="n">pitch</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">pitch</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">),</span>
+            <span class="n">yaw</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">yaw</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">),</span>
+            <span class="n">roll</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">roll</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+            <span class="n">z_sensor</span><span class="o">=</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">_design</span><span class="p">(</span><span class="n">instrument</span><span class="p">,</span> <span class="s2">"z_sensor"</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+            <span class="n">roll_sensor</span><span class="o">=</span><span class="n">sensor</span><span class="o">.</span><span class="n">roll</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+            <span class="n">pitch_sensor</span><span class="o">=</span><span class="n">sensor</span><span class="o">.</span><span class="n">pitch</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+            <span class="n">yaw_sensor</span><span class="o">=</span><span class="n">sensor</span><span class="o">.</span><span class="n">yaw</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+            <span class="n">x_sensor</span><span class="o">=</span><span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+            <span class="n">y_sensor</span><span class="o">=</span><span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DistortionParameters.to_instrument">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters.to_instrument">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_instrument</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">instrument</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">AbstractInstrument</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">AbstractInstrument</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Apply these parameters to a copy of the given instrument.</span>
+
+<span class="sd">        The given instrument is left unmodified, and any cached optical</span>
+<span class="sd">        system on the result is discarded so that it is rebuilt with the</span>
+<span class="sd">        new parameters.</span>
+
+<span class="sd">        The nominal focal length of the primary mirror is recovered from the</span>
+<span class="sd">        invariant ``focal_length + translation.z``, which is unchanged by</span>
+<span class="sd">        applying a :attr:`displacement_primary`, so this method may be applied</span>
+<span class="sd">        repeatedly to the results of previous applications.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instrument</span>
+<span class="sd">            The instrument model to apply the parameters to.</span>
+<span class="sd">        """</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span>
+
+        <span class="c1"># discard the cached system before the deep copy so that the</span>
+        <span class="c1"># (potentially large) raytrace results are not copied</span>
+        <span class="n">result</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"system"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="c1"># copy the parameter values too, so that the result does not alias</span>
+        <span class="c1"># this object's arrays (mutating one must not silently change the</span>
+        <span class="c1"># other)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">primary_mirror</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">primary_mirror</span>
+        <span class="n">focal_length_nominal</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">primary_mirror</span><span class="o">.</span><span class="n">sag</span><span class="o">.</span><span class="n">focal_length</span> <span class="o">+</span> <span class="n">primary_mirror</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span>
+        <span class="p">)</span>
+
+        <span class="n">result</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">yaw</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">yaw_grating</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pitch_grating</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">roll</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">roll_grating</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">field_stop</span><span class="o">.</span><span class="n">roll</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">roll_field_stop</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">rulings</span><span class="o">.</span><span class="n">spacing</span><span class="o">.</span><span class="n">coefficients</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">spacing_rulings</span>
+        <span class="n">primary_mirror</span><span class="o">.</span><span class="n">sag</span><span class="o">.</span><span class="n">focal_length</span> <span class="o">=</span> <span class="n">focal_length_nominal</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">displacement_primary</span>
+        <span class="n">primary_mirror</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">p</span><span class="o">.</span><span class="n">displacement_primary</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pitch</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">yaw</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">yaw</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">roll</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">roll</span>
+
+        <span class="c1"># the sensor terms are offsets from the placement the instrument was</span>
+        <span class="c1"># built with, so that repeated applications do not accumulate; the</span>
+        <span class="c1"># compound focus-preserving move shifts the grating along with it</span>
+        <span class="n">sensor</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">sensor</span>
+        <span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">_design</span><span class="p">(</span><span class="n">instrument</span><span class="p">,</span> <span class="s2">"z_sensor"</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">z_sensor</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">_design</span><span class="p">(</span><span class="n">instrument</span><span class="p">,</span> <span class="s2">"z_grating"</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">z_sensor</span> <span class="o">/</span> <span class="n">KAPPA_FOCUS</span>
+        <span class="p">)</span>
+        <span class="n">sensor</span><span class="o">.</span><span class="n">roll</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">roll_sensor</span>
+        <span class="n">sensor</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pitch_sensor</span>
+        <span class="n">sensor</span><span class="o">.</span><span class="n">yaw</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">yaw_sensor</span>
+        <span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">x_sensor</span>
+        <span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">y_sensor</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"z_sensor"</span><span class="p">,</span> <span class="s2">"z_grating"</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="sa">f</span><span class="s2">"_design_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">_design</span><span class="p">(</span><span class="n">instrument</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="DistortionParameters.to_file">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters.to_file">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_file</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Save these parameters as a plain-text ECSV table.</span>
+
+<span class="sd">        The fields become the columns of the table (with their units), and</span>
+<span class="sd">        the elements along the (single) logical axis of the parameters become</span>
+<span class="sd">        its rows, so that fit results can be committed to version control and</span>
+<span class="sd">        reviewed as text. Scalar fields are broadcast along the axis.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path</span>
+<span class="sd">            The path of the file to write.</span>
+<span class="sd">        metadata</span>
+<span class="sd">            Additional provenance recorded in the table header, for example</span>
+<span class="sd">            the date and configuration of the fit that produced the</span>
+<span class="sd">            parameters.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the parameters have more than one logical axis, or if</span>
+<span class="sd">            `metadata` contains the reserved key ``"axis"``, which records</span>
+<span class="sd">            the name of the logical axis for :meth:`from_file`.</span>
+
+<span class="sd">        See Also</span>
+<span class="sd">        --------</span>
+<span class="sd">        from_file : The inverse of this method.</span>
+<span class="sd">        """</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"only parameters with at most one axis can be saved, "</span> <span class="sa">f</span><span class="s2">"got </span><span class="si">{</span><span class="n">shape</span><span class="si">=}</span><span class="s2">"</span>
+            <span class="p">)</span>
+        <span class="n">axis</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">shape</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">shape</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">columns</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">fields</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">as_named_array</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">unit</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">ndarray</span>
+            <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">unit</span>
+            <span class="n">columns</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">num</span><span class="p">,),</span> <span class="n">subok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">table</span> <span class="o">=</span> <span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">QTable</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="s2">"axis"</span> <span class="ow">in</span> <span class="n">metadata</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"the metadata key 'axis' is reserved for the name of the "</span>
+                <span class="sa">f</span><span class="s2">"logical axis, got </span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'axis'</span><span class="p">]</span><span class="si">=}</span><span class="s2">"</span>
+            <span class="p">)</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s2">"axis"</span><span class="p">]</span> <span class="o">=</span> <span class="n">axis</span>
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+
+        <span class="n">table</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"ascii.ecsv"</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DistortionParameters.from_file">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters.from_file">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_file</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DistortionParameters</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Load parameters saved by :meth:`to_file`.</span>
+
+<span class="sd">        The logical axis of the parameters is recovered from the ``axis``</span>
+<span class="sd">        entry of the table header.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path</span>
+<span class="sd">            The path of the file to read.</span>
+<span class="sd">        axis</span>
+<span class="sd">            The name to use for the logical axis of the parameters,</span>
+<span class="sd">            overriding the name recorded in the file.</span>
+<span class="sd">        """</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">QTable</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"ascii.ecsv"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">axis</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s2">"axis"</span><span class="p">]</span>
+
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">fields</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">colnames</span><span class="p">:</span>
+                <span class="c1"># written before this field existed: the default applies</span>
+                <span class="k">continue</span>
+            <span class="n">column</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">fields</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">column</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">fields</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">column</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span> <span class="o">*</span> <span class="n">column</span><span class="o">.</span><span class="n">unit</span>
+                <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">fields</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_design</span><span class="p">(</span><span class="n">instrument</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">AbstractInstrument</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Return the placement the instrument was built with, before any sensor term.</span>
+
+<span class="sd">    An instrument returned by :meth:`DistortionParameters.to_instrument`</span>
+<span class="sd">    remembers the values it was built from, so that applying parameters to</span>
+<span class="sd">    it again measures the sensor terms from the same origin.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If `name` is not a placement this function knows.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="sa">f</span><span class="s2">"_design_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span> <span class="ow">in</span> <span class="n">instrument</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">instrument</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="sa">f</span><span class="s2">"_design_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"z_sensor"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">instrument</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"z_grating"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">instrument</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># pragma: nocover</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+optics
+======
+
+.. automodule:: esis.flights.f1.optics
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      requirements
+      design
+      design_single
+      design_full
+      as_built
+      distortion_fit
+      distortion_fit_bounds
+      fit_distortion_reference
+      fit_distortion_pointing
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Modules
+
+    .. autosummary::
+       :toctree:
+       :template: module_custom.rst
+       :recursive:
+    
+       primaries
+       gratings
+       filters
+    
+    
+

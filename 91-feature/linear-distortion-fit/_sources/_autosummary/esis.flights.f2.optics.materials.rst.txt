@@ -1,0 +1,34 @@
+materials
+=========
+
+.. automodule:: esis.flights.f2.optics.materials
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      multilayer_AlSc
+      multilayer_SiSc
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

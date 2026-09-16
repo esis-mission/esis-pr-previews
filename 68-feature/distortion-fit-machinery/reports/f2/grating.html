@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../../_static/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../_static/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../_static/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<title>Grating Specifications — ESIS  documentation</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+<noscript>
+<style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+</noscript>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="../../_static/pygments.css?v=8f2a1f02" rel="stylesheet" type="text/css"/>
+<link href="../../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/thebelab.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/nbsphinx-code-cells.css?v=2aa19091" rel="stylesheet" type="text/css"/>
+<!-- So that users can add custom icons -->
+<script defer="" src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<link as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+<script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="../../_static/thebelab-helper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+<script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'reports/f2/grating';</script>
+<script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="../../roadmap.html" rel="next" title="Roadmap"/>
+<link href="design.html" rel="prev" title="Design &amp; Specifications"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+<meta content="" name="docsearch:version"/>
+<script src="../../_static/searchtools.js"></script>
+<script src="../../_static/language_data.js"></script>
+<script src="../../searchindex.js"></script>
+</head>
+<body data-default-mode="">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<dialog id="pst-search-dialog">
+<form action="../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search the docs ..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" name="q" placeholder="Search the docs ..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</dialog>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none" id="pst-header">
+<div class="bd-header__inner bd-page-width">
+<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<span class="fa-solid fa-bars"></span>
+</button>
+<div class="col-lg-3 navbar-header-items__start">
+<div class="navbar-item">
+<a class="navbar-brand logo" href="../../index.html">
+<img alt="ESIS  documentation - Home" class="logo__image only-light" src="../../_static/logo_black.png"/>
+<img alt="ESIS  documentation - Home" class="logo__image only-dark pst-js-only" src="../../_static/logo_white.png"/>
+</a></div>
+</div>
+<div class="col-lg-9 navbar-header-items">
+<div class="me-auto navbar-header-items__center">
+<div class="navbar-item">
+<nav>
+<ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../throughput.html">
+    Throughput
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+<li class="nav-item dropdown">
+<button aria-controls="pst-nav-more-links" aria-expanded="false" class="btn dropdown-toggle nav-item" data-bs-toggle="dropdown" type="button">
+                    More
+                </button>
+<ul class="dropdown-menu" id="pst-nav-more-links">
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../distortion-fit.html">
+    Fitting the ESIS-I distortion
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="design.html">
+    Design &amp; Specifications
+  </a>
+</li>
+<li class="current active">
+<a class="nav-link dropdown-item nav-internal" href="#">
+    Grating Specifications
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../../schedule.html">
+    Schedule
+  </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div>
+<div class="navbar-header-items__end">
+<div class="navbar-item navbar-persistent--container">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<div class="navbar-item">
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div></div>
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/esis-mission/esis" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<span class="fa-solid fa-outdent"></span>
+</button>
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<dialog id="pst-primary-sidebar-modal"></dialog>
+<div class="bd-sidebar-primary bd-sidebar" id="pst-primary-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+<div class="sidebar-header-items__center">
+<div class="navbar-item">
+<nav>
+<ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../throughput.html">
+    Throughput
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../distortion-fit.html">
+    Fitting the ESIS-I distortion
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="design.html">
+    Design &amp; Specifications
+  </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="#">
+    Grating Specifications
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../schedule.html">
+    Schedule
+  </a>
+</li>
+</ul>
+</nav></div>
+</div>
+<div class="sidebar-header-items__end">
+<div class="navbar-item">
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div></div>
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/esis-mission/esis" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item pst-sidebar-collapse"><button aria-controls="pst-primary-sidebar" aria-expanded="true" id="pst-collapse-sidebar-button">
+<svg aria-hidden="true" class="pst-icon" focusable="false" role="img" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z" fill="currentColor"></path>
+</svg>
+<span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+<span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+<div class="sidebar-primary-item">
+<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
+<p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
+<div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+<div class="sidebar-primary-item">
+<div class="flat" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" id="ethical-ad-placement">
+</div></div>
+</div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item">
+<nav aria-label="Breadcrumb" class="d-print-none">
+<ul class="bd-breadcrumbs">
+<li class="breadcrumb-item breadcrumb-home">
+<a aria-label="Home" class="nav-link" href="../../index.html">
+<i class="fa-solid fa-home"></i>
+</a>
+</li>
+<li aria-current="page" class="breadcrumb-item active"><span class="ellipsis">Grating Specifications</span></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="Grating-Specifications">
+<h1>Grating Specifications<a class="headerlink" href="#Grating-Specifications" title="Link to this heading">#</a></h1>
+<p>This report collects the specifications of the ESIS-II diffraction gratings
+in a form that can be independently checked against the vendor’s ruling
+prescription, in the same spirit as the primary-mirror sag table in
+<a class="reference internal" href="design.html"><span class="doc">Design &amp; Specifications</span></a>.</p>
+<p>The ESIS-II gratings are spherical, varied-line-space (VLS) gratings with a
+trapezoidal aperture:
+a skinny end which points toward the axis of symmetry of the instrument,
+and a fat end which points away from it.
+Since the flight rulings are too fine to test with visible light,
+each science grating is paired with a visible-light alignment grating whose
+ruling spacing is scaled so that a HeNe laser reproduces the flight geometry.
+The alignment gratings are modeled by
+<a class="reference internal" href="../../_autosummary/esis.flights.f2.optics.design_visible.html#esis.flights.f2.optics.design_visible" title="esis.flights.f2.optics.design_visible"><code class="xref py py-func docutils literal notranslate"><span class="pre">design_visible()</span></code></a>,
+a visible-light version of the instrument which inherits everything from the
+EUV design except the grating ruling spacing.</p>
+<p>We start by verifying how the ruling spacing changes from the skinny end of
+the grating to the fat end.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/index.html#module-numpy"><span class="nn">numpy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/pyplot_summary.html#module-matplotlib.pyplot"><span class="nn">matplotlib.pyplot</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/units/ref_api.html#module-astropy.units"><span class="nn">astropy.units</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/visualization/ref_api.html#module-astropy.visualization"><span class="nn">astropy.visualization</span></a>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.html#module-named_arrays"><span class="nn">named_arrays</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">na</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../_autosummary/esis.html#module-esis"><span class="nn">esis</span></a>
+</pre></div>
+</div>
+</div>
+<p>Load a single channel of the EUV optical design,
+which carries the science grating model that the specifications below are
+derived from.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="../../_autosummary/esis.optics.Instrument.html#esis.optics.Instrument" title="esis.optics._instruments._instruments.Instrument"><span class="n">instrument</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../_autosummary/esis.flights.f2.optics.design_single.html#esis.flights.f2.optics.design_single"><span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">design_single</span></a><span class="p">(</span><span class="n">num_distribution</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grating</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">grating</span>
+</pre></div>
+</div>
+</div>
+<section id="Coordinate-System">
+<h2>Coordinate System<a class="headerlink" href="#Coordinate-System" title="Link to this heading">#</a></h2>
+<p>All positions on the face of the grating are expressed in the following
+right-handed coordinate system:</p>
+<ul class="simple">
+<li><p>The origin is the vertex of the optical surface, which lies on the axis of
+symmetry of the trapezoid.
+Note that the vertex is very nearly the center of the <em>clear</em> aperture
+(within 25 μm),
+not the center of the substrate,
+which is about 1.3 mm closer to the skinny end.</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(y\)</span> axis lies in the plane of the face along the axis of symmetry
+of the trapezoid, with <span class="math notranslate nohighlight">\(+y\)</span> pointing from the skinny end toward the
+fat end.
+When the grating is installed, <span class="math notranslate nohighlight">\(+y\)</span> points radially away from the
+axis of symmetry of the instrument, and <span class="math notranslate nohighlight">\(y\)</span> is the direction of
+dispersion.</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(x\)</span> axis lies in the plane of the face, parallel to the grooves.</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(z\)</span> axis is normal to the vertex of the optical surface,
+pointing away from the substrate.</p></li>
+</ul>
+<p>The grooves are parallel to the <span class="math notranslate nohighlight">\(x\)</span> axis and the ruling spacing varies
+only as a function of <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Plot the clear and mechanical apertures of the grating in this coordinate
+system.
+Note that the surface-local coordinates of the <a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.html#module-optika" title="(in optika)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optika</span></code></a> model swap the
+roles of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> relative to the definition above
+(the model measures the ruling spacing along its local <span class="math notranslate nohighlight">\(x\)</span> axis),
+so the model’s axes are interchanged whenever we evaluate or plot below.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surface</span> <span class="o">=</span> <span class="n">grating</span><span class="o">.</span><span class="n">surface</span>
+
+<span class="n">y_skinny</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">grating</span><span class="o">.</span><span class="n">halfwidth_inner</span> <span class="o">+</span> <span class="n">grating</span><span class="o">.</span><span class="n">width_border_inner</span><span class="p">)</span>
+<span class="n">y_fat</span> <span class="o">=</span> <span class="n">grating</span><span class="o">.</span><span class="n">halfwidth_outer</span> <span class="o">+</span> <span class="n">grating</span><span class="o">.</span><span class="n">width_border</span>
+
+<span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/api/astropy.visualization.quantity_support.html#astropy.visualization.quantity_support"><span class="n">astropy</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">quantity_support</span></a><span class="p">():</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">"equal"</span><span class="p">)</span>
+    <span class="n">surface</span><span class="o">.</span><span class="n">aperture_mechanical</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">components</span><span class="o">=</span><span class="p">(</span><span class="s2">"y"</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">surface</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">components</span><span class="o">=</span><span class="p">(</span><span class="s2">"y"</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">"vertex"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">y_groove</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html#numpy.linspace" title="numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+            <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span>
+            <span class="p">[</span><span class="n">y_groove</span><span class="p">,</span> <span class="n">y_groove</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">y_skinny</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="s2">"skinny end"</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+        <span class="n">va</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">y_fat</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="s2">"fat end"</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+        <span class="n">va</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="s2">"grooves"</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+        <span class="n">va</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"$x$ (</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlabel</span><span class="p">()</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"$y$ (</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">get_ylabel</span><span class="p">()</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"view of the optical face, mechanical (black) and clear (blue)"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/reports_f2_grating_5_0.png" src="../../_images/reports_f2_grating_5_0.png"/>
+</div>
+</div>
+</section>
+<section id="Science-Grating-Ruling-Prescription">
+<h2>Science Grating Ruling Prescription<a class="headerlink" href="#Science-Grating-Ruling-Prescription" title="Link to this heading">#</a></h2>
+<p>The ruling spacing of the science grating is a polynomial in <span class="math notranslate nohighlight">\(y\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[d(y) = d_0 + d_1 y + d_2 y^2,\]</div>
+<p>defined about the vertex of the optical surface.
+Print the model of the rulings, which includes the values of the
+polynomial coefficients.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grating</span><span class="o">.</span><span class="n">rulings</span><span class="o">.</span><span class="n">spacing</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Polynomial1dRulingSpacing(
+    coefficients={0: &lt;Quantity 0.0005579 mm&gt;, 1: &lt;Quantity -1.79596543e-05 um / mm&gt;, 2: &lt;Quantity -1.6761426e-07 um / mm2&gt;},
+    normal=Cartesian3dVectorArray(x=1, y=0, z=0),
+    transformation=None,
+)
+</pre></div></div>
+</div>
+<p>Since <span class="math notranslate nohighlight">\(d_1\)</span> and <span class="math notranslate nohighlight">\(d_2\)</span> are both negative,
+the ruling spacing <em>decreases</em> (and the ruling density <em>increases</em>)
+monotonically from the skinny end of the grating to the fat end.</p>
+<p>Evaluate the ruling spacing over the full substrate,
+from the skinny end to the fat end,
+and print it as a table which can be checked against the vendor’s
+prescription.
+Note the interchange of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> between the face coordinates
+and the surface-local coordinates of the model discussed above.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.linspace.html#named_arrays.linspace" title="named_arrays.linspace"><span class="n">na</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="n">y_skinny</span><span class="p">,</span> <span class="n">y_fat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"y"</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">position</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">na</span><span class="o">.</span><span class="n">Cartesian3dVectorArray</span></a><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">normal</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">na</span><span class="o">.</span><span class="n">Cartesian3dVectorArray</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">spacing</span> <span class="o">=</span> <span class="n">grating</span><span class="o">.</span><span class="n">rulings</span><span class="o">.</span><span class="n">spacing</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">position</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">normal</span></a><span class="p">)</span><span class="o">.</span><span class="n">length</span>
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#print"><span class="nb">print</span></a><span class="p">(</span>
+    <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">"y (mm)"</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+            <span class="s2">"spacing (um)"</span><span class="p">:</span> <span class="n">spacing</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">),</span>
+            <span class="s2">"density (1/mm)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">spacing</span><span class="p">)</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+       y (mm)  spacing (um)  density (1/mm)
+0  -13.020000      0.558108     1791.767116
+1  -12.040417      0.558095     1791.810388
+2  -11.060833      0.558081     1791.854695
+3  -10.081250      0.558067     1791.900037
+4   -9.101667      0.558052     1791.946414
+5   -8.122083      0.558038     1791.993827
+6   -7.142500      0.558023     1792.042275
+7   -6.162917      0.558007     1792.091759
+8   -5.183333      0.557991     1792.142279
+9   -4.203750      0.557975     1792.193835
+10  -3.224167      0.557959     1792.246427
+11  -2.244583      0.557942     1792.300056
+12  -1.265000      0.557925     1792.354721
+13  -0.285417      0.557908     1792.410423
+14   0.694167      0.557890     1792.467162
+15   1.673750      0.557872     1792.524938
+16   2.653333      0.557854     1792.583751
+17   3.632917      0.557835     1792.643603
+18   4.612500      0.557816     1792.704492
+19   5.592083      0.557797     1792.766419
+20   6.571667      0.557778     1792.829384
+21   7.551250      0.557758     1792.893388
+22   8.530833      0.557737     1792.958430
+23   9.510417      0.557717     1793.024511
+24  10.490000      0.557696     1793.091632
+</pre></div></div>
+</div>
+</section>
+<section id="Visible-Alignment-Gratings">
+<h2>Visible Alignment Gratings<a class="headerlink" href="#Visible-Alignment-Gratings" title="Link to this heading">#</a></h2>
+<p>The alignment gratings are designed so that a HeNe laser
+(<span class="math notranslate nohighlight">\(\lambda = 632.8\)</span> nm) diffracted into first order follows the same
+path through the instrument as the center of the EUV passband does for the
+science gratings.
+From the grating equation,</p>
+<div class="math notranslate nohighlight">
+\[\sin \alpha + \sin \beta = \frac{m \lambda}{d(y)},\]</div>
+<p>the diffracted angles match at every point on the face of the grating if
+<span class="math notranslate nohighlight">\(\lambda / d(y)\)</span> is preserved,
+so the alignment ruling spacing is the science ruling spacing scaled by the
+constant ratio</p>
+<div class="math notranslate nohighlight">
+\[\frac{d_\text{vis}(y)}{d(y)}
+    = \frac{\lambda_\text{HeNe}}{\lambda_c},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda_c\)</span> is the center of the EUV passband.
+Compute this ratio.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wavelength_center</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">wavelength_Ne_VII</span> <span class="o">+</span> <span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">wavelength_Si_XII</span>
+<span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">ratio</span> <span class="o">=</span> <span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">wavelength_HeNe</span> <span class="o">/</span> <span class="n">wavelength_center</span>
+<span class="n">ratio</span> <span class="o">=</span> <span class="n">ratio</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span>
+<span class="n">ratio</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$13.120097 \; \mathrm{}$</div></div>
+</div>
+<p>This scaling is implemented by
+<a class="reference internal" href="../../_autosummary/esis.flights.f2.optics.design_visible.html#esis.flights.f2.optics.design_visible" title="esis.flights.f2.optics.design_visible"><code class="xref py py-func docutils literal notranslate"><span class="pre">design_visible()</span></code></a>,
+which inherits everything else from the EUV design.
+Load the visible-light instrument and print the ruling spacing polynomial of
+its alignment gratings.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="../../_autosummary/esis.optics.Instrument.html#esis.optics.Instrument" title="esis.optics._instruments._instruments.Instrument"><span class="n">instrument_visible</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../_autosummary/esis.flights.f2.optics.design_visible.html#esis.flights.f2.optics.design_visible"><span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">design_visible</span></a><span class="p">(</span><span class="n">num_distribution</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grating_visible</span> <span class="o">=</span> <span class="n">instrument_visible</span><span class="o">.</span><span class="n">grating</span>
+
+<span class="n">grating_visible</span><span class="o">.</span><span class="n">rulings</span><span class="o">.</span><span class="n">spacing</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Polynomial1dRulingSpacing(
+    coefficients={0: &lt;Quantity 0.00731974 mm&gt;, 1: &lt;Quantity -0.00023563 um / mm&gt;, 2: &lt;Quantity -2.19911538e-06 um / mm2&gt;},
+    normal=Cartesian3dVectorArray(x=1, y=0, z=0),
+    transformation=None,
+)
+</pre></div></div>
+</div>
+<p>Evaluate the alignment ruling spacing over the full substrate,
+from the skinny end to the fat end.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spacing_visible</span> <span class="o">=</span> <span class="n">grating_visible</span><span class="o">.</span><span class="n">rulings</span><span class="o">.</span><span class="n">spacing</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">position</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.Cartesian3dVectorArray.html#named_arrays.Cartesian3dVectorArray" title="named_arrays._vectors.cartesian.vectors_cartesian_3d.Cartesian3dVectorArray"><span class="n">normal</span></a><span class="p">)</span><span class="o">.</span><span class="n">length</span>
+</pre></div>
+</div>
+</div>
+<p>Plot the line spacing of the visible alignment gratings as a function of
+<span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/api/astropy.visualization.quantity_support.html#astropy.visualization.quantity_support"><span class="n">astropy</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">quantity_support</span></a><span class="p">():</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.plt.plot.html#named_arrays.plt.plot" title="named_arrays.plt.plot"><span class="n">na</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">spacing_visible</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="o">-</span><span class="n">grating</span><span class="o">.</span><span class="n">halfwidth_inner</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="n">grating</span><span class="o">.</span><span class="n">halfwidth_outer</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">"clear aperture"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="s2">"skinny end"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="s2">"fat end"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"$y$ (</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlabel</span><span class="p">()</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ruling spacing (</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">get_ylabel</span><span class="p">()</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/reports_f2_grating_17_0.png" src="../../_images/reports_f2_grating_17_0.png"/>
+</div>
+</div>
+<p>Plot the corresponding ruling density.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/api/astropy.visualization.quantity_support.html#astropy.visualization.quantity_support"><span class="n">astropy</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">quantity_support</span></a><span class="p">():</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.plt.plot.html#named_arrays.plt.plot" title="named_arrays.plt.plot"><span class="n">na</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">spacing_visible</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="o">-</span><span class="n">grating</span><span class="o">.</span><span class="n">halfwidth_inner</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="n">grating</span><span class="o">.</span><span class="n">halfwidth_outer</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">"clear aperture"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="s2">"skinny end"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"top"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="s2">"fat end"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"top"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"$y$ (</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlabel</span><span class="p">()</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ruling density (</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">get_ylabel</span><span class="p">()</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/reports_f2_grating_19_0.png" src="../../_images/reports_f2_grating_19_0.png"/>
+</div>
+</div>
+<p>Print the line spacing and ruling density of the alignment gratings as a
+table which can be checked against the vendor’s prescription.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#print"><span class="nb">print</span></a><span class="p">(</span>
+    <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">"y (mm)"</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+            <span class="s2">"spacing (um)"</span><span class="p">:</span> <span class="n">spacing_visible</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">),</span>
+            <span class="s2">"density (1/mm)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">spacing_visible</span><span class="p">)</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+       y (mm)  spacing (um)  density (1/mm)
+0  -13.020000      7.322434      136.566604
+1  -12.040417      7.322258      136.569902
+2  -11.060833      7.322077      136.573279
+3  -10.081250      7.321891      136.576735
+4   -9.101667      7.321702      136.580270
+5   -8.122083      7.321508      136.583883
+6   -7.142500      7.321310      136.587576
+7   -6.162917      7.321108      136.591348
+8   -5.183333      7.320902      136.595198
+9   -4.203750      7.320691      136.599128
+10  -3.224167      7.320476      136.603136
+11  -2.244583      7.320257      136.607224
+12  -1.265000      7.320034      136.611390
+13  -0.285417      7.319806      136.615636
+14   0.694167      7.319575      136.619961
+15   1.673750      7.319339      136.624364
+16   2.653333      7.319099      136.628847
+17   3.632917      7.318854      136.633409
+18   4.612500      7.318606      136.638050
+19   5.592083      7.318353      136.642770
+20   6.571667      7.318096      136.647569
+21   7.551250      7.317835      136.652447
+22   8.530833      7.317569      136.657405
+23   9.510417      7.317299      136.662441
+24  10.490000      7.317026      136.667557
+</pre></div></div>
+</div>
+<p>The line spacing of the visible alignment gratings decreases monotonically
+from the skinny end of the grating to the fat end,
+and the corresponding ruling density increases,
+consistent with the sign of the VLS coefficients of the science gratings.</p>
+</section>
+<section id="End-to-end-Check">
+<h2>End-to-end Check<a class="headerlink" href="#End-to-end-Check" title="Link to this heading">#</a></h2>
+<p>As an independent check of the scaling,
+trace a HeNe laser through the visible-light instrument and confirm that it
+lands on the sensors at the same place as the center of the EUV passband.</p>
+<p>Start by plotting the rays traveling through the visible-light instrument,
+as viewed from the side.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">instrument_visible</span><span class="o">.</span><span class="n">field</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">instrument_visible</span><span class="o">.</span><span class="n">pupil</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/api/astropy.visualization.quantity_support.html#astropy.visualization.quantity_support"><span class="n">astropy</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">quantity_support</span></a><span class="p">():</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">instrument_visible</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">components</span><span class="o">=</span><span class="p">(</span><span class="s2">"z"</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span>
+        <span class="n">kwargs_rays</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">"tab:red"</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING: function 'sqrt' is not known to astropy's Quantity. Will run it anyway, hoping it will treat ndarray subclasses correctly. Please raise an issue at https://github.com/astropy/astropy/issues. [astropy.units.quantity]
+2026-08-03 17:51:15 - astropy - WARNING: function 'sqrt' is not known to astropy's Quantity. Will run it anyway, hoping it will treat ndarray subclasses correctly. Please raise an issue at https://github.com/astropy/astropy/issues.
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/reports_f2_grating_23_1.png" src="../../_images/reports_f2_grating_23_1.png"/>
+</div>
+</div>
+<p>Now compute the mean position of the unvignetted HeNe rays on the sensors.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rays_visible</span> <span class="o">=</span> <span class="n">instrument_visible</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rayfunction</span><span class="p">()</span><span class="o">.</span><span class="n">outputs</span>
+
+<span class="n">where</span> <span class="o">=</span> <span class="n">rays_visible</span><span class="o">.</span><span class="n">unvignetted</span>
+<span class="n">position_visible</span> <span class="o">=</span> <span class="p">(</span><span class="n">rays_visible</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">where</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">where</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">position_visible</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$-1.0056294 \; \mathrm{mm}$</div></div>
+</div>
+<p>Compare against the mean position of each EUV spectral line on the sensors
+of the flight instrument.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="../../_autosummary/esis.optics.Instrument.html#esis.optics.Instrument" title="esis.optics._instruments._instruments.Instrument"><span class="n">instrument_euv</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../_autosummary/esis.flights.f2.optics.design.html#esis.flights.f2.optics.design"><span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">design</span></a><span class="p">(</span><span class="n">num_distribution</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">instrument_euv</span><span class="o">.</span><span class="n">field</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">instrument_euv</span><span class="o">.</span><span class="n">pupil</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">rays_euv</span> <span class="o">=</span> <span class="n">instrument_euv</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rayfunction</span><span class="p">()</span><span class="o">.</span><span class="n">outputs</span>
+
+<span class="n">axis</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#tuple"><span class="nb">tuple</span></a><span class="p">(</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">rays_euv</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span> <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">"wavelength"</span><span class="p">)</span>
+
+<span class="n">where</span> <span class="o">=</span> <span class="n">rays_euv</span><span class="o">.</span><span class="n">unvignetted</span>
+<span class="n">position_euv</span> <span class="o">=</span> <span class="p">(</span><span class="n">rays_euv</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">where</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span> <span class="o">/</span> <span class="n">where</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+<span class="n">position_euv</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$[-8.34716,~6.3492908] \; \mathrm{mm}$</div></div>
+</div>
+<p>The HeNe laser lands within a few microns of the midpoint of the two EUV
+spectral lines,
+confirming that the alignment gratings reproduce the flight geometry.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">position_difference</span> <span class="o">=</span> <span class="n">position_visible</span> <span class="o">-</span> <span class="n">position_euv</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">"wavelength"</span><span class="p">)</span>
+<span class="n">position_difference</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$-6.6947987 \; \mathrm{\mu m}$</div></div>
+</div>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="left-prev" href="design.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Design &amp; Specifications</p>
+</div>
+</a>
+<a class="right-next" href="../../roadmap.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Roadmap</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<dialog id="pst-secondary-sidebar-modal"></dialog>
+<div class="bd-sidebar-secondary bd-toc" id="pst-secondary-sidebar"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<i class="fa-solid fa-list"></i> On this page
+  </div>
+<nav aria-labelledby="pst-page-navigation-heading-2" class="page-toc" id="pst-page-toc-nav">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Coordinate-System">Coordinate System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Science-Grating-Ruling-Prescription">Science Grating Ruling Prescription</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Visible-Alignment-Gratings">Visible Alignment Gratings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#End-to-end-Check">End-to-end Check</a></li>
+</ul>
+</nav></div>
+<div class="sidebar-secondary-item">
+<div class="tocsection sourcelink">
+<a href="../../_sources/reports/f2/grating.ipynb.txt">
+<i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+</div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script defer="" src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer="" src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+<footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+<div class="footer-items__start">
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+<p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+</p>
+</div>
+</div>
+<div class="footer-items__end">
+<div class="footer-item">
+<p class="theme-version">
+<!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+</p></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

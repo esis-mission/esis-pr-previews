@@ -1,0 +1,8 @@
+correlation
+===========
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.correlation
+
+    .. autolink-examples:: esis.optics.correlation

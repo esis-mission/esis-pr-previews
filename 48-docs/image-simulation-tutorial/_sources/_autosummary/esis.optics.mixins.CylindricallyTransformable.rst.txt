@@ -1,0 +1,40 @@
+CylindricallyTransformable
+==========================
+
+.. currentmodule:: esis.optics.mixins
+
+.. autoclass:: esis.optics.mixins.CylindricallyTransformable
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~CylindricallyTransformable.azimuth
+      ~CylindricallyTransformable.distance_radial
+      ~CylindricallyTransformable.transformation
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~CylindricallyTransformable.__init__
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.mixins.CylindricallyTransformable
+        :parts: 1
+    

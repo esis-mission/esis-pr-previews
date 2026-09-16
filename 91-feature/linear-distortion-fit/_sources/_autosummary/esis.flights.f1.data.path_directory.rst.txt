@@ -1,0 +1,8 @@
+path\_directory
+===============
+
+.. currentmodule:: esis.flights.f1.data
+
+.. autofunction:: esis.flights.f1.data.path_directory
+
+    .. autolink-examples:: esis.flights.f1.data.path_directory

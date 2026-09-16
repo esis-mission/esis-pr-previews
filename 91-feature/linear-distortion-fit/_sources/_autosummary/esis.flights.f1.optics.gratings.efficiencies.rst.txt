@@ -1,0 +1,37 @@
+efficiencies
+============
+
+.. automodule:: esis.flights.f1.optics.gratings.efficiencies
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      efficiency_vs_wavelength
+      efficiency_vs_x
+      efficiency_vs_y
+      efficiency_vs_angle_0deg
+      efficiency_vs_angle_3deg
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

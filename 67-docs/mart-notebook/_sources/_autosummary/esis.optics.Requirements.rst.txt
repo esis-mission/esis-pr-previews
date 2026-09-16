@@ -1,0 +1,45 @@
+Requirements
+============
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.Requirements
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Requirements.resolution_angular
+      ~Requirements.resolution_spatial
+      ~Requirements.resolution_spectral
+      ~Requirements.fov
+      ~Requirements.snr
+      ~Requirements.cadence
+      ~Requirements.length_observation
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Requirements.__init__
+      ~Requirements.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.Requirements
+        :parts: 1
+    

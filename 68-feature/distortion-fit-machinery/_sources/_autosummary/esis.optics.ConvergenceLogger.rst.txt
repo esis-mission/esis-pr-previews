@@ -1,0 +1,45 @@
+ConvergenceLogger
+=================
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.ConvergenceLogger
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~ConvergenceLogger.offset_energy
+      ~ConvergenceLogger.path_data
+      ~ConvergenceLogger.path_log
+      ~ConvergenceLogger.path_plot
+      ~ConvergenceLogger.directory
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~ConvergenceLogger.__init__
+      ~ConvergenceLogger.log
+      ~ConvergenceLogger.save_plot
+      ~ConvergenceLogger.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.ConvergenceLogger
+        :parts: 1
+    
