@@ -1,8 +1,0 @@
-as\_built\_unfocused
-====================
-
-.. currentmodule:: esis.flights.f1.optics
-
-.. autofunction:: esis.flights.f1.optics.as_built_unfocused
-
-    .. autolink-examples:: esis.flights.f1.optics.as_built_unfocused

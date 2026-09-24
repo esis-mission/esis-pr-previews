@@ -1,6 +1,0 @@
-esis.flights.f1.spectrum.Mg\_X.wavelength
-=========================================
-
-.. currentmodule:: esis.flights.f1.spectrum.Mg_X
-
-.. autodata:: wavelength

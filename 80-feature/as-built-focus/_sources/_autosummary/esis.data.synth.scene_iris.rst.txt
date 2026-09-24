@@ -1,8 +1,0 @@
-scene\_iris
-===========
-
-.. currentmodule:: esis.data.synth
-
-.. autofunction:: esis.data.synth.scene_iris
-
-    .. autolink-examples:: esis.data.synth.scene_iris
