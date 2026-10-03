@@ -1,0 +1,36 @@
+spectrum
+========
+
+.. automodule:: esis.flights.f1.spectrum
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Modules
+
+    .. autosummary::
+       :toctree:
+       :template: module_custom.rst
+       :recursive:
+    
+       O_V
+       Mg_X
+       He_I
+    
+    
+

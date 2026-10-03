@@ -1,0 +1,8 @@
+scene\_aia
+==========
+
+.. currentmodule:: esis.data.synth
+
+.. autofunction:: esis.data.synth.scene_aia
+
+    .. autolink-examples:: esis.data.synth.scene_aia

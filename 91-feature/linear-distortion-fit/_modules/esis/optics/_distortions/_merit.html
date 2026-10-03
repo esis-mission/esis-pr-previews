@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esis.optics._distortions._merit &#8212; ESIS  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-codeautolink.css?v=b2176991" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/esis/optics/_distortions/_merit';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../../_static/searchtools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo_black.png" class="logo__image only-light" alt="ESIS  documentation - Home"/>
+    <img src="../../../../_static/logo_white.png" class="logo__image only-dark pst-js-only" alt="ESIS  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../reports/distortion-fit.html">
+    Distortion fit
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../reports/f2/design.html">
+    Design & Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../reports/f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../schedule.html">
+    Schedule
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/distortion-fit.html">
+    Distortion fit
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/f2/design.html">
+    Design & Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../reports/f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../schedule.html">
+    Schedule
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">esis.optics._distortions._merit</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for esis.optics._distortions._merit</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""The merit of a distortion fit: a linearized image compared with a frame."""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">named_arrays</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">na</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">optika</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">esis</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"LinearMerit"</span><span class="p">,</span>
+    <span class="s2">"correlation"</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_standardize</span><span class="p">(</span>
+    <span class="n">a</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">axis</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Shift and scale an array to zero mean and unit standard deviation.</span>
+
+<span class="sd">    A constant array is left at zero, so that it contributes nothing to a</span>
+<span class="sd">    correlation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    a</span>
+<span class="sd">        The array to standardize.</span>
+<span class="sd">    axis</span>
+<span class="sd">        The logical axes along which to compute the mean and deviation.</span>
+<span class="sd">        If :obj:`None`, every axis is used.</span>
+<span class="sd">    """</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span>
+    <span class="n">deviation</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">deviation</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">deviation</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="correlation">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.correlation.html#esis.optics.correlation">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">correlation</span><span class="p">(</span>
+    <span class="n">a</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">b</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">axis</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Compute the Pearson correlation coefficient of two arrays.</span>
+
+<span class="sd">    Maximizing the correlation is the same as minimizing the squared</span>
+<span class="sd">    difference after fitting a gain and an offset, so it is the least-squares</span>
+<span class="sd">    merit with the absolute calibration of the frame left free.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    a</span>
+<span class="sd">        The first array, standardized before comparing.</span>
+<span class="sd">        If it is constant, the correlation is zero.</span>
+<span class="sd">    b</span>
+<span class="sd">        The second array, standardized before comparing.</span>
+<span class="sd">        If it is constant, the correlation is zero.</span>
+<span class="sd">    axis</span>
+<span class="sd">        The logical axes along which to compute the correlation.</span>
+<span class="sd">        If :obj:`None`, the correlation is computed over every axis.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">_standardize</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span> <span class="o">*</span> <span class="n">_standardize</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_host</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Bring an array that may live on a device back to the host."""</span>
+    <span class="n">ndarray</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>  <span class="c1"># pragma: nocover</span>
+        <span class="k">return</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">ndarray</span><span class="o">.</span><span class="n">copy_to_host</span><span class="p">()),</span> <span class="n">axes</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+
+<div class="viewcode-block" id="LinearMerit">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LinearMerit</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    The merit of a set of :class:`DistortionParameters` for one channel.</span>
+
+<span class="sd">    Each evaluation applies the parameters to the channel, linearizes the</span>
+<span class="sd">    resulting optical system (:meth:`optika.systems.SequentialSystem.linearize`),</span>
+<span class="sd">    clips the scene by the field stop in object space, images it with a</span>
+<span class="sd">    conservative regrid onto the sensor, and returns the Pearson correlation</span>
+<span class="sd">    with the observed frame.</span>
+
+<span class="sd">    Compared with imaging the scene by a sparse ray trace, the linearized</span>
+<span class="sd">    image has no sampling noise, so the merit is deterministic and smooth,</span>
+<span class="sd">    and it needs no point-spread function: the exact footprint integral of</span>
+<span class="sd">    the regrid is a physically sized smoothing on its own.  It is also about</span>
+<span class="sd">    three times cheaper, and the regrid can run on a GPU.</span>
+
+<span class="sd">    The merit is geometric: the materials of the instrument are idealized</span>
+<span class="sd">    and the effective area of every line is pinned to a common value, so</span>
+<span class="sd">    that the fit measures where light lands and not how much of it there is.</span>
+
+<span class="sd">    Instances are callables of a flat parameter vector, picklable so that</span>
+<span class="sd">    :func:`scipy.optimize.differential_evolution` can evaluate them in worker</span>
+<span class="sd">    processes, and return the *negative* correlation for minimization.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    instrument</span>
+<span class="sd">        The channel to fit, usually the as-built model reduced to a single</span>
+<span class="sd">        channel.</span>
+<span class="sd">    parameters</span>
+<span class="sd">        The prototype which defines the units and structure of the flat</span>
+<span class="sd">        parameter vector.</span>
+<span class="sd">    scene</span>
+<span class="sd">        The spectral radiance of the scene as a function of wavelength and</span>
+<span class="sd">        field position, on the cell *vertices* of the field grid.</span>
+<span class="sd">    observation</span>
+<span class="sd">        The observed frame of this channel.</span>
+<span class="sd">    device</span>
+<span class="sd">        The device on which to build and apply the regridding weights; see</span>
+<span class="sd">        :meth:`optika.systems.AbstractLinearSystem.image`.</span>
+<span class="sd">    degree</span>
+<span class="sd">        The degree of the polynomial distortion model.</span>
+<span class="sd">    axis_wavelength</span>
+<span class="sd">        The logical axis of the scene along which the wavelength varies</span>
+<span class="sd">        within each spectral line.</span>
+<span class="sd">    axis_field</span>
+<span class="sd">        The logical axes of the scene corresponding to field position.</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">instrument</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">AbstractInstrument</span><span class="p">,</span>
+        <span class="n">parameters</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">DistortionParameters</span><span class="p">,</span>
+        <span class="n">scene</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">FunctionArray</span><span class="p">,</span>
+        <span class="n">observation</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+        <span class="n">device</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">degree</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">axis_wavelength</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"velocity"</span><span class="p">,</span>
+        <span class="n">axis_field</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"detector_x"</span><span class="p">,</span> <span class="s2">"detector_y"</span><span class="p">),</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instrument</span> <span class="o">=</span> <span class="n">instrument</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">observation</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">observation</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">degree</span> <span class="o">=</span> <span class="n">degree</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis_wavelength</span> <span class="o">=</span> <span class="n">axis_wavelength</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis_field</span> <span class="o">=</span> <span class="n">axis_field</span>
+        <span class="c1"># the linear forward model wants spectral-positional coordinates</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scene</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">FunctionArray</span><span class="p">(</span>
+            <span class="n">inputs</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">SpectralPositionalVectorArray</span><span class="p">(</span>
+                <span class="n">wavelength</span><span class="o">=</span><span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">wavelength</span><span class="p">,</span>
+                <span class="n">position</span><span class="o">=</span><span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">position</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">outputs</span><span class="o">=</span><span class="n">scene</span><span class="o">.</span><span class="n">outputs</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_centers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">cell_centers</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis_field</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_calls</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_failed</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pupil_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pupil_mask</span><span class="p">(</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_instrument</span><span class="p">(</span><span class="n">instrument</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_pupil_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Choose the normalized pupil point of the chief rays used by the mask.</span>
+
+<span class="sd">        The field-stop mask traces one ray per scene cell, and that ray must</span>
+<span class="sd">        clear everything *except* the field stop.  The channels are rotated</span>
+<span class="sd">        copies of one another, so a fixed pupil point can land on the central</span>
+<span class="sd">        obscuration or a grating edge for some of them: pick, per channel,</span>
+<span class="sd">        the candidate that clears the most field.</span>
+<span class="sd">        """</span>
+        <span class="n">best</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span> <span class="p">[(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">)]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pupil_mask</span> <span class="o">=</span> <span class="n">candidate</span>
+            <span class="n">fraction</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_field_stop</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">best</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">fraction</span> <span class="o">&gt;</span> <span class="n">best</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="n">best</span> <span class="o">=</span> <span class="p">(</span><span class="n">fraction</span><span class="p">,</span> <span class="n">candidate</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">best</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<div class="viewcode-block" id="LinearMerit.mask_field_stop">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit.mask_field_stop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mask_field_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Which cells of the scene clear the field stop.</span>
+
+<span class="sd">        The stop sits before the grating, so this is the same octagon for</span>
+<span class="sd">        every spectral line; applying it in object space, before the</span>
+<span class="sd">        wavelength sum, is what keeps each line's spill-over out of its</span>
+<span class="sd">        neighbours' windows.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instrument</span>
+<span class="sd">            The channel with the current parameters applied.</span>
+<span class="sd">        """</span>
+        <span class="n">wavelength</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">wavelength</span>
+        <span class="k">if</span> <span class="s2">"wavelength"</span> <span class="ow">in</span> <span class="n">na</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">wavelength</span><span class="p">):</span>
+            <span class="n">wavelength</span> <span class="o">=</span> <span class="n">wavelength</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">wavelength</span><span class="o">=~</span><span class="mi">0</span><span class="p">)]</span>
+        <span class="n">rays</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rayfunction</span><span class="p">(</span>
+            <span class="n">wavelength</span><span class="o">=</span><span class="n">wavelength</span><span class="p">,</span>
+            <span class="n">field</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">field_centers</span><span class="p">,</span>
+            <span class="n">pupil</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">Cartesian2dVectorArray</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">pupil_mask</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span> <span class="n">axes</span><span class="o">=</span><span class="s2">"_pupil_mask_x"</span><span class="p">),</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">pupil_mask</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span> <span class="n">axes</span><span class="o">=</span><span class="s2">"_pupil_mask_y"</span><span class="p">),</span>
+            <span class="p">),</span>
+            <span class="n">normalized_field</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">normalized_pupil</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">efficiency</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">rays</span><span class="o">.</span><span class="n">outputs</span><span class="o">.</span><span class="n">unvignetted</span>
+        <span class="n">extra</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">mask</span><span class="p">))</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_field</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">extra</span><span class="p">:</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mask</span></div>
+
+
+<div class="viewcode-block" id="LinearMerit.linearize">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit.linearize">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">linearize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instrument</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">optika</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">LinearSystem</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Linearize the channel with the effective area pinned per line.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instrument</span>
+<span class="sd">            The channel with the current parameters applied.</span>
+<span class="sd">        """</span>
+        <span class="n">linear</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">linearize</span><span class="p">(</span>
+            <span class="n">wavelength</span><span class="o">=</span><span class="n">instrument</span><span class="o">.</span><span class="n">wavelength</span><span class="p">,</span>
+            <span class="n">degree</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">degree</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="c1"># the fit is geometric: every line shares one effective area, which</span>
+        <span class="c1"># also removes the sampling scatter of the fitted area model</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">area_effective</span>
+        <span class="n">linear</span><span class="o">.</span><span class="n">area_effective</span> <span class="o">=</span> <span class="n">optika</span><span class="o">.</span><span class="n">radiometry</span><span class="o">.</span><span class="n">InterpolatedEffectiveAreaModel</span><span class="p">(</span>
+            <span class="n">wavelength</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">wavelength</span><span class="p">,</span>
+            <span class="n">area</span><span class="o">=</span><span class="mi">0</span> <span class="o">*</span> <span class="n">area</span><span class="o">.</span><span class="n">area</span> <span class="o">+</span> <span class="n">area</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+            <span class="n">axis_wavelength</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">axis_wavelength</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">linear</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_on_sensor</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">linear</span><span class="p">:</span> <span class="n">optika</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">LinearSystem</span><span class="p">,</span>
+        <span class="n">minimum</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Refuse a trial that puts the scene off the sensor.</span>
+
+<span class="sd">        Such a trial would have the regrid allocate an empty set of weights,</span>
+<span class="sd">        which a device kernel cannot survive, and it is the worst possible</span>
+<span class="sd">        image in any case.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If fewer than `minimum` cells of the scene land on the sensor.</span>
+<span class="sd">        """</span>
+        <span class="n">coordinates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">cell_centers</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_wavelength</span><span class="p">)</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">distortion</span><span class="o">.</span><span class="n">distort</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span><span class="o">.</span><span class="n">position</span>
+        <span class="n">sensor</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">coordinates_sensor</span>
+        <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">sensor</span><span class="o">.</span><span class="n">stop</span>
+        <span class="n">inside</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">lo</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+            <span class="o">&amp;</span> <span class="p">(</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+            <span class="o">&amp;</span> <span class="p">(</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">lo</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+            <span class="o">&amp;</span> <span class="p">(</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">inside</span><span class="p">)</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="n">minimum</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"only </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> scene cells land on the sensor"</span><span class="p">)</span>
+
+<div class="viewcode-block" id="LinearMerit.image">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit.image">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">image</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parameters</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">DistortionParameters</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Compute the linearized image of the scene for the given parameters.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        parameters</span>
+<span class="sd">            The distortion parameters to apply to the channel.</span>
+<span class="sd">        """</span>
+        <span class="n">instrument</span> <span class="o">=</span> <span class="n">parameters</span><span class="o">.</span><span class="n">to_instrument</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">instrument</span><span class="p">)</span>
+        <span class="n">linear</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linearize</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_field_stop</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span>
+        <span class="n">scene</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">copy_shallow</span><span class="p">()</span>
+        <span class="n">scene</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">outputs</span> <span class="o">*</span> <span class="n">mask</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_on_sensor</span><span class="p">(</span><span class="n">linear</span><span class="p">)</span>
+        <span class="n">kwargs_device</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">dict</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">weights</span><span class="p">(</span>
+            <span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span>
+            <span class="n">axis_wavelength</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_wavelength</span><span class="p">,</span>
+            <span class="n">axis_field</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_field</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs_device</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">image_from_weights</span><span class="p">(</span>
+            <span class="n">weights</span><span class="p">,</span>
+            <span class="n">scene</span><span class="p">,</span>
+            <span class="n">axis_wavelength</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_wavelength</span><span class="p">,</span>
+            <span class="n">axis_field</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_field</span><span class="p">,</span>
+            <span class="n">noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">_host</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">))</span>
+        <span class="n">extra</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">result</span><span class="p">))</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_field</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">extra</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
+        <span class="c1"># kept for callers that also need the mapping, e.g. the alignment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">linear</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="LinearMerit.correlation">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit.correlation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">correlation</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parameters</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">DistortionParameters</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Compute the Pearson correlation of the linearized image with the observation.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        parameters</span>
+<span class="sd">            The distortion parameters to apply to the channel.</span>
+<span class="sd">        """</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">correlation</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">observation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Evaluate the negative correlation for a flat parameter vector.</span>
+
+<span class="sd">        A trial that cannot be imaged (rays off the stops, a singular</span>
+<span class="sd">        polynomial fit, the scene off the sensor) is reported as the worst</span>
+<span class="sd">        possible image rather than raising, so that a population-based</span>
+<span class="sd">        optimizer can carry on.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x</span>
+<span class="sd">            The flat parameter vector, interpreted in the units and structure</span>
+<span class="sd">            of :attr:`parameters`.</span>
+<span class="sd">        """</span>
+        <span class="n">parameters</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_calls</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">correlation</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: BLE001</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_failed</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="mf">1.0</span></div>
+
+
+
+<div class="viewcode-block" id="correlation_raytraced">
+<a class="viewcode-back" href="../../../../_autosummary/esis.optics.correlation_raytraced.html#esis.optics.correlation_raytraced">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">correlation_raytraced</span><span class="p">(</span>
+    <span class="n">instrument</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">AbstractInstrument</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">DistortionParameters</span><span class="p">,</span>
+    <span class="n">scene</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">FunctionArray</span><span class="p">,</span>
+    <span class="n">observation</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">pupil</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractCartesian2dVectorArray</span><span class="p">,</span>
+    <span class="n">sigma_psf</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">axis_wavelength</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"velocity"</span><span class="p">,</span>
+    <span class="n">axis_field</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"detector_x"</span><span class="p">,</span> <span class="s2">"detector_y"</span><span class="p">),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Compute the correlation of a ray-traced image with the observation.</span>
+
+<span class="sd">    This is the merit the fit used before it was linearized, kept as an</span>
+<span class="sd">    independent forward model to score a fit against.  The ray trace samples</span>
+<span class="sd">    every scene cell with a few rays, so the image carries sampling noise and</span>
+<span class="sd">    needs a point-spread function of a few pixels to compare with the data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    instrument</span>
+<span class="sd">        The channel to image.</span>
+<span class="sd">    parameters</span>
+<span class="sd">        The distortion parameters to apply to the channel.</span>
+<span class="sd">    scene</span>
+<span class="sd">        The spectral radiance of the scene.</span>
+<span class="sd">    observation</span>
+<span class="sd">        The observed frame of this channel.</span>
+<span class="sd">    pupil</span>
+<span class="sd">        The vertices of the pupil grid used to image the scene.</span>
+<span class="sd">    sigma_psf</span>
+<span class="sd">        The standard deviation, in detector pixels, of the Gaussian</span>
+<span class="sd">        point-spread function convolved with the modeled image.</span>
+<span class="sd">    seed</span>
+<span class="sd">        The seed used to freeze the imaging model's random ray jitter.</span>
+<span class="sd">    axis_wavelength</span>
+<span class="sd">        The logical axis of the scene along which the wavelength varies</span>
+<span class="sd">        within each spectral line.</span>
+<span class="sd">    axis_field</span>
+<span class="sd">        The logical axes of the scene corresponding to field position.</span>
+<span class="sd">    """</span>
+    <span class="n">instrument</span> <span class="o">=</span> <span class="n">parameters</span><span class="o">.</span><span class="n">to_instrument</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">image</span><span class="p">(</span>
+            <span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span>
+            <span class="n">pupil</span><span class="o">=</span><span class="n">pupil</span><span class="p">,</span>
+            <span class="n">axis_wavelength</span><span class="o">=</span><span class="n">axis_wavelength</span><span class="p">,</span>
+            <span class="n">axis_field</span><span class="o">=</span><span class="n">axis_field</span><span class="p">,</span>
+            <span class="n">noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
+    <span class="n">observation</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">observation</span><span class="p">)</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">image</span><span class="p">))</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">observation</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">extra</span><span class="p">:</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">sigma_psf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">radius</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">sigma_psf</span><span class="p">)))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">radius</span><span class="p">,</span> <span class="n">radius</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">profile</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">sigma_psf</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">kernel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">profile</span><span class="p">,</span> <span class="n">profile</span><span class="p">)</span>
+        <span class="n">kernel</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">kernel</span> <span class="o">/</span> <span class="n">kernel</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">axes</span><span class="o">=</span><span class="n">axis_field</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis_field</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">na</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">correlation</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">observation</span><span class="p">,</span> <span class="n">axis_field</span><span class="p">))</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span></div>
+
+
+
+<span class="n">ObjectiveType</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

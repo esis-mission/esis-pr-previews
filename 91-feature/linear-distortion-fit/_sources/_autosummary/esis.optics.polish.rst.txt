@@ -1,0 +1,8 @@
+polish
+======
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.polish
+
+    .. autolink-examples:: esis.optics.polish

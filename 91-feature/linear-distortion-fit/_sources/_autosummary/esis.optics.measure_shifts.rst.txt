@@ -1,0 +1,8 @@
+measure\_shifts
+===============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.measure_shifts
+
+    .. autolink-examples:: esis.optics.measure_shifts
