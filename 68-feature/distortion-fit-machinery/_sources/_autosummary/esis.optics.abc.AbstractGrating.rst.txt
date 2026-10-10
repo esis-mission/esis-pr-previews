@@ -1,0 +1,60 @@
+AbstractGrating
+===============
+
+.. currentmodule:: esis.optics.abc
+
+.. autoclass:: esis.optics.abc.AbstractGrating
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~AbstractGrating.angle_aperture
+      ~AbstractGrating.angle_input
+      ~AbstractGrating.angle_output
+      ~AbstractGrating.azimuth
+      ~AbstractGrating.clearance
+      ~AbstractGrating.distance_radial
+      ~AbstractGrating.halfwidth_inner
+      ~AbstractGrating.halfwidth_outer
+      ~AbstractGrating.manufacturing_number
+      ~AbstractGrating.material
+      ~AbstractGrating.num_folds
+      ~AbstractGrating.pitch
+      ~AbstractGrating.roll
+      ~AbstractGrating.rulings
+      ~AbstractGrating.sag
+      ~AbstractGrating.serial_number
+      ~AbstractGrating.surface
+      ~AbstractGrating.transformation
+      ~AbstractGrating.translation
+      ~AbstractGrating.width_border
+      ~AbstractGrating.width_border_inner
+      ~AbstractGrating.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~AbstractGrating.__init__
+      ~AbstractGrating.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.abc.AbstractGrating
+        :parts: 1
+    

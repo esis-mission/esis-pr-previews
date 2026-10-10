@@ -1,0 +1,8 @@
+fit\_distortion\_outline
+========================
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.fit_distortion_outline
+
+    .. autolink-examples:: esis.optics.fit_distortion_outline

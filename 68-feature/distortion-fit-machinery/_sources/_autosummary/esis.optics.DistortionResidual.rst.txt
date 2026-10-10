@@ -1,0 +1,51 @@
+DistortionResidual
+==================
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.DistortionResidual
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~DistortionResidual.axis_channel
+      ~DistortionResidual.axis_field
+      ~DistortionResidual.axis_wavelength
+      ~DistortionResidual.pupil
+      ~DistortionResidual.seed
+      ~DistortionResidual.sigma_psf
+      ~DistortionResidual.smoothing
+      ~DistortionResidual.weight_correlation
+      ~DistortionResidual.weight_distance
+      ~DistortionResidual.instrument
+      ~DistortionResidual.parameters
+      ~DistortionResidual.scene
+      ~DistortionResidual.observation
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~DistortionResidual.__init__
+      ~DistortionResidual.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.DistortionResidual
+        :parts: 1
+    

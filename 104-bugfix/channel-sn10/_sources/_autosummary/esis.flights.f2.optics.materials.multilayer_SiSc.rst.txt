@@ -1,0 +1,8 @@
+multilayer\_SiSc
+================
+
+.. currentmodule:: esis.flights.f2.optics.materials
+
+.. autofunction:: esis.flights.f2.optics.materials.multilayer_SiSc
+
+    .. autolink-examples:: esis.flights.f2.optics.materials.multilayer_SiSc

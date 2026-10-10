@@ -1,0 +1,85 @@
+optics
+======
+
+.. automodule:: esis.optics
+
+    
+    
+    .. rubric:: Module Attributes
+
+    .. autosummary::
+      :toctree:
+    
+      num_interpolation
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      correlation
+      correlation_raytraced
+      fit_distortion
+      polish
+      align_channels
+      measure_edges
+      predict_edges
+      outline_residual
+      width_residual
+      fit_distortion_outline
+      sky_grid
+      sample_on_sky
+      measure_shifts
+      window_mask
+      measure_channel_shifts
+      median_shifts
+      shift_modes
+    
+    
+
+    
+    
+    .. rubric:: Classes
+
+    .. autosummary::
+      :toctree:
+      :template: class_custom.rst
+    
+      FrontAperture
+      CentralObscuration
+      PrimaryMirror
+      FieldStop
+      Grating
+      Filter
+      Sensor
+      Camera
+      Requirements
+      Instrument
+      DistortionParameters
+      LinearMerit
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Modules
+
+    .. autosummary::
+       :toctree:
+       :template: module_custom.rst
+       :recursive:
+    
+       abc
+       mixins
+    
+    
+

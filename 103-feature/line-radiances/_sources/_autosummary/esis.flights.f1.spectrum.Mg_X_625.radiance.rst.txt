@@ -1,0 +1,6 @@
+esis.flights.f1.spectrum.Mg\_X\_625.radiance
+============================================
+
+.. currentmodule:: esis.flights.f1.spectrum.Mg_X_625
+
+.. autodata:: radiance

@@ -1,0 +1,114 @@
+Level\_0
+========
+
+.. currentmodule:: esis.data
+
+.. autoclass:: esis.data.Level_0
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Level_0.active
+      ~Level_0.axes
+      ~Level_0.axes_center
+      ~Level_0.axes_flattened
+      ~Level_0.axes_vertex
+      ~Level_0.axis_channel
+      ~Level_0.axis_time
+      ~Level_0.axis_x
+      ~Level_0.axis_xy
+      ~Level_0.axis_y
+      ~Level_0.broadcasted
+      ~Level_0.camera
+      ~Level_0.channel
+      ~Level_0.dark
+      ~Level_0.dark_subtracted
+      ~Level_0.darks
+      ~Level_0.darks_down
+      ~Level_0.darks_up
+      ~Level_0.despiked
+      ~Level_0.electrons
+      ~Level_0.explicit
+      ~Level_0.indices
+      ~Level_0.inputs
+      ~Level_0.length
+      ~Level_0.lights
+      ~Level_0.ndim
+      ~Level_0.num_x
+      ~Level_0.num_y
+      ~Level_0.outputs
+      ~Level_0.shape
+      ~Level_0.size
+      ~Level_0.taps
+      ~Level_0.time_mission_start
+      ~Level_0.timeline
+      ~Level_0.type_abstract
+      ~Level_0.type_explicit
+      ~Level_0.unbiased
+      ~Level_0.value
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Level_0.__init__
+      ~Level_0.add_axes
+      ~Level_0.all
+      ~Level_0.animate
+      ~Level_0.any
+      ~Level_0.astype
+      ~Level_0.broadcast_to
+      ~Level_0.cell_centers
+      ~Level_0.combine_axes
+      ~Level_0.copy
+      ~Level_0.copy_shallow
+      ~Level_0.from_fits
+      ~Level_0.from_scalar_array
+      ~Level_0.from_taps
+      ~Level_0.index
+      ~Level_0.index_secant
+      ~Level_0.interp_linear
+      ~Level_0.max
+      ~Level_0.mean
+      ~Level_0.median
+      ~Level_0.min
+      ~Level_0.ndindex
+      ~Level_0.pcolormesh
+      ~Level_0.percentile
+      ~Level_0.ptp
+      ~Level_0.regrid
+      ~Level_0.replace
+      ~Level_0.reshape
+      ~Level_0.rms
+      ~Level_0.std
+      ~Level_0.sum
+      ~Level_0.to
+      ~Level_0.to_jshtml
+      ~Level_0.to_string
+      ~Level_0.to_string_array
+      ~Level_0.transpose
+      ~Level_0.var
+      ~Level_0.vmr
+      ~Level_0.volume_cell
+      ~Level_0.weights
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.data.Level_0
+        :parts: 1
+    

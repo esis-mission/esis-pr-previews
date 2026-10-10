@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+
+<html data-content_root="../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../_static/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../_static/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../_static/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<title>Distortion fit — ESIS  documentation</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+<noscript>
+<style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+</noscript>
+<!-- Loaded before other Sphinx assets -->
+<link href="../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet"/>
+<link href="../_static/pygments.css?v=8f2a1f02" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/thebelab.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<!-- So that users can add custom icons -->
+<script defer="" src="../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" rel="preload"/>
+<script src="../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../_static/doctools.js?v=fd6eb6e6"></script>
+<script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="../_static/thebelab-helper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+<script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'reports/distortion-fit';</script>
+<script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="distortion-fit-summary.html" rel="next" title="Calibrating the ESIS-I optics against the flight: a summary"/>
+<link href="level-1.html" rel="prev" title="Level-1 Dataset"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="en" name="docsearch:language"/>
+<meta content="" name="docsearch:version"/>
+<script src="../_static/searchtools.js"></script>
+<script src="../_static/language_data.js"></script>
+<script src="../searchindex.js"></script>
+</head>
+<body data-default-mode="">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<dialog id="pst-search-dialog">
+<form action="../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search the docs ..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" name="q" placeholder="Search the docs ..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</dialog>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none" id="pst-header">
+<div class="bd-header__inner bd-page-width">
+<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle" type="button">
+<span class="fa-solid fa-bars"></span>
+</button>
+<div class="col-lg-3 navbar-header-items__start">
+<div class="navbar-item">
+<a class="navbar-brand logo" href="../index.html">
+<img alt="ESIS  documentation - Home" class="logo__image only-light" src="../_static/logo_black.png"/>
+<img alt="ESIS  documentation - Home" class="logo__image only-dark pst-js-only" src="../_static/logo_white.png"/>
+</a></div>
+</div>
+<div class="col-lg-9 navbar-header-items">
+<div class="me-auto navbar-header-items__center">
+<div class="navbar-item">
+<nav>
+<ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="throughput.html">
+    Throughput
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+<li class="nav-item dropdown">
+<button aria-controls="pst-nav-more-links" aria-expanded="false" class="btn dropdown-toggle nav-item" data-bs-toggle="dropdown" type="button">
+                    More
+                </button>
+<ul class="dropdown-menu" id="pst-nav-more-links">
+<li class="current active">
+<a aria-current="page" class="nav-link dropdown-item nav-internal" href="#">
+    Distortion fit
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="distortion-fit-summary.html">
+    Calibrating the ESIS-I optics against the flight: a summary
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="f2/design.html">
+    Design &amp; Specifications
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../roadmap.html">
+    Roadmap
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../schedule.html">
+    Schedule
+  </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div>
+<div class="navbar-header-items__end">
+<div class="navbar-item navbar-persistent--container">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" type="button">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<div class="navbar-item">
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto" type="button"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light" type="button"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark" type="button"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div></div>
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/esis-mission/esis" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" type="button">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle" type="button">
+<span class="fa-solid fa-outdent"></span>
+</button>
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<dialog id="pst-primary-sidebar-modal"></dialog>
+<div class="bd-sidebar-primary bd-sidebar" id="pst-primary-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+<div class="sidebar-header-items__center">
+<div class="navbar-item">
+<nav>
+<ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="throughput.html">
+    Throughput
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+<li class="nav-item current active">
+<a aria-current="page" class="nav-link nav-internal" href="#">
+    Distortion fit
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="distortion-fit-summary.html">
+    Calibrating the ESIS-I optics against the flight: a summary
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="f2/design.html">
+    Design &amp; Specifications
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../roadmap.html">
+    Roadmap
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../schedule.html">
+    Schedule
+  </a>
+</li>
+</ul>
+</nav></div>
+</div>
+<div class="sidebar-header-items__end">
+<div class="navbar-item">
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto" type="button"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light" type="button"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark" type="button"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div></div>
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/esis-mission/esis" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item pst-sidebar-collapse"><button aria-controls="pst-primary-sidebar" aria-expanded="true" id="pst-collapse-sidebar-button" type="button">
+<svg aria-hidden="true" class="pst-icon" focusable="false" role="img" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z" fill="currentColor"></path>
+</svg>
+<span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+<span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+<div class="sidebar-primary-item">
+<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
+<p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
+<div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+<div class="sidebar-primary-item">
+<div class="flat" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" id="ethical-ad-placement">
+</div></div>
+</div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item">
+<nav aria-label="Breadcrumb" class="d-print-none">
+<ul class="bd-breadcrumbs">
+<li class="breadcrumb-item breadcrumb-home">
+<a aria-label="Home" class="nav-link" href="../index.html">
+<i class="fa-solid fa-home"></i>
+</a>
+</li>
+<li aria-current="page" class="breadcrumb-item active"><span class="ellipsis">Distortion fit</span></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="distortion-fit">
+<h1>Distortion fit<a class="headerlink" href="#distortion-fit" title="Link to this heading">#</a></h1>
+<p>How the distortion of ESIS-I is fit to the flight data, and how to reproduce
+the fit committed to the package.</p>
+<section id="what-the-data-determine">
+<h2>What the data determine<a class="headerlink" href="#what-the-data-determine" title="Link to this heading">#</a></h2>
+<p>One Level-1 frame determines eight combinations of the parameters of a
+channel: two translations, the dispersion, two scales, a rotation, a shear
+and one more.  That is the result of a singular-value decomposition of the
+Jacobian of the sky-to-sensor mapping with respect to the fifteen optical
+parameters, sampled over the field at the three bright lines: eight singular
+values above forty pixels per half-box, then a cliff to below three.  The
+null directions are what one would guess.  The roll of the field stop moves
+only the edges of the windows.  The displacement of the primary trades
+against the focus-preserving distance of the sensor.  The in-plane position
+of the sensor trades against the grating’s yaw and pitch, and both trade
+against the pointing: the mapping cannot tell a moved sky from a moved
+grating.  A global search over a set that contains null directions lands
+somewhere along them at random, and two seeds disagree by tens of pixels;
+over the nine terms that span the eight combinations without a null
+direction, two seeds agree to two hundredths in merit.</p>
+<p>Two things break the degeneracies the frame leaves.  The edges of the
+windows are the image of the field stop through the optics, and do not move
+when the pointing does, so they say where the grating and sensor put the
+image and leave the pointing to explain the rest.  Measured in every frame
+of the flight, they move by up to a pixel and a half end to end while the
+pointing sweeps seven arcseconds, or nine pixels, and the motion of all
+four channels’ windows is one rigid translation of the field stop of a few
+microns, smooth through the flight, which is carried per frame.  And the
+channels compared with one another on the sky resolve a tenth of a pixel
+where the proxy scene resolves one.</p>
+<p>One more motion is visible only in the channels against one another.
+Each channel views the solar image through its own sector of the primary,
+so if that image is not exactly at the field stop, each channel sees it
+shifted along its own dispersion by the sector’s offset times the
+defocus, while the stop’s edge, an aperture in the plane the grating
+images, stays put: 1.6 pixels per 0.1 mm for ESIS-I.  A slow change of the
+primary’s focus through the flight therefore separates the channels’
+skies without moving their windows, in a pattern no pointing or grating
+motion can make, and the model carries it as one shared term per frame,
+<a class="reference internal" href="../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters.z_primary" title="esis.optics.DistortionParameters.z_primary"><code class="xref py py-attr docutils literal notranslate"><span class="pre">esis.optics.DistortionParameters.z_primary</span></code></a>.</p>
+<p>What the data do not determine is stated rather than fit.  The angle
+between the windows and the sky, which a roll of the instrument or of the
+field stop would set, changes the merit by less than three thousandths over
+four degrees and is held at the design.  The instrument roll is one number
+for the whole instrument and is held at zero, in the reference and in
+every frame: the merit cannot measure a roll to an arcminute, and a polish
+left free in it settles on its first step rather than on a value.  A
+per-channel value would be the azimuth of that channel’s arm, which turns
+the window and the sky together and is the sensor’s roll by another name.
+The primary’s displacement is the one shared quantity the windows do
+measure, see below.</p>
+</section>
+<section id="the-merit">
+<h2>The merit<a class="headerlink" href="#the-merit" title="Link to this heading">#</a></h2>
+<p>The fit compares an image of the Sun seen by another instrument (the AIA
+proxy scene, <a class="reference internal" href="../_autosummary/esis.flights.f1.data.synth.scene_aia.html#esis.flights.f1.data.synth.scene_aia" title="esis.flights.f1.data.synth.scene_aia"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.data.synth.scene_aia()</span></code></a>) with a Level-1
+frame, after imaging the scene through the model of one channel.  The
+image is made by <a class="reference internal" href="../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit" title="esis.optics.LinearMerit"><code class="xref py py-class docutils literal notranslate"><span class="pre">esis.optics.LinearMerit</span></code></a>: the channel is
+linearized (<a class="reference external" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.systems.SequentialSystem.html#optika.systems.SequentialSystem.linearize" title="(in optika)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">optika.systems.SequentialSystem.linearize()</span></code></a>) with its
+field of view carried as the polygon its stop rays trace, so that every
+scene cell outside the field stop is blocked before the lines are summed,
+and the scene is regridded conservatively onto the sensor.  The merit is
+the Pearson correlation with the frame, or the least-squares score of
+<a class="reference internal" href="../_autosummary/esis.optics.LinearMerit.html#esis.optics.LinearMerit" title="esis.optics.LinearMerit"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearMerit</span></code></a> (<code class="docutils literal notranslate"><span class="pre">merit="least_squares"</span></code>), which compares absolute intensities
+after the level of the frame outside every window is subtracted and lets
+one <a class="reference internal" href="../_autosummary/esis.optics.DistortionParameters.html#esis.optics.DistortionParameters.degradation" title="esis.optics.DistortionParameters.degradation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">degradation</span></code></a> per channel set
+the level of the image.  Both give the same geometry within the
+acceptance test’s noise; the least-squares score delivers the four
+degradations, which reproduce the factor of 1.6 between the channel pairs
+seen in the photon budget.</p>
+<p>The edge pixels are 0.37 % of a window.  Moving only the edges by a pixel
+changes the correlation by 0.0003 to 0.0014; moving the whole image by a
+pixel changes it by 0.005.  The merit therefore cannot place the windows,
+which is why the edges are measured directly.</p>
+</section>
+<section id="the-stages">
+<h2>The stages<a class="headerlink" href="#the-stages" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="../_autosummary/esis.flights.f1.optics.fit_distortion_reference.html#esis.flights.f1.optics.fit_distortion_reference" title="esis.flights.f1.optics.fit_distortion_reference"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.fit_distortion_reference()</span></code></a> runs the stages
+from the as-built model (<a class="reference internal" href="../_autosummary/esis.flights.f1.optics.as_built.html#esis.flights.f1.optics.as_built" title="esis.flights.f1.optics.as_built"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.as_built()</span></code></a>) and the
+data alone; the free set of every stage is recorded in the table it
+writes.</p>
+<ol class="arabic simple">
+<li><p><strong>Absolute.</strong>  Each channel is fit on its own with
+<a class="reference internal" href="../_autosummary/esis.optics.fit_distortion.html#esis.optics.fit_distortion" title="esis.optics.fit_distortion"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.optics.fit_distortion()</span></code></a>: a seeded differential evolution
+over the nine terms one frame determines (grating yaw and pitch, ruling
+spacing, pointing pitch and yaw, and the sensor’s focus-preserving
+distance, roll, pitch and yaw), eighty generations of fifteen members
+per dimension, then a restarted Nelder-Mead polish.  Every other term
+stays at the as-built model.</p></li>
+<li><p><strong>Edges.</strong> <a class="reference internal" href="../_autosummary/esis.flights.f1.optics.measure_window_edges.html#esis.flights.f1.optics.measure_window_edges" title="esis.flights.f1.optics.measure_window_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.measure_window_edges()</span></code></a> fits an
+error-function step where each window’s predicted outline crosses the
+rows and columns of every frame whose signal is at least half the
+flight’s median, and takes the median over the frames per crossing,
+with the per-frame departures kept as the drift of the windows.  The
+middle window sits on its neighbours and is left out.</p></li>
+<li><p><strong>Outline.</strong> <a class="reference internal" href="../_autosummary/esis.optics.fit_distortion_outline.html#esis.optics.fit_distortion_outline" title="esis.optics.fit_distortion_outline"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.optics.fit_distortion_outline()</span></code></a> places each
+channel’s windows on the median edges through the grating’s yaw and
+pitch and the sensor’s roll, which move the windows without moving the
+sky within them, then re-polishes the sky terms against the merit,
+twice.</p></li>
+<li><p><strong>Primary.</strong>  Displacing the primary changes the scale of the sky on
+the sensor and not the size of the windows; the focus-preserving sensor
+move does the opposite.  With the sky’s scale pinned by the merit, the
+width of the windows against the edges therefore fixes the one
+displacement the instrument has.  The scan tries a grid of
+displacements, re-polishes every channel’s scale terms at each, and
+takes the one whose windows have the measured width.</p></li>
+<li><p><strong>Shared.</strong>  The primary displacement, the field-stop roll and the
+payload pitch and yaw belong to the instrument.  The pointing is set to
+its mean over the channels, the others to what the stages above left,
+and each channel’s grating and camera placement is polished again with
+them fixed, the channels side by side in worker processes.</p></li>
+<li><p><strong>Internal.</strong> <a class="reference internal" href="../_autosummary/esis.optics.align_channels.html#esis.optics.align_channels" title="esis.optics.align_channels"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.optics.align_channels()</span></code></a> samples every
+channel’s frame on a common sky grid through its own distortion at
+He I 584 and O V 630, reading only the window each line illuminates
+(<a class="reference internal" href="../_autosummary/esis.optics.window_mask.html#esis.optics.window_mask" title="esis.optics.window_mask"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.optics.window_mask()</span></code></a>; outside it the frame holds the
+neighbouring lines, which through this line’s distortion land on the
+sky as structure that belongs elsewhere), measures the tile shifts
+against channel 1, and solves for the increments of the same terms
+whose change of the mapping reproduces the shifts.  Using two lines
+separates a geometric error from a dispersion error.</p></li>
+<li><p><strong>Focus.</strong> <a class="reference internal" href="../_autosummary/esis.flights.f1.optics.fit_defocus_history.html#esis.flights.f1.optics.fit_defocus_history" title="esis.flights.f1.optics.fit_defocus_history"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.fit_defocus_history()</span></code></a>
+measures every channel’s sky against channel 1 in every frame, with
+the windows placed by the smoothed drift.  Each channel views the Sun
+through its own sector of the primary, so a defocus moves its image
+along its own dispersion while the windows stay put, and a focus that
+differs from sector to sector moves each image by its own amount.  The
+focus of every sector is solved from the shifts through the model’s
+pattern, four unknowns from six measured components, and a quadratic
+in the frame index, zero at the reference frame, smooths each sector’s
+history.  The mean over the sectors is the defocus of the primary as a
+whole.  The proxy scene takes no part: it cannot tell a focus from the
+internal alignment, but the channels can, to a few microns.</p></li>
+<li><p><strong>Pointing.</strong> <a class="reference internal" href="../_autosummary/esis.flights.f1.optics.fit_distortion_pointing.html#esis.flights.f1.optics.fit_distortion_pointing" title="esis.flights.f1.optics.fit_distortion_pointing"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.fit_distortion_pointing()</span></code></a>
+polishes the pitch and yaw of every frame on the mean merit of the four
+channels, with the roll held, each channel’s grating offset by that
+frame’s window drift and each sector of the primary focused by that
+frame’s value first.  The drift of a single frame is measured to a
+few tenths of a pixel and the darkest frames have no edges at all, so
+a cubic in the frame index smooths it through the flight and holds its
+end value where nothing was measured; the offsets and the defocus ride
+along in the pointing table for
+<a class="reference internal" href="../_autosummary/esis.flights.f1.optics.distortion_fit.html#esis.flights.f1.optics.distortion_fit" title="esis.flights.f1.optics.distortion_fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.distortion_fit()</span></code></a> to apply.</p></li>
+<li><p><strong>Acceptance.</strong> <a class="reference internal" href="../_autosummary/esis.flights.f1.optics.acceptance.html#esis.flights.f1.optics.acceptance" title="esis.flights.f1.optics.acceptance"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.acceptance()</span></code></a> scores the
+result on frames across the flight, the reference frame among them:
+the merit with each frame’s pointing applied on six of them, and in
+every frame the coalignment metric: the length of the median tile
+shift of each channel’s sky against channel 1 at each aligned line,
+its component along the channel’s dispersion, which is the part a
+velocity is charged for and is given in km/s as well as pixels, the
+scatter of the tiles about the median, and the decomposition of the
+tiles into the linear distortion modes; with the residual of the
+window outlines and widths against the measured edges.  No inversion
+is involved.</p></li>
+</ol>
+</section>
+<section id="reproducing-the-committed-fit">
+<h2>Reproducing the committed fit<a class="headerlink" href="#reproducing-the-committed-fit" title="Link to this heading">#</a></h2>
+<p>The scripts under <code class="docutils literal notranslate"><span class="pre">docs/reports/distortion_fit</span></code> run the stages on a
+Slurm cluster, in this order:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">channel</span> <span class="o">--</span><span class="n">array</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">channel</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">edges</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">edges</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">combine</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">combine</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">defocus</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">defocus</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">pointing</span> <span class="o">--</span><span class="n">array</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="mi">29</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">pointing</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">gather</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">gather</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">accept</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">accept</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">blink</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">blink</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">sbatch</span> <span class="o">--</span><span class="n">job</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="n">dist</span><span class="o">-</span><span class="n">coalign</span> <span class="n">reproduce</span><span class="o">.</span><span class="n">sbatch</span> <span class="n">coalign</span> <span class="o">&lt;</span><span class="nb">dir</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The first produces one ECSV per channel; <code class="docutils literal notranslate"><span class="pre">edges</span></code> the median edges and
+the drift; <code class="docutils literal notranslate"><span class="pre">combine</span></code> runs the outline, primary, shared and internal
+stages into the committed <code class="docutils literal notranslate"><span class="pre">distortion_reference.ecsv</span></code>; <code class="docutils literal notranslate"><span class="pre">pointing</span></code> and
+<code class="docutils literal notranslate"><span class="pre">gather</span></code> the committed <code class="docutils literal notranslate"><span class="pre">distortion_pointing.ecsv</span></code>; <code class="docutils literal notranslate"><span class="pre">accept</span></code> the
+acceptance table; <code class="docutils literal notranslate"><span class="pre">blink</span></code> renders every frame beside its model for
+<code class="docutils literal notranslate"><span class="pre">blink.py</span> <span class="pre">page</span></code> to bind into a page that blinks between them; and
+<code class="docutils literal notranslate"><span class="pre">coalign</span></code> reads every channel’s frame onto the alignment’s sky grid
+through its fitted distortion at He I and O V, inside the window each
+line illuminates, for <code class="docutils literal notranslate"><span class="pre">coalign.py</span> <span class="pre">page</span></code> to bind into a page that blinks
+any two channels and shows their difference, with the median tile shift
+of every pair.  The blink page judges the model against the data; the
+coalignment page judges the channels against one another, which is what
+the internal stage sets, and it is the view in which a residual of a tenth
+of a pixel is visible.  Two more commands repeat late stages on a saved
+reference without the capture: <code class="docutils literal notranslate"><span class="pre">polish</span></code> reruns the shared polish and the
+alignment from <code class="docutils literal notranslate"><span class="pre">start_reference.ecsv</span></code> in the directory, for instance at
+a finer scene (<code class="docutils literal notranslate"><span class="pre">ESIS_NUM_SCENE</span></code>), and <code class="docutils literal notranslate"><span class="pre">align</span></code> reruns only the
+alignment in place.  The
+environment is the released libraries, <code class="docutils literal notranslate"><span class="pre">optika</span></code> 3.1 and later,
+<code class="docutils literal notranslate"><span class="pre">named_arrays</span></code> 2.14 and <code class="docutils literal notranslate"><span class="pre">regridding</span></code> 3.5, with <code class="docutils literal notranslate"><span class="pre">torch</span></code> and a
+<code class="docutils literal notranslate"><span class="pre">numba</span></code> that can see the CUDA driver for the GPU.  The committed tables
+were made on the cluster’s GPUs; the same chain on the host
+(<code class="docutils literal notranslate"><span class="pre">ESIS_DEVICE=cpu</span></code>) reproduces them, the capture merits to seven
+figures and the pointing to 0.03 arcsec, in about the same time.  Every
+table’s header records the whole environment it was made in:
+the interpreter, the platform, the version of every installed package and
+the commit of each checkout the fit imported from, so that a table names
+exactly the code that produced it.  A further command, <code class="docutils literal notranslate"><span class="pre">coregister</span></code>,
+measures what the focus of each sector leaves and fits it as an offset of
+each channel’s own pointing, twelve numbers through the flight; it was the
+measurement that led to the sector focus.  Its table,
+<code class="docutils literal notranslate"><span class="pre">coregistration.ecsv</span></code>, is committed beside the others, and
+<a class="reference internal" href="../_autosummary/esis.flights.f1.optics.distortion_fit.html#esis.flights.f1.optics.distortion_fit" title="esis.flights.f1.optics.distortion_fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">esis.flights.f1.optics.distortion_fit()</span></code></a> applies it only when asked
+(<code class="docutils literal notranslate"><span class="pre">channel_offsets=True</span></code>): the offsets are at most 0.17 arcsec, 0.22 px,
+and take the registration of the channels over the bright frames from 0.11
+to 0.09 px rms at He I and from 0.08 to 0.06 px at O V (1.7 to 1.5 and
+0.8 to 0.6 km/s along the dispersion), with the held-out correlations
+unchanged.  They are kept as an option because no mechanism stands behind
+them; <code class="docutils literal notranslate"><span class="pre">ESIS_COREGISTERED=1</span></code> makes <code class="docutils literal notranslate"><span class="pre">accept</span></code> and <code class="docutils literal notranslate"><span class="pre">coalign.py</span></code> score
+and render through the co-registered copy of the pointing table that
+<code class="docutils literal notranslate"><span class="pre">coregister</span></code> writes, so an inversion or a page can be made either way.
+Loading the Level-1 frames peaks above 100 GB of memory, which the job
+script asks for.  End to end
+the chain is six hours on the cluster: one to two hours for the capture
+of each channel, ten minutes for the edges, two and a half hours for the
+combine, three quarters of an hour for the focus, ten to fifteen minutes
+for each frame’s pointing, and half an hour each for the acceptance and
+the blink renders.  On the host without a GPU the capture takes about the
+same, and the stages from the focus on fit a workstation with 128 GB of
+memory.</p>
+</section>
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
+<p>The correlation of each channel with its frame after each stage of the
+committed chain, run on the cluster on 2026-10-09 (the as-built row is the
+starting model, the absolute row the capture of the four channel jobs):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>stage</p></th>
+<th class="head"><p>ch0</p></th>
+<th class="head"><p>ch1</p></th>
+<th class="head"><p>ch2</p></th>
+<th class="head"><p>ch3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>as-built</p></td>
+<td><p>0.350</p></td>
+<td><p>0.419</p></td>
+<td><p>0.404</p></td>
+<td><p>0.379</p></td>
+</tr>
+<tr class="row-odd"><td><p>absolute</p></td>
+<td><p>0.803</p></td>
+<td><p>0.841</p></td>
+<td><p>0.803</p></td>
+<td><p>0.827</p></td>
+</tr>
+<tr class="row-even"><td><p>outline</p></td>
+<td><p>0.803</p></td>
+<td><p>0.840</p></td>
+<td><p>0.803</p></td>
+<td><p>0.826</p></td>
+</tr>
+<tr class="row-odd"><td><p>edges [px]</p></td>
+<td><p>2.53</p></td>
+<td><p>2.17</p></td>
+<td><p>2.08</p></td>
+<td><p>2.12</p></td>
+</tr>
+<tr class="row-even"><td><p>shared</p></td>
+<td><p>0.809</p></td>
+<td><p>0.851</p></td>
+<td><p>0.804</p></td>
+<td><p>0.828</p></td>
+</tr>
+<tr class="row-odd"><td><p>aligned [px]</p></td>
+<td><p>0.01</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.03</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The merit is the correlation.  The primary displacement is held at nominal, the field-stop roll and the instrument roll at zero,
+and the pointing is shared: pitch -21.3, yaw -17.0 arcsec
+from the as-built model; the aligned row is the length of the median tile shift of each channel
+against channel 1 after the internal alignment.  The free set of every stage, the seed and
+schedule of the capture, the per-stage scores, the package commits and
+where the windows land are in the table’s header.</p>
+</section>
+<section id="acceptance">
+<h2>Acceptance<a class="headerlink" href="#acceptance" title="Link to this heading">#</a></h2>
+<p>The reference scored on frames it was not fit to, with each frame’s
+pointing applied: the correlation of every channel, and the median
+tile shift of every channel against channel 1 at each aligned line in
+pixels, He I first then O V.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>frame</p></th>
+<th class="head"><p>corr 0</p></th>
+<th class="head"><p>corr 1</p></th>
+<th class="head"><p>corr 2</p></th>
+<th class="head"><p>corr 3</p></th>
+<th class="head"><p>He I 0</p></th>
+<th class="head"><p>He I 1</p></th>
+<th class="head"><p>He I 2</p></th>
+<th class="head"><p>He I 3</p></th>
+<th class="head"><p>O V 0</p></th>
+<th class="head"><p>O V 1</p></th>
+<th class="head"><p>O V 2</p></th>
+<th class="head"><p>O V 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.21</p></td>
+<td><p>0.00</p></td>
+<td><p>0.21</p></td>
+<td><p>0.17</p></td>
+<td><p>0.14</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.24</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.16</p></td>
+<td><p>0.00</p></td>
+<td><p>0.12</p></td>
+<td><p>0.11</p></td>
+<td><p>0.12</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.18</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.20</p></td>
+<td><p>0.00</p></td>
+<td><p>0.16</p></td>
+<td><p>0.08</p></td>
+<td><p>0.10</p></td>
+<td><p>0.00</p></td>
+<td><p>0.07</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.15</p></td>
+<td><p>0.00</p></td>
+<td><p>0.16</p></td>
+<td><p>0.05</p></td>
+<td><p>0.07</p></td>
+<td><p>0.00</p></td>
+<td><p>0.07</p></td>
+<td><p>0.17</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.14</p></td>
+<td><p>0.00</p></td>
+<td><p>0.13</p></td>
+<td><p>0.10</p></td>
+<td><p>0.07</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.16</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.13</p></td>
+<td><p>0.04</p></td>
+<td><p>0.04</p></td>
+<td><p>0.00</p></td>
+<td><p>0.07</p></td>
+<td><p>0.18</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.10</p></td>
+<td><p>0.00</p></td>
+<td><p>0.11</p></td>
+<td><p>0.06</p></td>
+<td><p>0.05</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.16</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.15</p></td>
+<td><p>0.00</p></td>
+<td><p>0.13</p></td>
+<td><p>0.08</p></td>
+<td><p>0.03</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.11</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.14</p></td>
+<td><p>0.00</p></td>
+<td><p>0.07</p></td>
+<td><p>0.12</p></td>
+<td><p>0.05</p></td>
+<td><p>0.00</p></td>
+<td><p>0.08</p></td>
+<td><p>0.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>0.799</p></td>
+<td><p>0.852</p></td>
+<td><p>0.805</p></td>
+<td><p>0.828</p></td>
+<td><p>0.09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.06</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.06</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.08</p></td>
+<td><p>0.00</p></td>
+<td><p>0.05</p></td>
+<td><p>0.07</p></td>
+<td><p>0.05</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.04</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.05</p></td>
+<td><p>0.00</p></td>
+<td><p>0.13</p></td>
+<td><p>0.06</p></td>
+<td><p>0.05</p></td>
+<td><p>0.00</p></td>
+<td><p>0.04</p></td>
+<td><p>0.09</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>0.805</p></td>
+<td><p>0.846</p></td>
+<td><p>0.799</p></td>
+<td><p>0.823</p></td>
+<td><p>0.09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.06</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.13</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.05</p></td>
+<td><p>0.11</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.05</p></td>
+<td><p>0.07</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.10</p></td>
+<td><p>0.00</p></td>
+<td><p>0.07</p></td>
+<td><p>0.09</p></td>
+<td><p>0.03</p></td>
+<td><p>0.00</p></td>
+<td><p>0.04</p></td>
+<td><p>0.07</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>0.810</p></td>
+<td><p>0.851</p></td>
+<td><p>0.804</p></td>
+<td><p>0.827</p></td>
+<td><p>0.10</p></td>
+<td><p>0.00</p></td>
+<td><p>0.08</p></td>
+<td><p>0.11</p></td>
+<td><p>0.04</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.08</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.10</p></td>
+<td><p>0.00</p></td>
+<td><p>0.08</p></td>
+<td><p>0.06</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.02</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.05</p></td>
+<td><p>0.00</p></td>
+<td><p>0.13</p></td>
+<td><p>0.05</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.06</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>0.807</p></td>
+<td><p>0.849</p></td>
+<td><p>0.801</p></td>
+<td><p>0.825</p></td>
+<td><p>0.08</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.04</p></td>
+<td><p>0.03</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.09</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.06</p></td>
+<td><p>0.00</p></td>
+<td><p>0.10</p></td>
+<td><p>0.06</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.02</p></td>
+<td><p>0.08</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.04</p></td>
+<td><p>0.00</p></td>
+<td><p>0.10</p></td>
+<td><p>0.08</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.02</p></td>
+<td><p>0.13</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>0.808</p></td>
+<td><p>0.848</p></td>
+<td><p>0.800</p></td>
+<td><p>0.823</p></td>
+<td><p>0.07</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.10</p></td>
+<td><p>0.02</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.13</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.11</p></td>
+<td><p>0.00</p></td>
+<td><p>0.15</p></td>
+<td><p>0.10</p></td>
+<td><p>0.03</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.11</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.12</p></td>
+<td><p>0.06</p></td>
+<td><p>0.03</p></td>
+<td><p>0.00</p></td>
+<td><p>0.02</p></td>
+<td><p>0.07</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>0.804</p></td>
+<td><p>0.844</p></td>
+<td><p>0.798</p></td>
+<td><p>0.816</p></td>
+<td><p>0.17</p></td>
+<td><p>0.00</p></td>
+<td><p>0.12</p></td>
+<td><p>0.16</p></td>
+<td><p>0.04</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.08</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.14</p></td>
+<td><p>0.00</p></td>
+<td><p>0.07</p></td>
+<td><p>0.09</p></td>
+<td><p>0.08</p></td>
+<td><p>0.00</p></td>
+<td><p>0.04</p></td>
+<td><p>0.11</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.14</p></td>
+<td><p>0.00</p></td>
+<td><p>0.08</p></td>
+<td><p>0.07</p></td>
+<td><p>0.11</p></td>
+<td><p>0.00</p></td>
+<td><p>0.06</p></td>
+<td><p>0.08</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.12</p></td>
+<td><p>0.00</p></td>
+<td><p>0.11</p></td>
+<td><p>0.11</p></td>
+<td><p>0.10</p></td>
+<td><p>0.00</p></td>
+<td><p>0.09</p></td>
+<td><p>0.07</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.14</p></td>
+<td><p>0.00</p></td>
+<td><p>0.18</p></td>
+<td><p>0.13</p></td>
+<td><p>0.15</p></td>
+<td><p>0.00</p></td>
+<td><p>0.16</p></td>
+<td><p>0.12</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>nan</p></td>
+<td><p>0.79</p></td>
+<td><p>0.00</p></td>
+<td><p>0.01</p></td>
+<td><p>0.23</p></td>
+<td><p>0.18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.18</p></td>
+<td><p>0.08</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The coalignment metric over 30 frames of the flight, every channel but channel 1: the rms and the
+largest of the whole-channel shifts against channel 1, and the mean scatter of the tiles about them,
+in detector pixels (about 17 km/s per pixel along the dispersion):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>line</p></th>
+<th class="head"><p>rms</p></th>
+<th class="head"><p>max</p></th>
+<th class="head"><p>scatter</p></th>
+<th class="head"><p>along disp.</p></th>
+<th class="head"><p>rms velocity</p></th>
+<th class="head"><p>max velocity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>He I</p></td>
+<td><p>0.138</p></td>
+<td><p>0.791</p></td>
+<td><p>0.348</p></td>
+<td><p>0.120 px</p></td>
+<td><p>2.3 km/s</p></td>
+<td><p>14.9 km/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>O V</p></td>
+<td><p>0.090</p></td>
+<td><p>0.239</p></td>
+<td><p>0.244</p></td>
+<td><p>0.056 px</p></td>
+<td><p>1.0 km/s</p></td>
+<td><p>3.0 km/s</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A pixel along the dispersion is 18.9 km/s at He I and 17.4 km/s at O V; only the component of a shift along a channel’s dispersion is a velocity error.</p>
+<p>The residual of the window outlines against the flight-median edges is 2.4, 2.1, 2.2, 1.9 px on channels 0 to 3, and of the window widths 2.7, 2.8, 2.7, 2.8 px: the modelled windows are about two pixels too large on every
+side, which the primary cannot fix, see below.</p>
+</section>
+<section id="the-focus-of-each-sector-of-the-primary">
+<h2>The focus of each sector of the primary<a class="headerlink" href="#the-focus-of-each-sector-of-the-primary" title="Link to this heading">#</a></h2>
+<p>With every frame’s pointing, window drift and one defocus of the whole
+primary applied, the channels still slid against one another through the
+flight: by 0.20 px rms at He I and 0.17 px at O V over the frames bright
+enough to measure, and by 0.6 px at the first.  It was a translation of
+each channel’s whole image, with a tenth of a pixel of magnification and
+rotation at most on top; He I and O V agreed on it to a tenth of a pixel,
+so it was not a matter of dispersion; and it was smooth in time.  Two
+measurements on the Level-1 frames alone, with no model in them but each
+channel’s Jacobian, bounded what it could be
+(<code class="docutils literal notranslate"><span class="pre">docs/reports/distortion_fit/diagnostics.py</span></code>), and a third test named
+it.</p>
+<p><em>The image against the window.</em>  Against frame 15, on each detector: the
+motion of the image, from correlating the interior of the He I and O V
+windows with the same pixels at frame 15, thirty pixels in from the edges
+so that the edge takes no part; and the motion of the window, from the edge
+table.  Taken to the sky and differenced against channel 1, the pointing
+drops out, as does any rigid motion of the field stop, and a grating or a
+camera that moved would carry its image and its window together.  The
+image did not ride with the window: channel 2’s image stayed on
+channel 1’s to 0.02 px while its window moved 0.4 px, and channel 3’s
+image and window moved apart.  So the motion was not a grating or a
+camera, and it was not a decenter of the field stop or of the primary,
+which move every window, or every image, by one vector.</p>
+<p><em>The sectors.</em>  A focus that differs from sector to sector moves each
+channel’s image along its own dispersion by its own amount, which is a
+three-parameter pattern per frame against six measured components.  It
+fits: over the frames with edges the rms of the measured motion falls from
+0.13 px to 0.04 px, the floor of the measurement, and what is left across
+each channel’s dispersion is at the noise.  The figure modes of the primary
+tried first, astigmatism, coma and trefoil, had failed because they force
+the four sectors into a fixed relation; the sectors want their own
+histories, channel 0’s sector holding within 8 µm of its focus at the
+reference frame while channel 1’s moves from −26 to +22 µm, channel 2’s
+from +2 to +24 and channel 3’s from −17 to +13, and each is smooth in time
+to the precision of a single frame, 2 to 4 µm.  Nothing after the field stop can do this, and
+neither can any rigid motion of the mirror or the stop, so if it is real
+it is the figure of the primary changing unevenly with temperature, about
+100 nm of sag between sectors over the flight, the same scale as the common
+drift of the focus.  The focus stage now solves one focus per sector, and
+the pointing table carries four values per frame.</p>
+<p><em>The edges as fiducials, and the caveat.</em>  The conclusion rests on the
+window edges marking a rigid outline, and measured side by side and line
+by line in every frame they do not do so cleanly:</p>
+<ul class="simple">
+<li><p>The He I window has no left edge on any detector, where the image runs
+off the sensor; channel 0 has no bottom edge and channel 3 no top edge.
+Channel 1, the anchor of the alignment, is placed in <span class="math notranslate nohighlight">\(x\)</span> by the
+right edge of its He I window and the left edge of its O V window alone,
+both soft, both following a curve that departs from a straight line
+by 0.4 px where the other edges hold to 0.1 or 0.2, and 0.4 px per
+fifteen frames apart in their motion.</p></li>
+<li><p>The edges differ in sharpness from 0.7 to over 4 px in the width of
+the fitted step, with a median of 1.6, and their profiles are skewed,
+the dark half of the step wider than the lit by 0.8 px in the median.
+An edge three pixels soft is not the field stop in focus.</p></li>
+<li><p>Several edges change through the flight: the top edge of channel 0
+sharpens from 3.8 to 1.9 px at O V, the left edge of channel 2 from 4.3
+to 2.5 px, and the right edge of channel 0 softens from 1.8 to 2.5 px at
+He I, while most hold to a tenth of a pixel.</p></li>
+<li><p>The two lines, which share one field stop and one grating, disagree on
+the motion of the same side by up to 0.3 px per fifteen frames.</p></li>
+</ul>
+<p>The sector focus is measured along each channel’s dispersion, and the
+window’s position along the dispersion comes from the two edges
+perpendicular to it, which are the edges that behaved worst.  The crossing
+of a skewed step moves when its width changes, by a fraction of the
+change, and that would appear in this measurement as a focus of the
+sector, with the same direction.  The disagreement between the lines puts
+that at up to half the effect.  So the data support two readings, the
+mirror bending or the along-dispersion fiducials drifting, and do not
+decide between them; the first is the simpler physical account and is what
+the model carries, with this caveat beside it.  What would decide it: the
+drift measured per line rather than merged, with only the sharp edges; a
+thermal model of the mirror and its mount against the pattern of the
+sectors in time; and for the next flight, temperature sensors on the
+primary and an undispersed channel.</p>
+</section>
+<section id="what-remains-open">
+<h2>What remains open<a class="headerlink" href="#what-remains-open" title="Link to this heading">#</a></h2>
+<p>The primary scan did not discriminate on the flight data, and an audit
+of the stage shows why it could not as written.  Its logic is sound: a
+displacement of the primary scales the sky and not the windows, while a
+change of a channel’s magnification scales both, so the sky’s scale from
+the merit and the windows’ width from the edges together fix the focal
+length and the magnification.  But the inner re-polish at each trial
+frees only the sensor’s distance and angles, and the sensor’s distance
+also translates the image by five pixels per millimetre on a sensor yawed
+twelve degrees; with no lateral term to undo that, the merit refuses the
+move that would restore the sky’s scale, the widths never change, and the
+width error is flat to a hundredth of a pixel at every displacement,
+which is what was observed.  The committed tables therefore hold the
+primary at nominal, and the stage stays in the package with
+<code class="docutils literal notranslate"><span class="pre">primary=False</span></code> as the driver’s <code class="docutils literal notranslate"><span class="pre">ESIS_PRIMARY=0</span></code>.  The fix is a
+direct two-observable solve, or a re-polish that frees a lateral term and
+a residual without the clip.  The modelled windows are two to three
+pixels too large on every side against the measured edges, on every
+channel, which is a magnification excess of about a third of a percent;
+a longer focal length of the primary with every channel’s sensor a few
+millimetres closer would produce exactly that at a fixed sky scale and is
+the first candidate, ahead of the field stop’s clear width or the sensor’s
+placement.</p>
+<p>The fit model traces ideal materials, and its photometry is about ten
+times brighter than the V&amp;R radiance and the effective area predict, so
+the degradations are not yet a throughput; that is a units or integration
+factor to find in the scene synthesis or the image operator before they
+are read as physics.  The model has no knob for a scale along <span class="math notranslate nohighlight">\(y\)</span>
+alone, and the anisotropy of channels 0 and 3 is expressed through the
+sensor’s yaw and distance; the physical candidate is the per-channel
+grating radius, which was measured and differs.  The reference is fit to
+one frame and scored on the others; a polish over several frames at once
+is the natural next step now that every stage takes the frame as a
+parameter.</p>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="left-prev" href="level-1.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Level-1 Dataset</p>
+</div>
+</a>
+<a class="right-next" href="distortion-fit-summary.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Calibrating the ESIS-I optics against the flight: a summary</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<dialog id="pst-secondary-sidebar-modal"></dialog>
+<div class="bd-sidebar-secondary bd-toc" id="pst-secondary-sidebar"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<i class="fa-solid fa-list"></i> On this page
+  </div>
+<nav aria-labelledby="pst-page-navigation-heading-2" class="page-toc" id="pst-page-toc-nav">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-data-determine">What the data determine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-merit">The merit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-stages">The stages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-the-committed-fit">Reproducing the committed fit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceptance">Acceptance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-focus-of-each-sector-of-the-primary">The focus of each sector of the primary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-remains-open">What remains open</a></li>
+</ul>
+</nav></div>
+<div class="sidebar-secondary-item">
+<div class="tocsection sourcelink">
+<a href="../_sources/reports/distortion-fit.rst.txt">
+<i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+</div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script defer="" src="../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer="" src="../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
+<footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+<div class="footer-items__start">
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+<p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+  </p>
+</div>
+</div>
+<div class="footer-items__end">
+<div class="footer-item">
+<p class="theme-version">
+<!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
+</p></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

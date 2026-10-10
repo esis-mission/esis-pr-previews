@@ -1,0 +1,36 @@
+He\_I
+=====
+
+.. automodule:: esis.flights.f1.spectrum.He_I
+
+    
+    
+    .. rubric:: Module Attributes
+
+    .. autosummary::
+      :toctree:
+    
+      wavelength
+      radiance
+      radiance_coronal_hole
+      radiance_active_region
+      width_doppler
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
