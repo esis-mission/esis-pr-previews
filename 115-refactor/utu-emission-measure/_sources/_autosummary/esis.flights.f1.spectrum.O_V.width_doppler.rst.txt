@@ -1,6 +1,0 @@
-esis.flights.f1.spectrum.O\_V.width\_doppler
-============================================
-
-.. currentmodule:: esis.flights.f1.spectrum.O_V
-
-.. autodata:: width_doppler

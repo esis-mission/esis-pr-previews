@@ -1,8 +1,0 @@
-scene\_dem
-==========
-
-.. currentmodule:: esis.data.synth
-
-.. autofunction:: esis.data.synth.scene_dem
-
-    .. autolink-examples:: esis.data.synth.scene_dem

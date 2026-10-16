@@ -1,6 +1,0 @@
-esis.flights.f1.spectrum.Si\_IV.wavelength
-==========================================
-
-.. currentmodule:: esis.flights.f1.spectrum.Si_IV
-
-.. autodata:: wavelength

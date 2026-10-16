@@ -1,6 +1,0 @@
-esis.flights.f1.spectrum.He\_I.radiance
-=======================================
-
-.. currentmodule:: esis.flights.f1.spectrum.He_I
-
-.. autodata:: radiance
