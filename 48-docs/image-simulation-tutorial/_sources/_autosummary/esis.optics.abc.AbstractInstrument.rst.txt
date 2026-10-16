@@ -1,0 +1,61 @@
+AbstractInstrument
+==================
+
+.. currentmodule:: esis.optics.abc
+
+.. autoclass:: esis.optics.abc.AbstractInstrument
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~AbstractInstrument.angle_grating_input
+      ~AbstractInstrument.angle_grating_output
+      ~AbstractInstrument.axis_channel
+      ~AbstractInstrument.camera
+      ~AbstractInstrument.central_obscuration
+      ~AbstractInstrument.field
+      ~AbstractInstrument.field_stop
+      ~AbstractInstrument.filter
+      ~AbstractInstrument.front_aperture
+      ~AbstractInstrument.grating
+      ~AbstractInstrument.kwargs_plot
+      ~AbstractInstrument.name
+      ~AbstractInstrument.pitch
+      ~AbstractInstrument.primary_mirror
+      ~AbstractInstrument.pupil
+      ~AbstractInstrument.roll
+      ~AbstractInstrument.system
+      ~AbstractInstrument.transformation
+      ~AbstractInstrument.wavelength
+      ~AbstractInstrument.wavelength_max
+      ~AbstractInstrument.wavelength_min
+      ~AbstractInstrument.wavelength_physical
+      ~AbstractInstrument.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~AbstractInstrument.__init__
+      ~AbstractInstrument.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.abc.AbstractInstrument
+        :parts: 1
+    

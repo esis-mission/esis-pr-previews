@@ -1,0 +1,103 @@
+AbstractChannelData
+===================
+
+.. currentmodule:: esis.data.abc
+
+.. autoclass:: esis.data.abc.AbstractChannelData
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~AbstractChannelData.axes
+      ~AbstractChannelData.axes_center
+      ~AbstractChannelData.axes_flattened
+      ~AbstractChannelData.axes_vertex
+      ~AbstractChannelData.axis_channel
+      ~AbstractChannelData.axis_time
+      ~AbstractChannelData.axis_x
+      ~AbstractChannelData.axis_xy
+      ~AbstractChannelData.axis_y
+      ~AbstractChannelData.broadcasted
+      ~AbstractChannelData.channel
+      ~AbstractChannelData.explicit
+      ~AbstractChannelData.indices
+      ~AbstractChannelData.inputs
+      ~AbstractChannelData.length
+      ~AbstractChannelData.ndim
+      ~AbstractChannelData.num_x
+      ~AbstractChannelData.num_y
+      ~AbstractChannelData.outputs
+      ~AbstractChannelData.shape
+      ~AbstractChannelData.size
+      ~AbstractChannelData.type_abstract
+      ~AbstractChannelData.type_explicit
+      ~AbstractChannelData.value
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~AbstractChannelData.__init__
+      ~AbstractChannelData.add_axes
+      ~AbstractChannelData.all
+      ~AbstractChannelData.animate
+      ~AbstractChannelData.any
+      ~AbstractChannelData.astype
+      ~AbstractChannelData.broadcast_to
+      ~AbstractChannelData.cell_centers
+      ~AbstractChannelData.combine_axes
+      ~AbstractChannelData.copy
+      ~AbstractChannelData.copy_shallow
+      ~AbstractChannelData.debroadcast
+      ~AbstractChannelData.from_scalar_array
+      ~AbstractChannelData.index
+      ~AbstractChannelData.index_secant
+      ~AbstractChannelData.integrate
+      ~AbstractChannelData.interp_linear
+      ~AbstractChannelData.isel
+      ~AbstractChannelData.max
+      ~AbstractChannelData.mean
+      ~AbstractChannelData.median
+      ~AbstractChannelData.min
+      ~AbstractChannelData.ndindex
+      ~AbstractChannelData.pcolormesh
+      ~AbstractChannelData.percentile
+      ~AbstractChannelData.ptp
+      ~AbstractChannelData.regrid
+      ~AbstractChannelData.replace
+      ~AbstractChannelData.reshape
+      ~AbstractChannelData.rms
+      ~AbstractChannelData.std
+      ~AbstractChannelData.sum
+      ~AbstractChannelData.take_along_axis
+      ~AbstractChannelData.to
+      ~AbstractChannelData.to_jshtml
+      ~AbstractChannelData.to_string
+      ~AbstractChannelData.to_string_array
+      ~AbstractChannelData.to_value
+      ~AbstractChannelData.transpose
+      ~AbstractChannelData.var
+      ~AbstractChannelData.vmr
+      ~AbstractChannelData.volume_cell
+      ~AbstractChannelData.weights
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.data.abc.AbstractChannelData
+        :parts: 1
+    

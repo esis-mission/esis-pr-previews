@@ -1,0 +1,34 @@
+synth
+=====
+
+.. automodule:: esis.data.synth
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      scene_aia
+      scene_iris
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

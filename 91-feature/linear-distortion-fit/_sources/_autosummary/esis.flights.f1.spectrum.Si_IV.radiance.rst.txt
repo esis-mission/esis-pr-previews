@@ -1,0 +1,6 @@
+esis.flights.f1.spectrum.Si\_IV.radiance
+========================================
+
+.. currentmodule:: esis.flights.f1.spectrum.Si_IV
+
+.. autodata:: radiance

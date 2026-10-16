@@ -1,0 +1,32 @@
+He\_II
+======
+
+.. automodule:: esis.flights.f1.spectrum.He_II
+
+    
+    
+    .. rubric:: Module Attributes
+
+    .. autosummary::
+      :toctree:
+    
+      wavelength
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

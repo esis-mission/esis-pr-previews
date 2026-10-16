@@ -1,0 +1,8 @@
+median\_shifts
+==============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.median_shifts
+
+    .. autolink-examples:: esis.optics.median_shifts

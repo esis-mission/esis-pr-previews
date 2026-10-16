@@ -1,0 +1,40 @@
+FrontAperture
+=============
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.FrontAperture
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~FrontAperture.surface
+      ~FrontAperture.transformation
+      ~FrontAperture.translation
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~FrontAperture.__init__
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.FrontAperture
+        :parts: 1
+    

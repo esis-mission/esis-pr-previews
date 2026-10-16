@@ -1,0 +1,8 @@
+sample\_on\_sky
+===============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.sample_on_sky
+
+    .. autolink-examples:: esis.optics.sample_on_sky

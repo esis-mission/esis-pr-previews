@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../../_static/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../_static/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../_static/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<title>Synthetic ESIS-II Images — ESIS  documentation</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+<noscript>
+<style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+</noscript>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet"/>
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet"/>
+<link href="../../_static/pygments.css?v=8f2a1f02" rel="stylesheet" type="text/css"/>
+<link href="../../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/thebelab.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/nbsphinx-code-cells.css?v=2aa19091" rel="stylesheet" type="text/css"/>
+<!-- So that users can add custom icons -->
+<script defer="" src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" rel="preload"/>
+<link as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" rel="preload"/>
+<script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+<script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="../../_static/thebelab-helper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+<script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'reports/f2/synthetic-image';</script>
+<script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="../../_autosummary/esis.html" rel="next" title="esis"/>
+<link href="grating.html" rel="prev" title="Grating Specifications"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="en" name="docsearch:language"/>
+<meta content="" name="docsearch:version"/>
+<script src="../../_static/searchtools.js"></script>
+<script src="../../_static/language_data.js"></script>
+<script src="../../searchindex.js"></script>
+</head>
+<body data-default-mode="">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<dialog id="pst-search-dialog">
+<form action="../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search the docs ..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" name="q" placeholder="Search the docs ..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</dialog>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none" id="pst-header">
+<div class="bd-header__inner bd-page-width">
+<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle" type="button">
+<span class="fa-solid fa-bars"></span>
+</button>
+<div class="col-lg-3 navbar-header-items__start">
+<div class="navbar-item">
+<a class="navbar-brand logo" href="../../index.html">
+<img alt="ESIS  documentation - Home" class="logo__image only-light" src="../../_static/logo_black.png"/>
+<img alt="ESIS  documentation - Home" class="logo__image only-dark pst-js-only" src="../../_static/logo_white.png"/>
+</a></div>
+</div>
+<div class="col-lg-9 navbar-header-items">
+<div class="me-auto navbar-header-items__center">
+<div class="navbar-item">
+<nav>
+<ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../throughput.html">
+    Throughput
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+<li class="nav-item dropdown">
+<button aria-controls="pst-nav-more-links" aria-expanded="false" class="btn dropdown-toggle nav-item" data-bs-toggle="dropdown" type="button">
+                    More
+                </button>
+<ul class="dropdown-menu" id="pst-nav-more-links">
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="design.html">
+    Design &amp; Specifications
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="grating.html">
+    Grating Specifications
+  </a>
+</li>
+<li class="current active">
+<a aria-current="page" class="nav-link dropdown-item nav-internal" href="#">
+    Synthetic ESIS-II Images
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+<li class="">
+<a class="nav-link dropdown-item nav-internal" href="../../schedule.html">
+    Schedule
+  </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div>
+<div class="navbar-header-items__end">
+<div class="navbar-item navbar-persistent--container">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" type="button">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<div class="navbar-item">
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto" type="button"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light" type="button"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark" type="button"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div></div>
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/esis-mission/esis" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search" type="button">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle" type="button">
+<span class="fa-solid fa-outdent"></span>
+</button>
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<dialog id="pst-primary-sidebar-modal"></dialog>
+<div class="bd-sidebar-primary bd-sidebar" id="pst-primary-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+<div class="sidebar-header-items__center">
+<div class="navbar-item">
+<nav>
+<ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../throughput.html">
+    Throughput
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="design.html">
+    Design &amp; Specifications
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="grating.html">
+    Grating Specifications
+  </a>
+</li>
+<li class="nav-item current active">
+<a aria-current="page" class="nav-link nav-internal" href="#">
+    Synthetic ESIS-II Images
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../schedule.html">
+    Schedule
+  </a>
+</li>
+</ul>
+</nav></div>
+</div>
+<div class="sidebar-header-items__end">
+<div class="navbar-item">
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto" type="button"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light" type="button"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark" type="button"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div></div>
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/esis-mission/esis" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item pst-sidebar-collapse"><button aria-controls="pst-primary-sidebar" aria-expanded="true" id="pst-collapse-sidebar-button" type="button">
+<svg aria-hidden="true" class="pst-icon" focusable="false" role="img" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z" fill="currentColor"></path>
+</svg>
+<span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+<span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+<div class="sidebar-primary-item">
+<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
+<p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
+<div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+<div class="sidebar-primary-item">
+<div class="flat" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" id="ethical-ad-placement">
+</div></div>
+</div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item">
+<nav aria-label="Breadcrumb" class="d-print-none">
+<ul class="bd-breadcrumbs">
+<li class="breadcrumb-item breadcrumb-home">
+<a aria-label="Home" class="nav-link" href="../../index.html">
+<i class="fa-solid fa-home"></i>
+</a>
+</li>
+<li aria-current="page" class="breadcrumb-item active"><span class="ellipsis">Synthetic ESIS-II Images</span></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="Synthetic-ESIS-II-Images">
+<h1>Synthetic ESIS-II Images<a class="headerlink" href="#Synthetic-ESIS-II-Images" title="Link to this heading">#</a></h1>
+<p>This report forward-models a single ESIS-II detector frame from a real solar scene: the active-region pair NOAA 12565 and 12567 observed by SDO/AIA on 2016 July 15 at 00:00 UT.</p>
+<p>The scene is <code class="docutils literal notranslate"><span class="pre">esis.flights.f2.data.synth.scene_dem()</span></code>. The differential emission measure (DEM) of each AIA pixel is inverted from the six optically thin EUV channels with <code class="docutils literal notranslate"><span class="pre">utu.dem.plowman()</span></code>, against the CHIANTI 11 temperature response of <code class="docutils literal notranslate"><span class="pre">sdo.aia.temperature_response()</span></code>, and the spectrum of the plasma it describes is computed from the CHIANTI atomic database with <code class="docutils literal notranslate"><span class="pre">utu.spectrum</span></code>, for every line in the ESIS-II passband which carries at least half a percent of its radiance. Each line is
+spread over bins of velocity by the thermal motion of its ions, at rest.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/pyplot_summary.html#module-matplotlib.pyplot"><span class="nn">matplotlib.pyplot</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/index.html#module-numpy"><span class="nn">numpy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/units/ref_api.html#module-astropy.units"><span class="nn">astropy.units</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/visualization/ref_api.html#module-astropy.visualization"><span class="nn">astropy.visualization</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.html#module-named_arrays"><span class="nn">named_arrays</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">na</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.html#module-optika"><span class="nn">optika</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../_autosummary/esis.html#module-esis"><span class="nn">esis</span></a>
+</pre></div>
+</div>
+</div>
+<section id="The-scene">
+<h2>The scene<a class="headerlink" href="#The-scene" title="Link to this heading">#</a></h2>
+<p>The axes of the AIA pixels are renamed, so that they can’t be mistaken for the axes of the ESIS-II detector the scene is imaged onto. The first call downloads the AIA images and computes the contribution functions of the lines, which takes about a quarter of an hour; both are cached afterwards.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">axis_x</span> <span class="o">=</span> <span class="s2">"scene_x"</span>
+<span class="n">axis_y</span> <span class="o">=</span> <span class="s2">"scene_y"</span>
+
+<a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.FunctionArray.html#named_arrays.FunctionArray" title="named_arrays._functions.functions.FunctionArray"><span class="n">scene</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../_autosummary/esis.flights.f2.data.synth.scene_dem.html#esis.flights.f2.data.synth.scene_dem"><span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">synth</span><span class="o">.</span><span class="n">scene_dem</span></a><span class="p">(</span>
+    <span class="n">axis_detector_x</span><span class="o">=</span><span class="n">axis_x</span><span class="p">,</span>
+    <span class="n">axis_detector_y</span><span class="o">=</span><span class="n">axis_y</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">outputs</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "1b5151f7b67f4ef0aaf9006a57eec8c5"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "35b6cad99be44941935b6a48c6c04483"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:30 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:32 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:34 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:36 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:38 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:40 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:42 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:44 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:46 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:48 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:50 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU. [astropy.io.fits.hdu.image]
+2026-10-15 17:38:52 - fiasco - WARNING: VerifyWarning: Invalid 'BLANK' keyword in header.  The 'BLANK' keyword is only applicable to integer data, and will be ignored in this HDU.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000001 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:52 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000001 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000088 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:52 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000088 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000120 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:52 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000120 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000068 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000068 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57583.999984 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57583.999984 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000019 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000019 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000140 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000140 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000227 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000227 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000259 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000259 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000206 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000206 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000123 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000123 from DATE-OBS'.
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000158 from DATE-OBS'. [astropy.wcs.wcs]
+2026-10-15 17:38:53 - fiasco - WARNING: FITSFixedWarning: 'datfix' made the change 'Set MJD-OBS to 57584.000158 from DATE-OBS'.
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "d5db888b02734cb7bf0a93f9012b40cf"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "e51026700f0d461ab1957343765ff89d"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "93b5ad0e3f2042728dbaa35431079754"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "713769b649be4cd0969a4f3d2b5d4de8"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "183239182ad0420a8eab619e68bb7b08"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "8f6d2914236a4f02815bd0578cd3277a"}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING: No autoionization or level-resolved radiative recombination data available for He 1. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:40:01 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for He 1. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for He 1. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:40:02 - fiasco - WARNING: No proton data available for He 1. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for C 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:40:03 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for C 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for C 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:40:05 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for C 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for C 4. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:40:07 - fiasco - WARNING: No proton data available for C 4. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for C 5. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:40:33 - fiasco - WARNING: No proton data available for C 5. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for C 5. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:40:38 - fiasco - WARNING: No proton data available for C 5. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for C 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:41:07 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for C 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for N 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:41:08 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for N 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for N 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:41:10 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for N 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for N 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:41:12 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for N 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for N 5. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:41:15 - fiasco - WARNING: No proton data available for N 5. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for N 6. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:41:40 - fiasco - WARNING: No proton data available for N 6. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for N 6. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:41:46 - fiasco - WARNING: No proton data available for N 6. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for N 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:42:11 - fiasco - WARNING: No proton data available for N 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for O 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:42:14 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for O 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for O 2. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:42:15 - fiasco - WARNING: No proton data available for O 2. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for O 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:42:16 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for O 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for O 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:42:18 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for O 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for O 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:42:21 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for O 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for O 6. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:42:23 - fiasco - WARNING: No proton data available for O 6. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for O 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:42:49 - fiasco - WARNING: No proton data available for O 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for O 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:42:54 - fiasco - WARNING: No proton data available for O 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for O 8. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:43:19 - fiasco - WARNING: No proton data available for O 8. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Ne 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:43:22 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Ne 2. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Ne 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:43:24 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Ne 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Ne 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:43:26 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Ne 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Ne 4. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:43:27 - fiasco - WARNING: No proton data available for Ne 4. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Ne 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:43:27 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Ne 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Ne 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:43:31 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Ne 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Ne 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:43:33 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Ne 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Ne 8. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:43:36 - fiasco - WARNING: No proton data available for Ne 8. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Ne 9. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:44:02 - fiasco - WARNING: No proton data available for Ne 9. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Ne 9. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:44:07 - fiasco - WARNING: No proton data available for Ne 9. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Ne 10. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:44:33 - fiasco - WARNING: No proton data available for Ne 10. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:36 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Mg 3. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:44:37 - fiasco - WARNING: No proton data available for Mg 3. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:38 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:40 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:42 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:44 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:50 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Mg 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:44:52 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Mg 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Mg 10. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:44:55 - fiasco - WARNING: No proton data available for Mg 10. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Mg 11. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:45:21 - fiasco - WARNING: No proton data available for Mg 11. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Al 3. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:45:27 - fiasco - WARNING: No proton data available for Al 3. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Al 4. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:45:53 - fiasco - WARNING: No proton data available for Al 4. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Al 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:45:56 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Al 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Al 4. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:45:57 - fiasco - WARNING: No proton data available for Al 4. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Al 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:45:58 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Al 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Al 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:46:00 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Al 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Al 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:46:01 - fiasco - WARNING: No proton data available for Al 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Al 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:46:02 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Al 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Al 8. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:46:08 - fiasco - WARNING: No proton data available for Al 8. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Al 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:46:08 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Al 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Al 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:46:11 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Al 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Al 11. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:46:14 - fiasco - WARNING: No proton data available for Al 11. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Al 12. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:46:39 - fiasco - WARNING: No proton data available for Al 12. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Al 12. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:46:45 - fiasco - WARNING: No proton data available for Al 12. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Al 13. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:47:10 - fiasco - WARNING: No proton data available for Al 13. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:47:13 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Si 4. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:47:16 - fiasco - WARNING: No proton data available for Si 4. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Si 5. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:47:42 - fiasco - WARNING: No proton data available for Si 5. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:47:45 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Si 5. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:47:47 - fiasco - WARNING: No proton data available for Si 5. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:47:47 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:47:49 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:47:55 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:48:05 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:48:15 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Si 11. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:48:17 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Si 11. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Si 12. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:48:20 - fiasco - WARNING: No proton data available for Si 12. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Si 13. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:48:45 - fiasco - WARNING: No proton data available for Si 13. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Si 13. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:48:51 - fiasco - WARNING: No proton data available for Si 13. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Si 14. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:49:16 - fiasco - WARNING: No proton data available for Si 14. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:49:20 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for S 3. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:49:20 - fiasco - WARNING: No proton data available for S 3. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:49:21 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 4. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:49:22 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 5. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for S 6. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:49:26 - fiasco - WARNING: No proton data available for S 6. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for S 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:49:52 - fiasco - WARNING: No proton data available for S 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:49:55 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for S 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:49:56 - fiasco - WARNING: No proton data available for S 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:49:57 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:49:59 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:50:07 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 11. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:50:08 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 11. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 12. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:50:18 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 12. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for S 13. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:50:21 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for S 13. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for S 14. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:50:24 - fiasco - WARNING: No proton data available for S 14. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for S 15. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:50:49 - fiasco - WARNING: No proton data available for S 15. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for S 15. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:50:55 - fiasco - WARNING: No proton data available for S 15. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for S 16. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:51:20 - fiasco - WARNING: No proton data available for S 16. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:23 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 3. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 3. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:51:26 - fiasco - WARNING: No proton data available for Fe 3. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:27 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 6. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 6. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:51:27 - fiasco - WARNING: No proton data available for Fe 6. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:28 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 7. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 7. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:51:30 - fiasco - WARNING: No proton data available for Fe 7. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:30 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 8. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 8. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:51:37 - fiasco - WARNING: No proton data available for Fe 8. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:38 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 9. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 9. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:51:51 - fiasco - WARNING: No proton data available for Fe 9. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:52 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 10. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 11. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:55 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 11. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 12. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:51:59 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 12. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 13. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:52:02 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 13. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 14. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:52:05 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 14. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 15. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:52:07 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 15. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 16. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:52:12 - fiasco - WARNING: No proton data available for Fe 16. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Fe 17. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:52:38 - fiasco - WARNING: No proton data available for Fe 17. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No autoionization or level-resolved radiative recombination data available for Fe 17. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False. [fiasco.ions]
+2026-10-15 17:52:41 - fiasco - WARNING: No autoionization or level-resolved radiative recombination data available for Fe 17. Using single-ion model for level populations calculation. To silence this warning, set use_two_ion_model=False.
+WARNING: No proton data available for Fe 17. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:52:42 - fiasco - WARNING: No proton data available for Fe 17. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Fe 24. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:55:57 - fiasco - WARNING: No proton data available for Fe 24. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Fe 24. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:56:02 - fiasco - WARNING: No proton data available for Fe 24. Not including proton excitation and de-excitation in level populations calculation.
+WARNING: No proton data available for Fe 25. Not including proton excitation and de-excitation in level populations calculation. [fiasco.ions]
+2026-10-15 17:56:27 - fiasco - WARNING: No proton data available for Fe 25. Not including proton excitation and de-excitation in level populations calculation.
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{'line': 22, 'scene_y': 833, 'scene_x': 834, 'velocity': 20}
+</pre></div></div>
+</div>
+<p>The radiance of each line is its spectral radiance summed over its bins of velocity. The two lines ESIS-II was designed for are the brightest, followed by the weaker line of the Si XII doublet and the Mg VII and Mg VIII lines at the short end of the passband.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.diff.html#numpy.diff" title="numpy.diff"><span class="n">np</span><span class="o">.</span><span class="n">diff</span></a><span class="p">(</span><span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"velocity"</span><span class="p">)</span>
+<span class="n">radiance</span> <span class="o">=</span> <span class="p">(</span><span class="n">scene</span><span class="o">.</span><span class="n">outputs</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">"velocity"</span><span class="p">)</span>
+
+<span class="n">rest</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">wavelength_rest</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">radiance</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">axis_x</span><span class="p">,</span> <span class="n">axis_y</span><span class="p">))</span>
+<span class="n">fraction</span> <span class="o">=</span> <span class="n">mean</span> <span class="o">/</span> <span class="n">mean</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">"line"</span><span class="p">)</span>
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#print"><span class="nb">print</span></a><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="s1">'wavelength'</span><span class="si">:</span><span class="s2">&gt;12</span><span class="si">}{</span><span class="s1">'radiance'</span><span class="si">:</span><span class="s2">&gt;12</span><span class="si">}{</span><span class="s1">'fraction'</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="numpy.argsort"><span class="n">np</span><span class="o">.</span><span class="n">argsort</span></a><span class="p">(</span><span class="o">-</span><span class="n">mean</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#print"><span class="nb">print</span></a><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rest</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">)</span><span class="si">:</span><span class="s2">12.3f</span><span class="si">}</span><span class="s2">"</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">mean</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">value</span><span class="si">:</span><span class="s2">12.1f</span><span class="si">}</span><span class="s2">"</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fraction</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">value</span><span class="si">:</span><span class="s2">10.3f</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+  wavelength    radiance  fraction
+     499.406       291.5     0.271
+     465.221       234.5     0.218
+     520.665       141.1     0.131
+     436.733        86.1     0.080
+     434.927        52.7     0.049
+     430.454        52.4     0.049
+     431.323        30.9     0.029
+     435.646        22.6     0.021
+     447.357        20.7     0.019
+     443.973        17.5     0.016
+     467.427        15.6     0.014
+     445.700        14.2     0.013
+     433.179        14.2     0.013
+     510.042        13.5     0.013
+     482.994        11.5     0.011
+     481.489         9.2     0.009
+     431.198         8.7     0.008
+     436.660         8.4     0.008
+     487.042         8.3     0.008
+     444.219         8.0     0.007
+     434.730         7.8     0.007
+     439.176         6.1     0.006
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa">r</span><span class="s2">"Ne VII 465 $\AA$"</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">wavelength_Ne_VII</span><span class="p">,</span>
+    <span class="sa">r</span><span class="s2">"Si XII 499 $\AA$"</span><span class="p">:</span> <span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">wavelength_Si_XII</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.astropy.org/en/stable/api/astropy.visualization.quantity_support.html#astropy.visualization.quantity_support"><span class="n">astropy</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">quantity_support</span></a><span class="p">():</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span>
+        <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span>
+        <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#zip"><span class="nb">zip</span></a><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">lines</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">index</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.argmin.html#numpy.argmin" title="numpy.argmin"><span class="n">np</span><span class="o">.</span><span class="n">argmin</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">rest</span> <span class="o">-</span> <span class="n">w</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"line"</span><span class="p">)</span>
+        <a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.plt.pcolormesh.html#named_arrays.plt.pcolormesh" title="named_arrays.plt.pcolormesh"><span class="n">na</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span></a><span class="p">(</span>
+            <span class="n">scene</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">position</span><span class="p">,</span>
+            <span class="n">C</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.sqrt.html#numpy.sqrt" title="numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="n">radiance</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s2">"afmhot"</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">"equal"</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">"offset from the boresight in $x$ (arcsec)"</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">supylabel</span><span class="p">(</span><span class="s2">"offset from the boresight in $y$ (arcsec)"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/reports_f2_synthetic-image_7_0.png" src="../../_images/reports_f2_synthetic-image_7_0.png"/>
+</div>
+</div>
+</section>
+<section id="The-instrument">
+<h2>The instrument<a class="headerlink" href="#The-instrument" title="Link to this heading">#</a></h2>
+<p>The forward model is a single channel of the current ESIS-II design. Replacing the sensor material with an ideal one, which counts one electron per absorbed photon, and exposing for one second makes the frame read directly in photons per second per pixel.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="../../_autosummary/esis.optics.Instrument.html#esis.optics.Instrument" title="esis.optics._instruments._instruments.Instrument"><span class="n">instrument</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../_autosummary/esis.flights.f2.optics.design_single.html#esis.flights.f2.optics.design_single"><span class="n">esis</span><span class="o">.</span><span class="n">flights</span><span class="o">.</span><span class="n">f2</span><span class="o">.</span><span class="n">optics</span><span class="o">.</span><span class="n">design_single</span></a><span class="p">(</span><span class="n">num_distribution</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">instrument</span><span class="o">.</span><span class="n">system</span>
+<span class="n">system</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://optika.readthedocs.io/en/stable/_autosummary/optika.sensors.materials.IdealSensorMaterial.html#optika.sensors.materials.IdealSensorMaterial" title="optika.sensors.materials._materials.IdealSensorMaterial"><span class="n">optika</span><span class="o">.</span><span class="n">sensors</span><span class="o">.</span><span class="n">materials</span><span class="o">.</span><span class="n">IdealSensorMaterial</span></a><span class="p">()</span>
+<span class="n">system</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">timedelta_exposure</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Projection-onto-the-detector">
+<h2>Projection onto the detector<a class="headerlink" href="#Projection-onto-the-detector" title="Link to this heading">#</a></h2>
+<p>Each line is imaged through a linear approximation of the optical system, <code class="docutils literal notranslate"><span class="pre">optika.systems.SequentialSystem.linearize()</span></code>, which fits the distortion, vignetting, effective area, and field stop of the system and then images the scene by conservative regridding, without the sampling noise of a ray trace. The fits are polynomials in wavelength, so each line is linearized on five wavelengths spanning two angstroms around it.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#range"><span class="nb">range</span></a><span class="p">(</span><span class="n">rest</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="s2">"line"</span><span class="p">]):</span>
+    <span class="n">index</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">rest</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="n">linear</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">linearize</span><span class="p">(</span>
+        <span class="n">wavelength</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.linspace.html#named_arrays.linspace" title="named_arrays.linspace"><span class="n">na</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="n">w</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">,</span> <span class="n">w</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"_wavelength"</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+        <span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">image</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">image</span><span class="p">(</span>
+        <span class="n">scene</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://named-arrays.readthedocs.io/en/stable/_autosummary/named_arrays.FunctionArray.html#named_arrays.FunctionArray" title="named_arrays._functions.functions.FunctionArray"><span class="n">scene</span></a><span class="p">[</span><span class="n">index</span><span class="p">],</span>
+        <span class="n">axis_wavelength</span><span class="o">=</span><span class="s2">"velocity"</span><span class="p">,</span>
+        <span class="n">axis_field</span><span class="o">=</span><span class="p">(</span><span class="n">axis_x</span><span class="p">,</span> <span class="n">axis_y</span><span class="p">),</span>
+        <span class="n">noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span> <span class="o">+</span> <span class="n">image</span><span class="o">.</span><span class="n">outputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">electron</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING: function 'sqrt' is not known to astropy's Quantity. Will run it anyway, hoping it will treat ndarray subclasses correctly. Please raise an issue at https://github.com/astropy/astropy/issues. [astropy.units.quantity]
+2026-10-15 17:57:21 - fiasco - WARNING: function 'sqrt' is not known to astropy's Quantity. Will run it anyway, hoping it will treat ndarray subclasses correctly. Please raise an issue at https://github.com/astropy/astropy/issues.
+WARNING: function 'sqrt' is not known to astropy's Quantity. Will run it anyway, hoping it will treat ndarray subclasses correctly. Please raise an issue at https://github.com/astropy/astropy/issues. [astropy.units.quantity]
+2026-10-15 17:57:35 - fiasco - WARNING: function 'sqrt' is not known to astropy's Quantity. Will run it anyway, hoping it will treat ndarray subclasses correctly. Please raise an issue at https://github.com/astropy/astropy/issues.
+</pre></div></div>
+</div>
+</section>
+<section id="The-synthetic-frame">
+<h2>The synthetic frame<a class="headerlink" href="#The-synthetic-frame" title="Link to this heading">#</a></h2>
+<p>The Ne VII and Si XII images of the octagonal field stop land side by side on the detector, on either side of its center. Ne VII shows the cool fan loops and moss of the two active regions, and Si XII their hot cores. The fainter octagons to the left are the Mg VII and Mg VIII lines, and the one to the right is the weaker line of the Si XII doublet.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">ndarray_aligned</span><span class="p">((</span><span class="s2">"detector_y"</span><span class="p">,</span> <span class="s2">"detector_x"</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
+    <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.sqrt.html#numpy.sqrt" title="numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://numpy.org/doc/stable/reference/generated/numpy.clip.html#numpy.clip" title="numpy.clip"><span class="n">np</span><span class="o">.</span><span class="n">clip</span></a><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)),</span>
+    <span class="n">origin</span><span class="o">=</span><span class="s2">"lower"</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">"afmhot"</span><span class="p">,</span>
+    <span class="n">interpolation</span><span class="o">=</span><span class="s2">"none"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"detector $x$ (pixels)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"detector $y$ (pixels)"</span><span class="p">)</span>
+<span class="n">colorbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">"horizontal"</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">"square root of photons / s / pixel"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/reports_f2_synthetic-image_16_0.png" src="../../_images/reports_f2_synthetic-image_16_0.png"/>
+</div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"543491caa3b04046a83299387a4e5885": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5544b71cc0644544b2621d084d72f07f": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "78c68a20866e4b729cb7cad7cd296262": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_543491caa3b04046a83299387a4e5885", "max": 1.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_5544b71cc0644544b2621d084d72f07f", "tabbable": null, "tooltip": null, "value": 1.0}}, "a03991e67ccf4d7aa86f605e406e9bd1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1e89c04661d24845815b99d9ea2a0ccc": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "05b7db0cce274bd1a91ec8dee3c716c8": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_a03991e67ccf4d7aa86f605e406e9bd1", "placeholder": "\u200b", "style": "IPY_MODEL_1e89c04661d24845815b99d9ea2a0ccc", "tabbable": null, "tooltip": null, "value": "Files\u2007Downloaded:\u2007100%"}}, "67ec3e7be0e24b66b00678331a3a725a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3f9a62db6d7c404cb17cf89cefd93537": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "279c543d074b45b7966d8499995abea9": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_67ec3e7be0e24b66b00678331a3a725a", "placeholder": "\u200b", "style": "IPY_MODEL_3f9a62db6d7c404cb17cf89cefd93537", "tabbable": null, "tooltip": null, "value": "\u20071/1\u2007[00:00&lt;00:00,\u2007\u20074.05file/s]"}}, "c08e465889164097a44854a9ef466763": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1b5151f7b67f4ef0aaf9006a57eec8c5": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_05b7db0cce274bd1a91ec8dee3c716c8", "IPY_MODEL_78c68a20866e4b729cb7cad7cd296262", "IPY_MODEL_279c543d074b45b7966d8499995abea9"], "layout": "IPY_MODEL_c08e465889164097a44854a9ef466763", "tabbable": null, "tooltip": null}}, "5463ecf6489d4021ac63a52c34c5f375": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "324108061bc94c12b6d3280395153d57": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "cea05dd924984a3d84489013de820033": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_5463ecf6489d4021ac63a52c34c5f375", "max": 4911212.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_324108061bc94c12b6d3280395153d57", "tabbable": null, "tooltip": null, "value": 4911212.0}}, "aaa93264f85a4202904c285d48632aa2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "fe580d6b83da4d2fa52e13749963e1bf": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "6256e50d7f224f2a82b85844c78706d9": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_aaa93264f85a4202904c285d48632aa2", "placeholder": "\u200b", "style": "IPY_MODEL_fe580d6b83da4d2fa52e13749963e1bf", "tabbable": null, "tooltip": null, "value": "aiapy.aia_pointing_table.csv:\u2007"}}, "75337a6e89b646a79ddc33c32456c503": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "bf6c09a646104eb0948596263010a541": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "65a3ead24c2c4d3f895f6de6fedf6274": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_75337a6e89b646a79ddc33c32456c503", "placeholder": "\u200b", "style": "IPY_MODEL_bf6c09a646104eb0948596263010a541", "tabbable": null, "tooltip": null, "value": "\u200720.1M/?\u2007[00:00&lt;00:00,\u200799.9MB/s]"}}, "c6ae86fd6c5e455f98fd04fa1a873e37": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}, "35b6cad99be44941935b6a48c6c04483": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_6256e50d7f224f2a82b85844c78706d9", "IPY_MODEL_cea05dd924984a3d84489013de820033", "IPY_MODEL_65a3ead24c2c4d3f895f6de6fedf6274"], "layout": "IPY_MODEL_c6ae86fd6c5e455f98fd04fa1a873e37", "tabbable": null, "tooltip": null}}, "f4adcf0f7b384e91a92d1b325446dea6": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d0ae69712f19417dbf4809c331daf46b": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "ac3063d627f04c1f8da605eba925aa05": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_f4adcf0f7b384e91a92d1b325446dea6", "max": 1.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_d0ae69712f19417dbf4809c331daf46b", "tabbable": null, "tooltip": null, "value": 1.0}}, "d5ed36b349f44c4aad1911e02db99c7b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b693b77022cf4ebb984c90630872d0e9": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "98188346d6c0473d9955e6f9ec10f30b": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_d5ed36b349f44c4aad1911e02db99c7b", "placeholder": "\u200b", "style": "IPY_MODEL_b693b77022cf4ebb984c90630872d0e9", "tabbable": null, "tooltip": null, "value": "Files\u2007Downloaded:\u2007100%"}}, "5e213d4cf77b453e8c1c9ec1174a7ba3": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "80a6d2f9d114440dab1f897807e292df": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "745a4c1cda584f1eb03f484f232fb875": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_5e213d4cf77b453e8c1c9ec1174a7ba3", "placeholder": "\u200b", "style": "IPY_MODEL_80a6d2f9d114440dab1f897807e292df", "tabbable": null, "tooltip": null, "value": "\u20071/1\u2007[00:00&lt;00:00,\u2007\u20078.10file/s]"}}, "bde1e466081a47989615c3802f63f922": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d5db888b02734cb7bf0a93f9012b40cf": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_98188346d6c0473d9955e6f9ec10f30b", "IPY_MODEL_ac3063d627f04c1f8da605eba925aa05", "IPY_MODEL_745a4c1cda584f1eb03f484f232fb875"], "layout": "IPY_MODEL_bde1e466081a47989615c3802f63f922", "tabbable": null, "tooltip": null}}, "8f5851cb2cef474db5dafaf431dd537e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "54ed8c9006f44beca281fa0a39c30ebd": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "bbc63643b06f4d8f8ff6775304adcdc7": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_8f5851cb2cef474db5dafaf431dd537e", "max": 356.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_54ed8c9006f44beca281fa0a39c30ebd", "tabbable": null, "tooltip": null, "value": 356.0}}, "8dc5ea3eec234a8ea2aacd9d0c0c5f03": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4d75d470c0954d078d062692e5062f79": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "1093f1a0deee440a946952c989204772": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_8dc5ea3eec234a8ea2aacd9d0c0c5f03", "placeholder": "\u200b", "style": "IPY_MODEL_4d75d470c0954d078d062692e5062f79", "tabbable": null, "tooltip": null, "value": "aiapy.aia_V3_error_table.txt:\u2007\u2007\u20070%"}}, "3ed8910d4ea24ae8894087b7e31bf140": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c4aaa72b06274e92b286fdacea3e839b": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "5d67dd01110e4330abbebec910619861": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_3ed8910d4ea24ae8894087b7e31bf140", "placeholder": "\u200b", "style": "IPY_MODEL_c4aaa72b06274e92b286fdacea3e839b", "tabbable": null, "tooltip": null, "value": "\u20070.00/356\u2007[00:00&lt;?,\u2007?B/s]"}}, "9e77197e903f449883b620352027656c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}, "e51026700f0d461ab1957343765ff89d": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_1093f1a0deee440a946952c989204772", "IPY_MODEL_bbc63643b06f4d8f8ff6775304adcdc7", "IPY_MODEL_5d67dd01110e4330abbebec910619861"], "layout": "IPY_MODEL_9e77197e903f449883b620352027656c", "tabbable": null, "tooltip": null}}, "9aa8e4a87bbd490c97017535d460a7e5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "eac01a2c3ac34e67be21d79c592a38fe": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "9db69dd8aa1e4287b6da2fbabffd98b5": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_9aa8e4a87bbd490c97017535d460a7e5", "max": 1.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_eac01a2c3ac34e67be21d79c592a38fe", "tabbable": null, "tooltip": null, "value": 1.0}}, "dc66f03287c74afba26484d1f85bfde0": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5ba4de7e6c7b494cb3a6f88632f4fd37": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "72371824c7e047f29be15bfa89313800": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_dc66f03287c74afba26484d1f85bfde0", "placeholder": "\u200b", "style": "IPY_MODEL_5ba4de7e6c7b494cb3a6f88632f4fd37", "tabbable": null, "tooltip": null, "value": "Files\u2007Downloaded:\u2007100%"}}, "a7974cd40a004245bdf1ea6eb337d908": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2b793777a19447ecb2b52af6276c1fdb": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "a7cb2bdbffd442479aacf1c0cc4f5376": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_a7974cd40a004245bdf1ea6eb337d908", "placeholder": "\u200b", "style": "IPY_MODEL_2b793777a19447ecb2b52af6276c1fdb", "tabbable": null, "tooltip": null, "value": "\u20071/1\u2007[00:00&lt;00:00,\u2007\u20077.46file/s]"}}, "8ee31862aef042b387d4a828a291e3a5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "93b5ad0e3f2042728dbaa35431079754": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_72371824c7e047f29be15bfa89313800", "IPY_MODEL_9db69dd8aa1e4287b6da2fbabffd98b5", "IPY_MODEL_a7cb2bdbffd442479aacf1c0cc4f5376"], "layout": "IPY_MODEL_8ee31862aef042b387d4a828a291e3a5", "tabbable": null, "tooltip": null}}, "e3e156b0c8f14fe6ab77fbf4141e4219": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2fdbe439af1f4565a1ae5050a723674b": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "559b53dcd47141839b77534b81e96434": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_e3e156b0c8f14fe6ab77fbf4141e4219", "max": 1591.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_2fdbe439af1f4565a1ae5050a723674b", "tabbable": null, "tooltip": null, "value": 1591.0}}, "e07a3fc309e24ffa82097a8efe95edc5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f82f96979572460198e8a073613f14a6": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "8e10334dc42a4a3d9e95d4f66dc2e42e": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_e07a3fc309e24ffa82097a8efe95edc5", "placeholder": "\u200b", "style": "IPY_MODEL_f82f96979572460198e8a073613f14a6", "tabbable": null, "tooltip": null, "value": "aiapy.aia_V10_20201119_190000_response_table.txt:\u2007\u2007\u20070%"}}, "10484b72aa2345e18657d94a0bcf4e86": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "836dfd4c9f364a87adb311e74b7c905f": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "cd10f1a94df64bcb9908c9510a86814e": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_10484b72aa2345e18657d94a0bcf4e86", "placeholder": "\u200b", "style": "IPY_MODEL_836dfd4c9f364a87adb311e74b7c905f", "tabbable": null, "tooltip": null, "value": "\u20070.00/1.59k\u2007[00:00&lt;?,\u2007?B/s]"}}, "13b09b019d234deb984f947aa8b60dfe": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}, "713769b649be4cd0969a4f3d2b5d4de8": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_8e10334dc42a4a3d9e95d4f66dc2e42e", "IPY_MODEL_559b53dcd47141839b77534b81e96434", "IPY_MODEL_cd10f1a94df64bcb9908c9510a86814e"], "layout": "IPY_MODEL_13b09b019d234deb984f947aa8b60dfe", "tabbable": null, "tooltip": null}}, "6df94bda64294dd5b59a8faf462b58a2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "cf5788f617fa4626ab6287159f83a1c3": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "0d692465c7504f9b9d7c5dd6efc98b77": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_6df94bda64294dd5b59a8faf462b58a2", "max": 1.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_cf5788f617fa4626ab6287159f83a1c3", "tabbable": null, "tooltip": null, "value": 1.0}}, "015a9b7eed5949cdb4ad33a5693d2650": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b1ac619c8e33429cb4a4e1cb9fb2058d": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "8dcc80c088d548ed82665eaeddc19775": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_015a9b7eed5949cdb4ad33a5693d2650", "placeholder": "\u200b", "style": "IPY_MODEL_b1ac619c8e33429cb4a4e1cb9fb2058d", "tabbable": null, "tooltip": null, "value": "Files\u2007Downloaded:\u2007100%"}}, "5b2a403ed6974a9f8880ca708dfc8ff9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "db18ea9bd3934e19b1aece077caa783c": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "6f390c75dd7543d99c4382aad53c3ad5": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_5b2a403ed6974a9f8880ca708dfc8ff9", "placeholder": "\u200b", "style": "IPY_MODEL_db18ea9bd3934e19b1aece077caa783c", "tabbable": null, "tooltip": null, "value": "\u20071/1\u2007[00:00&lt;00:00,\u2007\u20072.20file/s]"}}, "44aef0edb20f4da092f000edcfa38e85": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "183239182ad0420a8eab619e68bb7b08": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_8dcc80c088d548ed82665eaeddc19775", "IPY_MODEL_0d692465c7504f9b9d7c5dd6efc98b77", "IPY_MODEL_6f390c75dd7543d99c4382aad53c3ad5"], "layout": "IPY_MODEL_44aef0edb20f4da092f000edcfa38e85", "tabbable": null, "tooltip": null}}, "268b3e5fe75845c58fbee22c64134d8e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4a9b7efeee124c768aff857f0e9cea0a": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "d77c77bc315e44e588a1f3719a2447b9": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_268b3e5fe75845c58fbee22c64134d8e", "max": 5426568.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_4a9b7efeee124c768aff857f0e9cea0a", "tabbable": null, "tooltip": null, "value": 5426568.0}}, "814bd623b3b44a47afe6e198c2605aab": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "964e5bc3f7e54d70bd4bfbe846311427": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "f4b8efff41a348c3b2ec1bfd813868ac": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_814bd623b3b44a47afe6e198c2605aab", "placeholder": "\u200b", "style": "IPY_MODEL_964e5bc3f7e54d70bd4bfbe846311427", "tabbable": null, "tooltip": null, "value": "aiapy.aia_V8_all_fullinst.genx:\u2007\u200757%"}}, "cf2915876002406e8dea6dbfe96ee8cf": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f2202270f3184239a718208a13a33419": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "6a0c1e1d64d14f4ea376ed8c86ee3fe0": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_cf2915876002406e8dea6dbfe96ee8cf", "placeholder": "\u200b", "style": "IPY_MODEL_f2202270f3184239a718208a13a33419", "tabbable": null, "tooltip": null, "value": "\u20073.08M/5.43M\u2007[00:00&lt;00:00,\u200712.5MB/s]"}}, "84787b82ae184de3a3c8ff73b4d0e482": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}, "8f6d2914236a4f02815bd0578cd3277a": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_f4b8efff41a348c3b2ec1bfd813868ac", "IPY_MODEL_d77c77bc315e44e588a1f3719a2447b9", "IPY_MODEL_6a0c1e1d64d14f4ea376ed8c86ee3fe0"], "layout": "IPY_MODEL_84787b82ae184de3a3c8ff73b4d0e482", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}
+</script></section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="left-prev" href="grating.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Grating Specifications</p>
+</div>
+</a>
+<a class="right-next" href="../../_autosummary/esis.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">esis</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<dialog id="pst-secondary-sidebar-modal"></dialog>
+<div class="bd-sidebar-secondary bd-toc" id="pst-secondary-sidebar"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<i class="fa-solid fa-list"></i> On this page
+  </div>
+<nav aria-labelledby="pst-page-navigation-heading-2" class="page-toc" id="pst-page-toc-nav">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#The-scene">The scene</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#The-instrument">The instrument</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Projection-onto-the-detector">Projection onto the detector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#The-synthetic-frame">The synthetic frame</a></li>
+</ul>
+</nav></div>
+<div class="sidebar-secondary-item">
+<div class="tocsection sourcelink">
+<a href="../../_sources/reports/f2/synthetic-image.ipynb.txt">
+<i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+</div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script defer="" src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer="" src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
+<footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+<div class="footer-items__start">
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+<p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+  </p>
+</div>
+</div>
+<div class="footer-items__end">
+<div class="footer-item">
+<p class="theme-version">
+<!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
+</p></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

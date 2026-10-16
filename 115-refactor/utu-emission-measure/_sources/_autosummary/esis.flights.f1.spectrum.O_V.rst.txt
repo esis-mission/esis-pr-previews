@@ -1,0 +1,38 @@
+O\_V
+====
+
+.. automodule:: esis.flights.f1.spectrum.O_V
+
+    
+    
+    .. rubric:: Module Attributes
+
+    .. autosummary::
+      :toctree:
+    
+      wavelength
+      radiance
+      radiance_coronal_hole
+      radiance_active_region
+      radiance_active_region_cds
+      fwhm
+      width_doppler
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

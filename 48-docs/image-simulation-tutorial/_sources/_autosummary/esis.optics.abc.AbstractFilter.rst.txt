@@ -1,0 +1,49 @@
+AbstractFilter
+==============
+
+.. currentmodule:: esis.optics.abc
+
+.. autoclass:: esis.optics.abc.AbstractFilter
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~AbstractFilter.azimuth
+      ~AbstractFilter.distance_radial
+      ~AbstractFilter.material
+      ~AbstractFilter.pitch
+      ~AbstractFilter.radius_clear
+      ~AbstractFilter.roll
+      ~AbstractFilter.surface
+      ~AbstractFilter.transformation
+      ~AbstractFilter.translation
+      ~AbstractFilter.width_border
+      ~AbstractFilter.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~AbstractFilter.__init__
+      ~AbstractFilter.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.abc.AbstractFilter
+        :parts: 1
+    

@@ -1,0 +1,8 @@
+window\_mask
+============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.window_mask
+
+    .. autolink-examples:: esis.optics.window_mask

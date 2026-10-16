@@ -1,0 +1,8 @@
+fit\_distortion\_reference
+==========================
+
+.. currentmodule:: esis.flights.f1.optics
+
+.. autofunction:: esis.flights.f1.optics.fit_distortion_reference
+
+    .. autolink-examples:: esis.flights.f1.optics.fit_distortion_reference
