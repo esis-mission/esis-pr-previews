@@ -1,0 +1,46 @@
+FieldStop
+=========
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.FieldStop
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~FieldStop.num_folds
+      ~FieldStop.num_sides
+      ~FieldStop.radius_clear
+      ~FieldStop.radius_mechanical
+      ~FieldStop.surface
+      ~FieldStop.transformation
+      ~FieldStop.translation
+      ~FieldStop.width_clear
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~FieldStop.__init__
+      ~FieldStop.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.FieldStop
+        :parts: 1
+    

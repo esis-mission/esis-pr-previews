@@ -1,0 +1,6 @@
+esis.flights.f1.spectrum.O\_V.wavelength
+========================================
+
+.. currentmodule:: esis.flights.f1.spectrum.O_V
+
+.. autodata:: wavelength

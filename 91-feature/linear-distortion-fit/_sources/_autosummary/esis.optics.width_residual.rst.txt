@@ -1,0 +1,8 @@
+width\_residual
+===============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.width_residual
+
+    .. autolink-examples:: esis.optics.width_residual

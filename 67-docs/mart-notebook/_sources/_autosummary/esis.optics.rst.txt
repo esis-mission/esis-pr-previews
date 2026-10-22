@@ -1,0 +1,52 @@
+optics
+======
+
+.. automodule:: esis.optics
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Classes
+
+    .. autosummary::
+      :toctree:
+      :template: class_custom.rst
+    
+      FrontAperture
+      CentralObscuration
+      PrimaryMirror
+      FieldStop
+      Grating
+      Filter
+      Sensor
+      Camera
+      Requirements
+      Instrument
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Modules
+
+    .. autosummary::
+       :toctree:
+       :template: module_custom.rst
+       :recursive:
+    
+       abc
+       mixins
+    
+    
+

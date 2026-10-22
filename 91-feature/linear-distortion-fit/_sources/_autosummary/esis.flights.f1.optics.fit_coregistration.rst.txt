@@ -1,0 +1,8 @@
+fit\_coregistration
+===================
+
+.. currentmodule:: esis.flights.f1.optics
+
+.. autofunction:: esis.flights.f1.optics.fit_coregistration
+
+    .. autolink-examples:: esis.flights.f1.optics.fit_coregistration

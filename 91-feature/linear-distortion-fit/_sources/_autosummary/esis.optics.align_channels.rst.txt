@@ -1,0 +1,8 @@
+align\_channels
+===============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.align_channels
+
+    .. autolink-examples:: esis.optics.align_channels

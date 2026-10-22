@@ -1,0 +1,68 @@
+Sensor
+======
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.Sensor
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Sensor.azimuth
+      ~Sensor.cte
+      ~Sensor.distance_radial
+      ~Sensor.family
+      ~Sensor.grade
+      ~Sensor.manufacturer
+      ~Sensor.num_blank
+      ~Sensor.num_overscan
+      ~Sensor.num_pixel
+      ~Sensor.num_pixel_active
+      ~Sensor.num_pixel_x
+      ~Sensor.num_pixel_y
+      ~Sensor.num_tap_x
+      ~Sensor.num_tap_y
+      ~Sensor.pitch
+      ~Sensor.position_image
+      ~Sensor.readout_mode
+      ~Sensor.readout_noise
+      ~Sensor.roll
+      ~Sensor.serial_number
+      ~Sensor.temperature
+      ~Sensor.transformation
+      ~Sensor.translation
+      ~Sensor.width_active
+      ~Sensor.width_package
+      ~Sensor.width_package_x
+      ~Sensor.width_package_y
+      ~Sensor.width_pixel
+      ~Sensor.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Sensor.__init__
+      ~Sensor.dark_current
+      ~Sensor.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.Sensor
+        :parts: 1
+    
