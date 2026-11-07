@@ -1,0 +1,33 @@
+figures
+=======
+
+.. automodule:: esis.flights.f2.optics.primaries.figures
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      figure_measurement
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

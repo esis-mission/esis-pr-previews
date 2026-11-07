@@ -1,0 +1,8 @@
+multilayer\_witness\_fit
+========================
+
+.. currentmodule:: esis.flights.f1.optics.gratings.materials
+
+.. autofunction:: esis.flights.f1.optics.gratings.materials.multilayer_witness_fit
+
+    .. autolink-examples:: esis.flights.f1.optics.gratings.materials.multilayer_witness_fit

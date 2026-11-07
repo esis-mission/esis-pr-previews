@@ -1,0 +1,8 @@
+predict\_edges
+==============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.predict_edges
+
+    .. autolink-examples:: esis.optics.predict_edges

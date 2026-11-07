@@ -1,0 +1,51 @@
+PrimaryMirror
+=============
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.PrimaryMirror
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~PrimaryMirror.material
+      ~PrimaryMirror.num_folds
+      ~PrimaryMirror.pitch
+      ~PrimaryMirror.radius_clear
+      ~PrimaryMirror.radius_mechanical
+      ~PrimaryMirror.roll
+      ~PrimaryMirror.sag
+      ~PrimaryMirror.surface
+      ~PrimaryMirror.transformation
+      ~PrimaryMirror.translation
+      ~PrimaryMirror.width_border
+      ~PrimaryMirror.width_clear
+      ~PrimaryMirror.yaw
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~PrimaryMirror.__init__
+      ~PrimaryMirror.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.PrimaryMirror
+        :parts: 1
+    

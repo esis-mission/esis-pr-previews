@@ -1,0 +1,8 @@
+outline\_residual
+=================
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.outline_residual
+
+    .. autolink-examples:: esis.optics.outline_residual

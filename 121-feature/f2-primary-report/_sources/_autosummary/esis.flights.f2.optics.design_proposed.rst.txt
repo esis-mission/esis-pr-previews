@@ -1,0 +1,8 @@
+design\_proposed
+================
+
+.. currentmodule:: esis.flights.f2.optics
+
+.. autofunction:: esis.flights.f2.optics.design_proposed
+
+    .. autolink-examples:: esis.flights.f2.optics.design_proposed
