@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esis.data.synth._scene_vdem._scene_vdem &#8212; ESIS  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-codeautolink.css?v=b2176991" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../../../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CQ9NDQQWKM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQ9NDQQWKM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/esis/data/synth/_scene_vdem/_scene_vdem';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../../../_static/searchtools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <script src="../../../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/logo_black.png" class="logo__image only-light" alt="ESIS  documentation - Home"/>
+    <img src="../../../../../_static/logo_white.png" class="logo__image only-dark pst-js-only" alt="ESIS  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../reports/f2/design.html">
+    Design & Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../reports/f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../reports/f2/synthetic-image.html">
+    Synthetic ESIS-II Images
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../schedule.html">
+    Schedule
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/point-spread-function.html">
+    Point-Spread Function
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/throughput.html">
+    Throughput
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/aia-image-simulation.html">
+    Image Simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/level-0.html">
+    Level-0 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/level-1.html">
+    Level-1 Dataset
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/f2/design.html">
+    Design & Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/f2/grating.html">
+    Grating Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reports/f2/synthetic-image.html">
+    Synthetic ESIS-II Images
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../_autosummary/esis.html">
+    esis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../schedule.html">
+    Schedule
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/esis-mission/esis" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/euv-snapshot-imaging-spectrograph/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">esis.data.synth._scene_vdem._scene_vdem</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for esis.data.synth._scene_vdem._scene_vdem</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""A synthetic solar scene from a velocity-resolved DEM."""</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pathlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">named_arrays</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">na</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.._scene_dem</span><span class="w"> </span><span class="kn">import</span> <span class="n">scene_emission_measure</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"scene_vdem"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">_abundances</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Coronal_Chianti_2021"</span><span class="p">:</span> <span class="s2">"sun_coronal_2021_chianti"</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="sd">"""</span>
+<span class="sd">The abundances a velocity-resolved DEM may name, and the names :mod:`fiasco`</span>
+<span class="sd">gives the same abundances.</span>
+<span class="sd">"""</span>
+
+
+<div class="viewcode-block" id="scene_vdem">
+<a class="viewcode-back" href="../../../../../_autosummary/esis.data.synth.scene_vdem.html#esis.data.synth.scene_vdem">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">scene_vdem</span><span class="p">(</span>
+    <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span>
+    <span class="n">wavelength_min</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">,</span>
+    <span class="n">wavelength_max</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">,</span>
+    <span class="n">velocity</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">pressure</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">,</span>
+    <span class="n">plate_scale</span><span class="p">:</span> <span class="p">(</span>
+        <span class="kc">None</span> <span class="o">|</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractCartesian2dVectorArray</span>
+    <span class="p">)</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">abundance</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">width_nonthermal</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span> <span class="o">|</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span>
+    <span class="n">fraction_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">,</span>
+    <span class="n">ions</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">axis_x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"x"</span><span class="p">,</span>
+    <span class="n">axis_y</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"y"</span><span class="p">,</span>
+    <span class="n">axis_line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"line"</span><span class="p">,</span>
+    <span class="n">axis_velocity</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"velocity"</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">FunctionArray</span><span class="p">[</span><span class="n">na</span><span class="o">.</span><span class="n">DopplerPositionalVectorArray</span><span class="p">,</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">]:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
+<span class="sd">    Create a synthetic solar scene from a velocity-resolved DEM.</span>
+
+<span class="sd">    A velocity-resolved DEM is the emission measure of each pixel of a</span>
+<span class="sd">    simulation in bins of temperature and of line-of-sight velocity, in the</span>
+<span class="sd">    format used to synthesize observations for the MUSE mission. The</span>
+<span class="sd">    spectrum of the plasma in each bin is computed with</span>
+<span class="sd">    :func:`scene_emission_measure`, as a Gaussian centered on the bin of</span>
+<span class="sd">    velocity.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path</span>
+<span class="sd">        The path to the zarr store of the DEM. It holds ``vdem``, the</span>
+<span class="sd">        emission measure along ``logT``, ``vdop``, ``x``, and ``y``;</span>
+<span class="sd">        ``logT``, the logarithm of the temperature of each bin; ``vbins``,</span>
+<span class="sd">        the vertices of the bins of line-of-sight velocity; ``x`` and ``y``,</span>
+<span class="sd">        the positions of the pixels along each axis; and, optionally,</span>
+<span class="sd">        ``Abundance``, the name of the abundances of the simulation. Each</span>
+<span class="sd">        array has its unit in the attribute ``units``. Without one,</span>
+<span class="sd">        ``vbins`` is taken to be in kilometers per second, and ``x`` and</span>
+<span class="sd">        ``y`` in centimeters, the units of the format, but ``vdem`` has to</span>
+<span class="sd">        have one. The names of the axes of ``vdem`` are those in its</span>
+<span class="sd">        metadata, ``dimension_names``, in a zarr v3 store, or in its</span>
+<span class="sd">        attribute ``_ARRAY_DIMENSIONS`` in a zarr v2 store, as xarray writes</span>
+<span class="sd">        them.</span>
+<span class="sd">    wavelength_min</span>
+<span class="sd">        The shortest wavelength of the lines to include.</span>
+<span class="sd">    wavelength_max</span>
+<span class="sd">        The longest wavelength of the lines to include.</span>
+<span class="sd">    velocity</span>
+<span class="sd">        The vertices of the bins of line-of-sight velocity each line is</span>
+<span class="sd">        spread over, along `axis_velocity`.</span>
+<span class="sd">    pressure</span>
+<span class="sd">        The constant pressure, :math:`n_e T`, the lines are computed at. The</span>
+<span class="sd">        DEM does not record the density of the plasma.</span>
+<span class="sd">    plate_scale</span>
+<span class="sd">        The angle each pixel of the simulation spans, the same along both</span>
+<span class="sd">        axes, or along each axis as a vector. If :obj:`None` (the default),</span>
+<span class="sd">        the angle the pitch of the pixels along each axis spans seen from</span>
+<span class="sd">        one astronomical unit away. A larger angle stretches the scene, as</span>
+<span class="sd">        when each pixel of the simulation is to fall on one pixel of a</span>
+<span class="sd">        detector.</span>
+<span class="sd">    abundance</span>
+<span class="sd">        The abundances the lines are computed with, by their name in</span>
+<span class="sd">        :mod:`fiasco`. If :obj:`None` (the default), those named by the</span>
+<span class="sd">        array ``Abundance`` of the DEM.</span>
+<span class="sd">    width_nonthermal</span>
+<span class="sd">        The standard deviation of the unresolved nonthermal velocities of the</span>
+<span class="sd">        plasma in each bin of the DEM, beyond its spread across the bin,</span>
+<span class="sd">        see :func:`utu.spectrum.synthesize`. It is added in quadrature to</span>
+<span class="sd">        the width the bin gives, see the notes.</span>
+<span class="sd">    fraction_min</span>
+<span class="sd">        The least fraction of the radiance of all the lines in the passband,</span>
+<span class="sd">        averaged over the pixels, for a line to be included, see</span>
+<span class="sd">        :func:`scene_emission_measure`.</span>
+<span class="sd">    ions</span>
+<span class="sd">        The ions to compute the lines of, see :func:`scene_emission_measure`.</span>
+<span class="sd">    axis_x</span>
+<span class="sd">        The name of the axis of the pixels in :math:`x`.</span>
+<span class="sd">    axis_y</span>
+<span class="sd">        The name of the axis of the pixels in :math:`y`.</span>
+<span class="sd">    axis_line</span>
+<span class="sd">        The name of the axis along the lines of the result.</span>
+<span class="sd">    axis_velocity</span>
+<span class="sd">        The name of the axis of `velocity`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        The spectral radiance of the scene, along `axis_line`,</span>
+<span class="sd">        `axis_velocity`, `axis_x`, and `axis_y`. The positions are the</span>
+<span class="sd">        vertices of the pixels, centered on the middle of the simulation,</span>
+<span class="sd">        and increase along `axis_x` and `axis_y`, whichever way the</span>
+<span class="sd">        positions of the store run.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If `abundance` is :obj:`None` and the DEM names no abundances, or</span>
+<span class="sd">        names ones :mod:`fiasco` is not known to have; if the axes of</span>
+<span class="sd">        ``vdem`` are not named, or are not ``logT``, ``vdop``, ``x``, and</span>
+<span class="sd">        ``y``; if ``vdem`` has no unit; or if `plate_scale` is :obj:`None`</span>
+<span class="sd">        and the DEM is a single pixel, whose angle cannot be found from the</span>
+<span class="sd">        positions of its pixels.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The plasma in each bin of line-of-sight velocity is taken to be spread</span>
+<span class="sd">    evenly across the bin, and is approximated by a Gaussian of the same</span>
+<span class="sd">    variance: centered on the bin, with a nonthermal width of the width of</span>
+<span class="sd">    the bin over :math:`\sqrt{12}`, added in quadrature to</span>
+<span class="sd">    `width_nonthermal`.</span>
+
+<span class="sd">    The pitch of the pixels along each axis is the distance between the</span>
+<span class="sd">    first and the last of them over the number of steps between them, as a</span>
+<span class="sd">    magnitude: the pixels are taken to be evenly spaced. A simulation one</span>
+<span class="sd">    pixel wide along an axis is taken to have the pitch of the other axis</span>
+<span class="sd">    along it too.</span>
+
+<span class="sd">    The format records neither the sign of the velocity nor whether the</span>
+<span class="sd">    emission measure is :math:`\int n_e n_H \, dh` or</span>
+<span class="sd">    :math:`\int n_e^2 \, dh`. The velocity is taken to be positive away from</span>
+<span class="sd">    the observer, and the emission measure to be :math:`\int n_e n_H \, dh`,</span>
+<span class="sd">    which is what the contribution functions of :mod:`fiasco` go with.</span>
+<span class="sd">    """</span>
+    <span class="c1"># zarr takes nearly a fifth of a second to import, and only this function</span>
+    <span class="c1"># reads it, so it is imported here rather than with esis.</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+
+    <span class="n">store</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">open_group</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"r"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">abundance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">"Abundance"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">store</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">"The DEM does not name the abundances it was simulated with, so "</span>
+                <span class="s2">"they have to be given as `abundance`."</span>
+            <span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">store</span><span class="p">[</span><span class="s2">"Abundance"</span><span class="p">][()])</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_abundances</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"The abundances of the DEM, </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s2">, are not ones fiasco is "</span>
+                <span class="sa">f</span><span class="s2">"known to have, so they have to be given as `abundance`."</span>
+            <span class="p">)</span>
+        <span class="n">abundance</span> <span class="o">=</span> <span class="n">_abundances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+
+    <span class="n">axis_temperature</span> <span class="o">=</span> <span class="s2">"_temperature"</span>
+    <span class="n">axis_shift</span> <span class="o">=</span> <span class="s2">"_shift"</span>
+
+    <span class="n">vdem</span> <span class="o">=</span> <span class="n">store</span><span class="p">[</span><span class="s2">"vdem"</span><span class="p">]</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">logT</span><span class="o">=</span><span class="n">axis_temperature</span><span class="p">,</span>
+        <span class="n">vdop</span><span class="o">=</span><span class="n">axis_shift</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">axis_x</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">axis_y</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">dimensions</span> <span class="o">=</span> <span class="n">_dimensions</span><span class="p">(</span><span class="n">vdem</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dimensions</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">axes</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"The axes of the DEM must be </span><span class="si">{</span><span class="nb">tuple</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span><span class="si">}</span><span class="s2">, in any order, "</span>
+            <span class="sa">f</span><span class="s2">"got </span><span class="si">{</span><span class="n">dimensions</span><span class="si">}</span><span class="s2">."</span>
+        <span class="p">)</span>
+
+    <span class="c1"># The unit is attached without a copy, which keeps the precision of the</span>
+    <span class="c1"># store, single for a simulation. utu.spectrum.synthesize sums it in that</span>
+    <span class="c1"># precision, so it is never copied into double precision.</span>
+    <span class="n">emission_measure</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span>
+        <span class="n">ndarray</span><span class="o">=</span><span class="n">_read</span><span class="p">(</span><span class="n">vdem</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">axes</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">dimensions</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span>
+        <span class="n">ndarray</span><span class="o">=</span><span class="mi">10</span> <span class="o">**</span> <span class="n">store</span><span class="p">[</span><span class="s2">"logT"</span><span class="p">][:]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">K</span><span class="p">,</span>
+        <span class="n">axes</span><span class="o">=</span><span class="n">axis_temperature</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">vbins</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span>
+        <span class="n">ndarray</span><span class="o">=</span><span class="n">_read</span><span class="p">(</span><span class="n">store</span><span class="p">[</span><span class="s2">"vbins"</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span>
+        <span class="n">axes</span><span class="o">=</span><span class="n">axis_shift</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">plate_scale</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plate_scale</span> <span class="o">=</span> <span class="n">_angle_pixel</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">_read</span><span class="p">(</span><span class="n">store</span><span class="p">[</span><span class="s2">"x"</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="n">axis_x</span><span class="p">),</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">ScalarArray</span><span class="p">(</span><span class="n">_read</span><span class="p">(</span><span class="n">store</span><span class="p">[</span><span class="s2">"y"</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="n">axis_y</span><span class="p">),</span>
+            <span class="n">axis_x</span><span class="o">=</span><span class="n">axis_x</span><span class="p">,</span>
+            <span class="n">axis_y</span><span class="o">=</span><span class="n">axis_y</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="n">num_x</span> <span class="o">=</span> <span class="n">emission_measure</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis_x</span><span class="p">]</span>
+    <span class="n">num_y</span> <span class="o">=</span> <span class="n">emission_measure</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis_y</span><span class="p">]</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="n">na</span><span class="o">.</span><span class="n">Cartesian2dVectorArray</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis_x</span><span class="p">)</span> <span class="o">-</span> <span class="n">num_x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">na</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis_y</span><span class="p">)</span> <span class="o">-</span> <span class="n">num_y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="n">position</span> <span class="o">*</span> <span class="n">plate_scale</span>
+
+    <span class="c1"># the spread of plasma evenly across each bin, and the nonthermal width</span>
+    <span class="c1"># within it</span>
+    <span class="n">width_bin</span> <span class="o">=</span> <span class="n">vbins</span><span class="o">.</span><span class="n">volume_cell</span><span class="p">(</span><span class="n">axis_shift</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">width_nonthermal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">width_bin</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">width_nonthermal</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">scene_emission_measure</span><span class="p">(</span>
+        <span class="n">emission_measure</span><span class="o">=</span><span class="n">emission_measure</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span>
+        <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
+        <span class="n">wavelength_min</span><span class="o">=</span><span class="n">wavelength_min</span><span class="p">,</span>
+        <span class="n">wavelength_max</span><span class="o">=</span><span class="n">wavelength_max</span><span class="p">,</span>
+        <span class="n">velocity</span><span class="o">=</span><span class="n">velocity</span><span class="p">,</span>
+        <span class="n">abundance</span><span class="o">=</span><span class="n">abundance</span><span class="p">,</span>
+        <span class="n">pressure</span><span class="o">=</span><span class="n">pressure</span><span class="p">,</span>
+        <span class="n">shift</span><span class="o">=</span><span class="n">vbins</span><span class="o">.</span><span class="n">cell_centers</span><span class="p">(</span><span class="n">axis_shift</span><span class="p">),</span>
+        <span class="n">width_nonthermal</span><span class="o">=</span><span class="n">width_nonthermal</span><span class="p">,</span>
+        <span class="n">fraction_min</span><span class="o">=</span><span class="n">fraction_min</span><span class="p">,</span>
+        <span class="n">ions</span><span class="o">=</span><span class="n">ions</span><span class="p">,</span>
+        <span class="n">axis_temperature</span><span class="o">=</span><span class="n">axis_temperature</span><span class="p">,</span>
+        <span class="n">axis_shift</span><span class="o">=</span><span class="n">axis_shift</span><span class="p">,</span>
+        <span class="n">axis_x</span><span class="o">=</span><span class="n">axis_x</span><span class="p">,</span>
+        <span class="n">axis_y</span><span class="o">=</span><span class="n">axis_y</span><span class="p">,</span>
+        <span class="n">axis_line</span><span class="o">=</span><span class="n">axis_line</span><span class="p">,</span>
+        <span class="n">axis_velocity</span><span class="o">=</span><span class="n">axis_velocity</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_dimensions</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="s2">"zarr.Array"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Return the names of the axes of an array of a zarr store.</span>
+
+<span class="sd">    A zarr v3 store keeps them in the metadata of the array, and a zarr v2</span>
+<span class="sd">    store, as xarray writes it, in the attribute ``_ARRAY_DIMENSIONS``.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    array</span>
+<span class="sd">        The array to name the axes of.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the array names its axes in neither place.</span>
+<span class="sd">    """</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span> <span class="s2">"dimension_names"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">names</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"_ARRAY_DIMENSIONS"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">names</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"The array </span><span class="si">{</span><span class="n">array</span><span class="o">.</span><span class="n">basename</span><span class="si">!r}</span><span class="s2"> of the DEM does not name its axes, "</span>
+            <span class="sa">f</span><span class="s2">"in its metadata or in the attribute '_ARRAY_DIMENSIONS'."</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_read</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="s2">"zarr.Array"</span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="n">u</span><span class="o">.</span><span class="n">UnitBase</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Read an array of a zarr store, with the unit in its attribute ``units``.</span>
+
+<span class="sd">    The unit is attached without a copy, so the array keeps the precision it</span>
+<span class="sd">    is stored in.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    array</span>
+<span class="sd">        The array to read.</span>
+<span class="sd">    unit</span>
+<span class="sd">        The unit of the array if it has no attribute ``units``, or</span>
+<span class="sd">        :obj:`None` if it must have one.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the array has no unit and `unit` is :obj:`None`.</span>
+<span class="sd">    """</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"units"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Unit</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"The array </span><span class="si">{</span><span class="n">array</span><span class="o">.</span><span class="n">basename</span><span class="si">!r}</span><span class="s2"> of the DEM must have its unit in the "</span>
+            <span class="sa">f</span><span class="s2">"attribute 'units'."</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">array</span><span class="p">[:]</span> <span class="o">&lt;&lt;</span> <span class="n">unit</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_angle_pixel</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">y</span><span class="p">:</span> <span class="n">na</span><span class="o">.</span><span class="n">AbstractScalar</span><span class="p">,</span>
+    <span class="n">axis_x</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">axis_y</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">na</span><span class="o">.</span><span class="n">Cartesian2dVectorArray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Return the angle each pixel spans along each axis, from one AU away.</span>
+
+<span class="sd">    The pitch along each axis is the distance between its first and last</span>
+<span class="sd">    pixels over the number of steps between them, as a magnitude, so that</span>
+<span class="sd">    positions which decrease along an axis do not turn the scene over. A</span>
+<span class="sd">    simulation one pixel wide along an axis is taken to have the pitch of</span>
+<span class="sd">    the other axis along it too.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x</span>
+<span class="sd">        The position of each pixel in :math:`x`, along `axis_x`.</span>
+<span class="sd">    y</span>
+<span class="sd">        The position of each pixel in :math:`y`, along `axis_y`.</span>
+<span class="sd">    axis_x</span>
+<span class="sd">        The name of the axis of `x`.</span>
+<span class="sd">    axis_y</span>
+<span class="sd">        The name of the axis of `y`.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the simulation is a single pixel.</span>
+<span class="sd">    """</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">component</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">axis</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">"x"</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">axis_x</span><span class="p">),</span> <span class="p">(</span><span class="s2">"y"</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">axis_y</span><span class="p">)]:</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">pitch</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">[{</span><span class="n">axis</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[{</span><span class="n">axis</span><span class="p">:</span> <span class="mi">0</span><span class="p">}])</span> <span class="o">/</span> <span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">angle</span><span class="p">[</span><span class="n">component</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pitch</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">au</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span>
+                <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span>
+                <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_angles</span><span class="p">(),</span>
+            <span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">angle</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">"The DEM is a single pixel, so the angle it spans cannot be found "</span>
+            <span class="s2">"from the positions of its pixels, and has to be given as "</span>
+            <span class="s2">"`plate_scale`."</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">na</span><span class="o">.</span><span class="n">Cartesian2dVectorArray</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">angle</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span> <span class="n">angle</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"y"</span><span class="p">)),</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">angle</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"y"</span><span class="p">,</span> <span class="n">angle</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)),</span>
+    <span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Roy T. Smart, Charles C. Kankelborg, Jacob D. Parker.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.1.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+scene\_muram
+============
+
+.. currentmodule:: esis.flights.f2.data.synth
+
+.. autofunction:: esis.flights.f2.data.synth.scene_muram
+
+    .. autolink-examples:: esis.flights.f2.data.synth.scene_muram

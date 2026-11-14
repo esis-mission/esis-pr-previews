@@ -1,0 +1,8 @@
+ruling\_measurement
+===================
+
+.. currentmodule:: esis.flights.f1.optics.gratings.rulings
+
+.. autofunction:: esis.flights.f1.optics.gratings.rulings.ruling_measurement
+
+    .. autolink-examples:: esis.flights.f1.optics.gratings.rulings.ruling_measurement

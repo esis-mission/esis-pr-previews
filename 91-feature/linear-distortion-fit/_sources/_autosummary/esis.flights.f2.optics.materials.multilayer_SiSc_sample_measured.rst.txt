@@ -1,0 +1,8 @@
+multilayer\_SiSc\_sample\_measured
+==================================
+
+.. currentmodule:: esis.flights.f2.optics.materials
+
+.. autofunction:: esis.flights.f2.optics.materials.multilayer_SiSc_sample_measured
+
+    .. autolink-examples:: esis.flights.f2.optics.materials.multilayer_SiSc_sample_measured
