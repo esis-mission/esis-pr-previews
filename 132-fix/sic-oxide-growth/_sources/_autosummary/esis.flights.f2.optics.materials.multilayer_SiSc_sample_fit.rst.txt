@@ -1,0 +1,8 @@
+multilayer\_SiSc\_sample\_fit
+=============================
+
+.. currentmodule:: esis.flights.f2.optics.materials
+
+.. autofunction:: esis.flights.f2.optics.materials.multilayer_SiSc_sample_fit
+
+    .. autolink-examples:: esis.flights.f2.optics.materials.multilayer_SiSc_sample_fit

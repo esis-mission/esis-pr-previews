@@ -1,0 +1,6 @@
+esis.flights.f1.spectrum.He\_II.wavelength
+==========================================
+
+.. currentmodule:: esis.flights.f1.spectrum.He_II
+
+.. autodata:: wavelength

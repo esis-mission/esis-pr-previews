@@ -1,0 +1,6 @@
+esis.optics.num\_interpolation
+==============================
+
+.. currentmodule:: esis.optics
+
+.. autodata:: num_interpolation

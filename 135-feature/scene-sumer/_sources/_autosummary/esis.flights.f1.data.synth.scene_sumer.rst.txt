@@ -1,0 +1,8 @@
+scene\_sumer
+============
+
+.. currentmodule:: esis.flights.f1.data.synth
+
+.. autofunction:: esis.flights.f1.data.synth.scene_sumer
+
+    .. autolink-examples:: esis.flights.f1.data.synth.scene_sumer

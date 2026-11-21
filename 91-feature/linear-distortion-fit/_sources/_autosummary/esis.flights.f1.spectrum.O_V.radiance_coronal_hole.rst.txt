@@ -1,0 +1,6 @@
+esis.flights.f1.spectrum.O\_V.radiance\_coronal\_hole
+=====================================================
+
+.. currentmodule:: esis.flights.f1.spectrum.O_V
+
+.. autodata:: radiance_coronal_hole

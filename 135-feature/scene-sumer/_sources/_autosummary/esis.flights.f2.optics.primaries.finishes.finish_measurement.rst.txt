@@ -1,0 +1,8 @@
+finish\_measurement
+===================
+
+.. currentmodule:: esis.flights.f2.optics.primaries.finishes
+
+.. autofunction:: esis.flights.f2.optics.primaries.finishes.finish_measurement
+
+    .. autolink-examples:: esis.flights.f2.optics.primaries.finishes.finish_measurement
