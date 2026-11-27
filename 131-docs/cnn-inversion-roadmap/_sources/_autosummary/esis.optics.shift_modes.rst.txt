@@ -1,0 +1,8 @@
+shift\_modes
+============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.shift_modes
+
+    .. autolink-examples:: esis.optics.shift_modes

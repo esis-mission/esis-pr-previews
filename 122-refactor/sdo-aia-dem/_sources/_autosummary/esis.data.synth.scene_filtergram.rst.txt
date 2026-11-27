@@ -1,0 +1,8 @@
+scene\_filtergram
+=================
+
+.. currentmodule:: esis.data.synth
+
+.. autofunction:: esis.data.synth.scene_filtergram
+
+    .. autolink-examples:: esis.data.synth.scene_filtergram

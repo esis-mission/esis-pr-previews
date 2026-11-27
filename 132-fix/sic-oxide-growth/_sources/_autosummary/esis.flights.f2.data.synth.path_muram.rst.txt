@@ -1,0 +1,8 @@
+path\_muram
+===========
+
+.. currentmodule:: esis.flights.f2.data.synth
+
+.. autofunction:: esis.flights.f2.data.synth.path_muram
+
+    .. autolink-examples:: esis.flights.f2.data.synth.path_muram

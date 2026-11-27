@@ -1,0 +1,8 @@
+path\_sumer
+===========
+
+.. currentmodule:: esis.flights.f1.data
+
+.. autofunction:: esis.flights.f1.data.path_sumer
+
+    .. autolink-examples:: esis.flights.f1.data.path_sumer

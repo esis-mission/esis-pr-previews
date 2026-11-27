@@ -1,0 +1,8 @@
+correlation\_raytraced
+======================
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.correlation_raytraced
+
+    .. autolink-examples:: esis.optics.correlation_raytraced

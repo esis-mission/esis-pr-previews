@@ -1,0 +1,8 @@
+measure\_polygon\_edges
+=======================
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.measure_polygon_edges
+
+    .. autolink-examples:: esis.optics.measure_polygon_edges

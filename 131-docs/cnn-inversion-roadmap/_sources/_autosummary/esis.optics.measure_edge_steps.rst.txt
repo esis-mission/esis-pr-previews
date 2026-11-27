@@ -1,0 +1,8 @@
+measure\_edge\_steps
+====================
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.measure_edge_steps
+
+    .. autolink-examples:: esis.optics.measure_edge_steps

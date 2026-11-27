@@ -1,0 +1,8 @@
+window\_drift
+=============
+
+.. currentmodule:: esis.flights.f1.optics
+
+.. autofunction:: esis.flights.f1.optics.window_drift
+
+    .. autolink-examples:: esis.flights.f1.optics.window_drift

@@ -1,0 +1,51 @@
+DistortionParameters
+====================
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.DistortionParameters
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~DistortionParameters.yaw_grating
+      ~DistortionParameters.pitch_grating
+      ~DistortionParameters.roll_grating
+      ~DistortionParameters.roll_field_stop
+      ~DistortionParameters.spacing_rulings
+      ~DistortionParameters.displacement_primary
+      ~DistortionParameters.pitch
+      ~DistortionParameters.yaw
+      ~DistortionParameters.roll
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~DistortionParameters.__init__
+      ~DistortionParameters.from_file
+      ~DistortionParameters.from_instrument
+      ~DistortionParameters.to_file
+      ~DistortionParameters.to_instrument
+      ~DistortionParameters.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.DistortionParameters
+        :parts: 1
+    

@@ -1,0 +1,47 @@
+DistortionObjective
+===================
+
+.. currentmodule:: esis.optics
+
+.. autoclass:: esis.optics.DistortionObjective
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~DistortionObjective.axis_channel
+      ~DistortionObjective.axis_field
+      ~DistortionObjective.axis_wavelength
+      ~DistortionObjective.pupil
+      ~DistortionObjective.weight_correlation
+      ~DistortionObjective.instrument
+      ~DistortionObjective.parameters
+      ~DistortionObjective.scene
+      ~DistortionObjective.observation
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~DistortionObjective.__init__
+      ~DistortionObjective.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.optics.DistortionObjective
+        :parts: 1
+    

@@ -1,0 +1,43 @@
+Sparcs
+======
+
+.. currentmodule:: esis.nsroc
+
+.. autoclass:: esis.nsroc.Sparcs
+    :members:
+    :show-inheritance:
+    :inherited-members:
+    :undoc-members:
+    :member-order: groupwise
+
+    
+    
+    .. rubric:: Attributes
+
+    .. autosummary::
+    
+      ~Sparcs.drift_pointing
+      ~Sparcs.drift_roll
+      ~Sparcs.jitter_pointing
+      ~Sparcs.jitter_roll
+    
+    
+
+    
+    
+    .. rubric:: Methods
+
+    .. autosummary::
+    
+      ~Sparcs.__init__
+      ~Sparcs.replace
+      ~Sparcs.to_string
+    
+    
+
+    
+    .. rubric:: Inheritance Diagram
+
+    .. inheritance-diagram:: esis.nsroc.Sparcs
+        :parts: 1
+    

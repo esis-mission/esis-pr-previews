@@ -1,0 +1,33 @@
+finishes
+========
+
+.. automodule:: esis.flights.f2.optics.primaries.finishes
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      finish_measurement
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+

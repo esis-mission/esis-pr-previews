@@ -1,0 +1,8 @@
+scene\_sumer\_observation
+=========================
+
+.. currentmodule:: esis.data.synth
+
+.. autofunction:: esis.data.synth.scene_sumer_observation
+
+    .. autolink-examples:: esis.data.synth.scene_sumer_observation

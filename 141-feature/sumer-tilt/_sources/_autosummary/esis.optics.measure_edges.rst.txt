@@ -1,0 +1,8 @@
+measure\_edges
+==============
+
+.. currentmodule:: esis.optics
+
+.. autofunction:: esis.optics.measure_edges
+
+    .. autolink-examples:: esis.optics.measure_edges

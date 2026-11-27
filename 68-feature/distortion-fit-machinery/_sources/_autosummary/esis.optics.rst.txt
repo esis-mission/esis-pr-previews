@@ -1,0 +1,66 @@
+optics
+======
+
+.. automodule:: esis.optics
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      fit_distortion
+      fit_distortion_scan
+      fit_distortion_series
+    
+    
+
+    
+    
+    .. rubric:: Classes
+
+    .. autosummary::
+      :toctree:
+      :template: class_custom.rst
+    
+      FrontAperture
+      CentralObscuration
+      PrimaryMirror
+      FieldStop
+      Grating
+      Filter
+      Sensor
+      Camera
+      Requirements
+      Instrument
+      DistortionParameters
+      DistortionObjective
+      DistortionResidual
+      ConvergenceLogger
+    
+    
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Modules
+
+    .. autosummary::
+       :toctree:
+       :template: module_custom.rst
+       :recursive:
+    
+       abc
+       mixins
+    
+    
+

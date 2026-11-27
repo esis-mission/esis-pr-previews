@@ -1,0 +1,36 @@
+materials
+=========
+
+.. automodule:: esis.flights.f1.optics.primaries.materials
+
+    
+    
+    
+
+    
+    
+    .. rubric:: Functions
+
+    .. autosummary::
+      :toctree:
+      :template: function_custom.rst
+    
+      multilayer_design
+      multilayer_witness_measured
+      multilayer_witness_fit
+      multilayer_fit
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
